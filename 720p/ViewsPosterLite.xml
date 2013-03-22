@@ -375,7 +375,7 @@
   </include>
 
   <include name="PLPoster">
-    <animation effect="slide" time="200" start="0,0" end="0,-20" tween="cubic" easing="out" condition="Skin.HasSetting(videomediacase)">Conditional</animation>
+    <animation effect="slide" time="200" start="0,0" end="0,-20" tween="cubic" easing="out" condition="!Skin.HasSetting(novideomediacase)">Conditional</animation>
     <control type="image">
       <width>309</width>
       <height>455</height>
@@ -392,7 +392,7 @@
       <texture background="true" flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png">$VAR[value_poster]</texture>
 	  <bordertexture background="true" flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
       <aspectratio aligny="top">stretch</aspectratio>
-	  <visible>!Skin.HasSetting(videomediacase)</visible>
+	  <visible>Skin.HasSetting(novideomediacase)</visible>
     </control>
     <control type="image">
 	  <posx>-30</posx>
@@ -402,7 +402,7 @@
       <fadetime>FanartCrossFadeTime</fadetime>
       <texture background="true">$VAR[value_videocase0]</texture>
       <aspectratio>stretch</aspectratio>
-	  <visible>Skin.HasSetting(videomediacase)</visible>
+	  <visible>!Skin.HasSetting(novideomediacase)</visible>
     </control>
 	<control type="image">
 	  <posx>102</posx>
@@ -413,7 +413,7 @@
 	  <aligny>center</aligny>
 	  <aspectratio>keep</aspectratio>
 	  <texture background="true">$VAR[value_videocodec]</texture>
-	  <visible>Skin.HasSetting(videomediacase)</visible>
+	  <visible>!Skin.HasSetting(novideomediacase)</visible>
     </control>
     <control type="image">
       <posx>257</posx>

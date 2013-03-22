@@ -46,6 +46,11 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+#  <etharr@hacjenda.info>, 2013.
 #   <krystianen@gmail.com>, 2012.
 # Maciek Fornalczyk <maciomanus@gmail.com>, 2012.
 # Mateusz 'bialo' Biełous <mateusz@bielous.eu>, 2012.
@@ -56,7 +61,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-13 18:49+0000\n"
+"PO-Revision-Date: 2013-03-21 14:08+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/skin-ace/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +72,7 @@ msgstr ""
 
 msgctxt "Addon Summary"
 msgid "Skin Ace, a new Skin by MarcosQui."
-msgstr "Skórka ace, nowość od MarcosQui"
+msgstr "Skóra ace, nowość od MarcosQui"
 
 msgctxt "Addon Description"
 msgid ""
@@ -107,7 +112,7 @@ msgstr "SERIALE"
 
 msgctxt "#31006"
 msgid "LIVE TV"
-msgstr "TV \"NA ŻYWO\""
+msgstr "TELEWIZJA"
 
 msgctxt "#31007"
 msgid "GAMES"
@@ -131,7 +136,7 @@ msgstr "USTAWIENIA"
 
 msgctxt "#31012"
 msgid "EXIT"
-msgstr ""
+msgstr "WYJŚCIE"
 
 msgctxt "#31013"
 msgid "CONCERTS"
@@ -171,7 +176,7 @@ msgstr "WYBIERZ DODATEK - OBRAZ"
 
 msgctxt "#31022"
 msgid "CHOOSE VIDEO NODE"
-msgstr ""
+msgstr "WYBIERZ WĘZEŁ WIDEO"
 
 msgctxt "#31023"
 msgid "BUTTON ACTION"
@@ -200,7 +205,7 @@ msgstr "ROK"
 
 msgctxt "#31029"
 msgid "SETS"
-msgstr "KOLEKCJE"
+msgstr "ZBIORY"
 
 msgctxt "#31030"
 msgid "PROGRAMS"
@@ -268,7 +273,7 @@ msgstr "OBSADA"
 
 msgctxt "#31046"
 msgid "DIRECTOR"
-msgstr ""
+msgstr "REŻYSER"
 
 msgctxt "#31047"
 msgid "STUDIOS"
@@ -276,7 +281,7 @@ msgstr "WYTWÓRNIE"
 
 msgctxt "#31048"
 msgid "SETS"
-msgstr "SERIE"
+msgstr "ZBIORY"
 
 msgctxt "#31049"
 msgid "RANDOM"
@@ -312,7 +317,7 @@ msgstr "WYŁĄCZ TIMER"
 
 msgctxt "#31057"
 msgid "EXIT"
-msgstr ""
+msgstr "WYJŚCIE"
 
 msgctxt "#31058"
 msgid "TURN OFF"
@@ -320,11 +325,11 @@ msgstr "WYŁĄCZ"
 
 msgctxt "#31059"
 msgid "RESTART"
-msgstr "RESTART"
+msgstr "Uruchom ponownie"
 
 msgctxt "#31060"
 msgid "SUSPEND"
-msgstr "ZAWIEŚ"
+msgstr "UŚPIJ"
 
 msgctxt "#31061"
 msgid "HIBERNATE"
@@ -356,7 +361,7 @@ msgstr "PROGRAM TV"
 
 msgctxt "#31068"
 msgid "VIEWTYPES"
-msgstr "RODZAJE WIDOKU"
+msgstr "WIDOK"
 
 msgctxt "#31069"
 msgid "COMICS"
@@ -416,11 +421,11 @@ msgstr "Element który dodałeś"
 
 msgctxt "#31083"
 msgid "PREVIEW"
-msgstr ""
+msgstr "PODGLĄD"
 
 msgctxt "#31084"
 msgid "CLOSE"
-msgstr ""
+msgstr "ZAMKNIJ"
 
 msgctxt "#31085"
 msgid ""
@@ -430,19 +435,19 @@ msgstr "UŻYJ ABY DODAĆ NOWY ELEMENT, NASTĘPNIE DOSTOSUJ JAK UWAŻASZ, MOŻESZ
 
 msgctxt "#31086"
 msgid "Concerts"
-msgstr ""
+msgstr "Koncerty"
 
 msgctxt "#31087"
 msgid "Trailers"
-msgstr ""
+msgstr "Zwiastuny"
 
 msgctxt "#31088"
 msgid "Games"
-msgstr ""
+msgstr "Gry"
 
 msgctxt "#31089"
 msgid "+ VIDEO NODE ITEM"
-msgstr ""
+msgstr "+ WĘZEŁ WIDEO"
 
 #. ....
 msgctxt "#31090"
@@ -475,27 +480,27 @@ msgstr "USUŃ ŚCIEŻKĘ - UKRYJ ELEMENT Z MENU GŁÓWNEGO"
 
 msgctxt "#31097"
 msgid "Access to collection"
-msgstr ""
+msgstr "Dostęp do kolekcji"
 
 msgctxt "#31098"
 msgid "Seasons and episodes"
-msgstr ""
+msgstr "Sezony i odcinki"
 
 msgctxt "#31099"
 msgid "Music videos"
-msgstr ""
+msgstr "Teledyski"
 
 msgctxt "#31100"
 msgid "Albums and tracks"
-msgstr ""
+msgstr "Albumy i utwory"
 
 msgctxt "#31101"
 msgid "Watch tv"
-msgstr ""
+msgstr "Oglądaj telewizję"
 
 msgctxt "#31102"
 msgid "Executables and emulators"
-msgstr ""
+msgstr "Programy i emulatory"
 
 msgctxt "#31103"
 msgid "Highlights to remember"
@@ -503,31 +508,31 @@ msgstr ""
 
 msgctxt "#31104"
 msgid "Forecast for up to 10 DAYS"
-msgstr ""
+msgstr "Prognoza 10 dniowa"
 
 msgctxt "#31105"
 msgid "My favourites items"
-msgstr ""
+msgstr "Moje ulubione"
 
 msgctxt "#31106"
 msgid "Favourite item"
-msgstr ""
+msgstr "Ulubiony"
 
 msgctxt "#31107"
 msgid "Playlist"
-msgstr ""
+msgstr "Lista odtwarzania"
 
 msgctxt "#31108"
 msgid "Add-on"
-msgstr ""
+msgstr "Wtyczka"
 
 msgctxt "#31109"
 msgid "Shutdown"
-msgstr ""
+msgstr "Zamknięcie programu"
 
 msgctxt "#31110"
 msgid "CD, DVD, Bluray"
-msgstr ""
+msgstr "CD, DVD, BD"
 
 msgctxt "#31111"
 msgid "DISC ART (IF AVAILABLE)"
@@ -535,19 +540,19 @@ msgstr ""
 
 msgctxt "#31112"
 msgid "PLOT ALWAYS VISIBLE"
-msgstr ""
+msgstr "ZARYS FABUŁY ZAWSZE WIDOCZNY"
 
 msgctxt "#31113"
 msgid "BIOGRAPHY ALWAYS VISIBLE"
-msgstr ""
+msgstr "BIOGRAFIA ZAWSZE WIDOCZNA"
 
 msgctxt "#31114"
 msgid "BANNER (IF AVAILABLE)"
-msgstr ""
+msgstr "BANER (JEŚLI DOSTĘPNY)"
 
 msgctxt "#31115"
 msgid "VIDEO NODE"
-msgstr ""
+msgstr "WĘZEŁ WIDEO"
 
 #. ....
 msgctxt "#31200"
@@ -576,7 +581,7 @@ msgstr "USUŃ ELEMENT - USUŃ ELEMENT KTÓRY UTWORZYŁEŚ"
 
 msgctxt "#31206"
 msgid "* Use image with dimensions 1920 x 188 pixels in PNG format"
-msgstr ""
+msgstr "Użyj obrazów o rozdzielczości 1920 x 188 pikseli w formacie PNG"
 
 msgctxt "#31207"
 msgid "CUSTOMIZE MAIN MENU"
@@ -612,11 +617,11 @@ msgstr "WYŁĄCZ/REORGANIZUJ"
 
 msgctxt "#31215"
 msgid "Page"
-msgstr ""
+msgstr "Strona"
 
 msgctxt "#31216"
 msgid "THUMBNAIL SET PLAYLIST"
-msgstr "MINIATURY W PLAYLISCIE"
+msgstr "MINIATURY W LIŚCIE ODTWARZANIA"
 
 msgctxt "#31217"
 msgid "CHANGE BACKDROP - ONE IMAGE"
@@ -660,7 +665,7 @@ msgstr "OGÓLNE INFORMACJE"
 
 msgctxt "#31227"
 msgid "INFORMATIONS BAR"
-msgstr ""
+msgstr "PASEK INFORMACJI"
 
 msgctxt "#31228"
 msgid "SMART SUBMENU"
@@ -709,7 +714,7 @@ msgstr ""
 
 msgctxt "#31243"
 msgid "SYSTEM MENU (MENU 'S')"
-msgstr ""
+msgstr "MENU SYSTEM"
 
 msgctxt "#31244"
 msgid "MENU 'S'"
@@ -717,6 +722,18 @@ msgstr ""
 
 msgctxt "#31245"
 msgid "KEEP BACKGROUND'S ASPECT"
+msgstr ""
+
+msgctxt "#31246"
+msgid "SHOW WIDGETS FOR:"
+msgstr "POKAZUJ WIDŻETY DLA:"
+
+msgctxt "#31247"
+msgid "CLEARART:"
+msgstr ""
+
+msgctxt "#31248"
+msgid "CLEARLOGO"
 msgstr ""
 
 #. ....
@@ -733,7 +750,7 @@ msgid ""
 "Icons for weather.[CR]Background images based on weather "
 "conditions.[CR][CR]The complete download can take a little depending on your"
 " connection speed."
-msgstr ""
+msgstr "Z zainstalowanym dodatkiem EXTRAPACK dostajesz:[CR]Motywy.[CR]Style tematów.[CR]Ikony gatunków wideo i muzyki.[CR]Fanarty gatunków muzyki i wideo.[CR]Animowane ikony pogody.[CR]Tła oparte o warunki pogodowe.[CR][CR]Pobieranie całości może zająć nieco czasu, w zależności od jakości połączenia."
 
 msgctxt "#31255"
 msgid "New theme has been set"
@@ -756,7 +773,7 @@ msgid ""
 "and I would suggest using the program FastStone Photo Resize to obtain good "
 "quality images and low size.[CR]If wish you can also use images with "
 "1980x1080 pixels/72dpi, in format jpg."
-msgstr ""
+msgstr "1. Utwórz katalog o dowolnej nazwie, na przykład MÓJ MOTYW.[CR][CR]2. Wewnątrz tego folderu utwórz katalogi:[CR]addons, aplaylist, autumn, concerts, disc, favourites, games, livetv, movies, music, mymenu, pictures, settings, shutdown, spring, summer, tvshows, vplaylist, winter[CR][CR]3. Wstaw do każdego z tych katalogów wybrane przez siebie obrazy, możesz wstawić dowolną ich ilość do każdego z folderów.[CR][CR]4. Po zakończeniu tworzenia motywu, wprowadź ścieżkę do głównego katalogu stworzonego motywu.[CR][CR]Domyślnie skóra ACE używa obrazów w formacie JPG, rozmiarze 1280x720 pikseli i rozdzielczości 72dpi.[CR]Jednakże dopuszczalne jest używanie obrazów w formacie JPG, rozmiarze 1980x1080 pikseli i rozdzielczości 72dpi."
 
 #. ....
 msgctxt "#31260"
@@ -833,7 +850,7 @@ msgstr "STANDARD"
 
 msgctxt "#31278"
 msgid "PERSONALIZE THE BOXES FOR YOUR COLLECTION"
-msgstr "PERSONALIZUJ PUDEŁKA DLA TWOJEGO ZBIORU"
+msgstr "PERSONALIZUJ PUDEŁKA SWOJEJ KOLEKCJI"
 
 msgctxt "#31279"
 msgid "CHANGE COLORS OR THE MEDIA LABEL, BUILD YOUR OWN CASE."
@@ -1069,7 +1086,7 @@ msgstr "KANAŁ"
 
 msgctxt "#31334"
 msgid "ROOT FOLDER COLLECTION"
-msgstr "ZBIÓR FOLDERÓW ROOT"
+msgstr "GŁÓWNY KATALOG KOLEKCJI"
 
 msgctxt "#31335"
 msgid "RELOAD SKIN"
@@ -1077,7 +1094,7 @@ msgstr "PRZEŁADUJ SKÓRĘ"
 
 msgctxt "#31336"
 msgid "PREMIERED"
-msgstr ""
+msgstr "PREMIERA"
 
 msgctxt "#31337"
 msgid "YEARS OF ACTIVITY"
@@ -1093,7 +1110,7 @@ msgstr "SAMOUCZEK"
 
 msgctxt "#31340"
 msgid "TRACKS"
-msgstr "ŚCIEŻKI"
+msgstr "UTWORY"
 
 msgctxt "#31341"
 msgid "GUI MODE"
@@ -1121,7 +1138,7 @@ msgstr "NOTES"
 
 msgctxt "#31347"
 msgid "Next Episode"
-msgstr ""
+msgstr "Następny odcinek"
 
 msgctxt "#31448"
 msgid "TV Shows at this day"
@@ -1233,7 +1250,7 @@ msgstr "ZARZĄDZAJ PROFILAMI"
 
 msgctxt "#31375"
 msgid "General settings"
-msgstr ""
+msgstr "Ustawienia ogólne"
 
 msgctxt "#31376"
 msgid "A HIGH DEFINITION MEDIA ENVIROMENT"
@@ -1270,7 +1287,7 @@ msgstr "OGLĄDAJ TWÓJ ULUBIONY SERIAL"
 
 msgctxt "#31383"
 msgid "LIVE TV RECEPTION.[CR]TUNE AND RECORD A TV SHOW."
-msgstr "ODBIÓR TELEWIZJI NA ŻYWO.[CR]USTAW I NAGRYWAJ AUDYCJE TELEWIZYJNE."
+msgstr "ODBIÓR TELEWIZJI.[CR]USTAW I NAGRYWAJ AUDYCJE TELEWIZYJNE."
 
 msgctxt "#31384"
 msgid "ORGANIZE YOUR PICTURES"
@@ -1374,7 +1391,7 @@ msgstr "KOLORY"
 
 msgctxt "#31405"
 msgid "CHANGING SKIN TONE"
-msgstr "ZMIENIANIE ODCIENIA SKÓRY"
+msgstr "ZMIANA ODCIENIA SKÓRY"
 
 msgctxt "#31406"
 msgid "MEDIA INFO"
@@ -1382,7 +1399,7 @@ msgstr "MEDIA INFO"
 
 msgctxt "#31407"
 msgid "COLLECTION"
-msgstr "ZBIÓR"
+msgstr "KOLEKCJA"
 
 msgctxt "#31408"
 msgid "ART"
@@ -1454,7 +1471,7 @@ msgstr "PERSONALIZUJ"
 
 msgctxt "#31425"
 msgid "Restoring settings..."
-msgstr ""
+msgstr "Przywracanie ustawień..."
 
 msgctxt "#31426"
 msgid "Activated item"
@@ -1498,7 +1515,7 @@ msgstr "WTYCZKA WYMAGANA"
 
 msgctxt "#31436"
 msgid "SMART SHORTCUTS"
-msgstr "INTELIGENTNE SKRÓTY"
+msgstr "SKRÓTY"
 
 msgctxt "#31437"
 msgid "ROOT"
@@ -1518,11 +1535,11 @@ msgstr "WŁĄCZ TV TUNES"
 
 msgctxt "#31441"
 msgid "GET ARTWORK"
-msgstr "POBIERZ ARTWORK"
+msgstr "POBIERZ GRAFIKĘ"
 
 msgctxt "#31442"
 msgid "GET ARTWORK ARTIST/ALBUM"
-msgstr ""
+msgstr "POBIERZ GRAFIKĘ ARTYSTA/ALBUM"
 
 msgctxt "#31443"
 msgid "SKIN ACE"
@@ -1530,19 +1547,19 @@ msgstr "SKÓRKA ACE"
 
 msgctxt "#31444"
 msgid "COLORS FOR THE TITLES AND PANELS"
-msgstr ""
+msgstr "KOLORY TYTUŁÓW I PANELI"
 
 msgctxt "#31445"
 msgid "Settings"
-msgstr ""
+msgstr "Ustawienia"
 
 msgctxt "#31446"
 msgid "HIDE THE THUMBNAILS BORDERS"
-msgstr ""
+msgstr "UKRYJ OBRAMOWANIE MINIATUR"
 
 msgctxt "#31447"
 msgid "SHOW BUTTON FOR RESET SKIN (TEMPORARY)"
-msgstr ""
+msgstr "POKAŻ PRZYCISK RESETOWANIA SKÓRY (TYMCZASOWO)"
 
 msgctxt "#31449"
 msgid "SOLO MODE"
@@ -1550,11 +1567,11 @@ msgstr ""
 
 msgctxt "#31450"
 msgid "RESTORE SETTINGS"
-msgstr ""
+msgstr "PRZYWRÓĆ USTAWIENIA"
 
 msgctxt "#31451"
 msgid "ALWAYS USE AFTER A SKIN UPDATE"
-msgstr ""
+msgstr "ZAWSZE UŻYWAJ PO AKTUALIZACJI SKÓRY"
 
 msgctxt "#31452"
 msgid ""
@@ -1572,7 +1589,7 @@ msgstr ""
 
 msgctxt "#31455"
 msgid "TRAILERS - SET SCRIPT"
-msgstr ""
+msgstr "ZWIASTUNY - USTAW SKRYPT"
 
 #. ....
 msgctxt "#31456"
@@ -1665,7 +1682,7 @@ msgstr "STYL EXTRA MINIATUR"
 
 msgctxt "#31478"
 msgid "CHANGING VIEW"
-msgstr "ZMIENIANIE WIDOKU"
+msgstr "ZMIANA WIDOKU"
 
 msgctxt "#31479"
 msgid "(DE)ACTIVATE VIEWS"
@@ -1689,7 +1706,7 @@ msgstr "AUTO UKRYWANIE"
 
 msgctxt "#31484"
 msgid "AUDIO LANGUAGES"
-msgstr ""
+msgstr "JĘZYKI ŚCIEŻKI DŹWIĘKOWEJ"
 
 msgctxt "#31485"
 msgid "'WATCHED' LABEL"
@@ -1837,7 +1854,7 @@ msgstr "ALTERNATYWA"
 
 msgctxt "#31521"
 msgid "WRITTEN"
-msgstr ""
+msgstr "SCENARIUSZ"
 
 msgctxt "#31522"
 msgid "DURATION"
@@ -1881,11 +1898,11 @@ msgstr "AKTYWNE ODTWARZANIE LISTY PRZY STARCIE SKÓRY"
 
 msgctxt "#31532"
 msgid "CHOOSE PLAYLIST"
-msgstr ""
+msgstr "WYBIERZ LISTĘ ODTWARZANIA"
 
 msgctxt "#31533"
-msgid "DARK BASE"
-msgstr "CIEMNA BAZA"
+msgid "FLAGS BAR - DARK STYLE"
+msgstr "PASEK FLAG - STYL MROCZNY"
 
 msgctxt "#31534"
 msgid "SHOW FIRST LETTERS DURING SCROLL"
@@ -1989,7 +2006,7 @@ msgstr "UKRYJ WYKONAWCA/ALBUM ART"
 
 msgctxt "#31559"
 msgid "SLIDESHOW"
-msgstr ""
+msgstr "POKAZ SLAJDÓW"
 
 msgctxt "#31560"
 msgid "FAVOURITES IMAGES"
@@ -2077,7 +2094,7 @@ msgstr "SĄ"
 
 msgctxt "#31581"
 msgid "VIEWTYPES AVAILABLE TO"
-msgstr "RODZAJE WYŚWIETLANIA DOSTĘPNE DLA"
+msgstr "WIDOKI DOSTĘPNE DLA"
 
 msgctxt "#31582"
 msgid "PLAYING NOW"
@@ -2097,7 +2114,7 @@ msgstr "W TRAKCIE"
 
 msgctxt "#31586"
 msgid "EMPTY COLLECTION!"
-msgstr "ZBIÓR PUSTY!"
+msgstr "PUSTA KOLEKCJA!"
 
 msgctxt "#31587"
 msgid "ADD CONTENT IN OPTION"
@@ -2125,11 +2142,11 @@ msgstr "NACIŚNIJ LEWO/PRAWO ABY PRZEWIJAĆ"
 
 msgctxt "#31594"
 msgid "CHOOSE A STYLE TO MAIN MENU"
-msgstr ""
+msgstr "WYBIERZ STYL GŁÓWNEGO MENU"
 
 msgctxt "#31595"
 msgid "CHOOSE A COLOR FOR THE PANELS"
-msgstr ""
+msgstr "WYBIERZ KOLOR PANELI"
 
 msgctxt "#31596"
 msgid ""
@@ -2157,11 +2174,11 @@ msgstr "NACIŚNIJ STRZAŁKĘ JEŻELI CHCESZ PRZERWAĆ, NACIŚNIJ ENTER JEŻELI C
 
 msgctxt "#31601"
 msgid "KIOSK MODE - PREVENTS MENU ACCESS IN COLLECTIONS"
-msgstr "TRYB KIOSK - ZAPOBIEGA DOSTĘPOWI DO MENU W ZBIORACH"
+msgstr "TRYB KIOSKU - BLOKADA DOSTĘPU DO MENU"
 
 msgctxt "#31602"
 msgid "INFO KIOSK MODE- PREVENTS INFORMATION PANEL ACCESS IN COLLECTIONS"
-msgstr "INFO KIOSK MODE- ZAPOBIEGA DOSTĘPOWI PANELU INFORMACY DO ZBIORÓW"
+msgstr "TRYB INFO KIOSKU - BLOKADA DOSTĘPU DO PANELU INFORMACJI"
 
 msgctxt "#31603"
 msgid ""
@@ -2183,7 +2200,7 @@ msgstr "CHCESZ INNY WIDOK DLA SKÓRY?"
 
 msgctxt "#31607"
 msgid "CHOOSE A NEW IMAGES THEME"
-msgstr ""
+msgstr "WYBIERZ NOWE OBRAZY DLA MOTYWU"
 
 msgctxt "#31608"
 msgid "ENABLE PVR FUNCTIONS"
@@ -2215,15 +2232,15 @@ msgstr ""
 
 msgctxt "#31615"
 msgid "MY STYLE"
-msgstr ""
+msgstr "MÓJ STYL"
 
 msgctxt "#31616"
 msgid "MODERN STYLE"
-msgstr ""
+msgstr "STYL NOWOCZESNY"
 
 msgctxt "#31617"
 msgid "MODERN"
-msgstr ""
+msgstr "NOWOCZESNY"
 
 msgctxt "#31624"
 msgid "PRESS ENTER TO SELECT"
@@ -2231,7 +2248,7 @@ msgstr "NACIŚNIJ ENTER ABY WYBRAĆ"
 
 msgctxt "#31625"
 msgid "AQUA"
-msgstr "AQUA"
+msgstr "WODA"
 
 msgctxt "#31626"
 msgid "BLOOD"
@@ -2403,7 +2420,7 @@ msgstr "WZNÓW ODTWARZANIE"
 
 msgctxt "#31666"
 msgid "Reproduced partially"
-msgstr ""
+msgstr "Częściowo odtworzone"
 
 msgctxt "#31667"
 msgid "MAIN MENU"
@@ -2471,39 +2488,43 @@ msgstr "ZAKOŃCZ TEN KROK I PRZEJDŹ DALEJ"
 
 msgctxt "#31685"
 msgid "COLOR PALETTE FOR THE PANELS"
-msgstr ""
+msgstr "PALETA KOLORÓW PANELI"
 
 msgctxt "#31686"
 msgid "COLOR PALETTE FOR TITLES"
-msgstr "PALETA KOLORÓW DLA NAGŁÓWKÓW"
+msgstr "PALETA KOLORÓW TYTUŁÓW"
 
 msgctxt "#31687"
 msgid "COLOR FOR PANELS"
-msgstr ""
+msgstr "KOLOR PANELI"
 
 msgctxt "#31688"
 msgid "COLOR FOR TITLES"
-msgstr "KOLOR NAGŁÓWKÓW"
+msgstr "KOLOR TYTUŁÓW"
 
 msgctxt "#31689"
 msgid "TRANSPARENCY FOR PANELS - INCLUDE MAIN MENU"
-msgstr ""
+msgstr "PRZEZROCZYSTOŚĆ PANELI - UWZGLĘDNIA MENU GŁÓWNE"
 
 msgctxt "#31690"
 msgid "PANEL TRANSPARENCY"
-msgstr ""
+msgstr "PRZEZROCZYSTOŚĆ PANELU"
 
 msgctxt "#31691"
 msgid "CURRENT TRANSPARENCY LEVEL"
-msgstr ""
+msgstr "AKTUALNY POZIOM PRZEZROCZYSTOŚCI"
 
 msgctxt "#31692"
 msgid "LYRICS IN KARAOKE MODE"
+msgstr "TEKST PIOSENKI W TRYBIE KARAOKE"
+
+msgctxt "#31693"
+msgid "OPTIMIZE SKIN FOR TOUCH-SCREEN (A HELP TAB WILL APPEAR)"
 msgstr ""
 
 msgctxt "#31694"
 msgid "MOST PLAYED"
-msgstr ""
+msgstr "NAJCZĘŚCIEJ ODTWARZANE"
 
 msgctxt "#31695"
 msgid "RELOAD"
@@ -2535,7 +2556,7 @@ msgstr "ZWIASTUN"
 
 msgctxt "#31702"
 msgid "GET ARTWORK"
-msgstr "POBIERZ ARTWORK"
+msgstr "POBIERZ GRAFIKĘ"
 
 msgctxt "#31703"
 msgid "STARRING"
@@ -2543,11 +2564,11 @@ msgstr "WYSTĘPUJĄ"
 
 msgctxt "#31704"
 msgid "SPECIAL THANKS"
-msgstr ""
+msgstr "SPECJALNE PODZIĘKOWANIA"
 
 msgctxt "#31705"
 msgid "TRANSLATORS"
-msgstr ""
+msgstr "TŁUMACZE"
 
 msgctxt "#31706"
 msgid "TRANSLATION AND SUPPORT COORDINATOR"
@@ -2555,11 +2576,11 @@ msgstr ""
 
 msgctxt "#31707"
 msgid "To all the people who collaborated to make this project possible."
-msgstr ""
+msgstr "Dla wszystkich ludzi, którzy współpracowali przy tym projekcie."
 
 msgctxt "#31708"
 msgid "SUPER SPECIAL THANKS (BY ALPHABETICAL ORDER)"
-msgstr ""
+msgstr "SUPER SPECJALNE PODZIĘKOWANIA (W PORZĄDKU ALFABETYCZNYM)"
 
 msgctxt "#31709"
 msgid "ALWAYS VISIBLE"
@@ -2643,7 +2664,7 @@ msgstr "OPCJE PRZEGLĄDANIA"
 
 msgctxt "#31729"
 msgid "SHOW PAUSE WORD"
-msgstr ""
+msgstr "POKAZUJ INFORMACJĘ O PAUZIE"
 
 msgctxt "#31730"
 msgid "SHOW POSTER/CLEARART"
@@ -2715,7 +2736,7 @@ msgstr "SZUKAJ"
 
 msgctxt "#31747"
 msgid "UPDATE LIBRARY"
-msgstr ""
+msgstr "AKTUALIZUJ BIBLIOTEKĘ"
 
 msgctxt "#31748"
 msgid "THEME IN USE"
@@ -2727,11 +2748,11 @@ msgstr "STYL W UŻYCIU"
 
 msgctxt "#31750"
 msgid "COLOR IN USE TO THE PANELS"
-msgstr ""
+msgstr "KOLORY PANELI"
 
 msgctxt "#31751"
 msgid "COLOR IN USE FOR TITLES"
-msgstr "KOLOR W UŻYCIU PRZEZ NAGŁÓWKI"
+msgstr "KOLOR TYTUŁÓW"
 
 msgctxt "#31752"
 msgid "Skin status"
@@ -2779,7 +2800,7 @@ msgstr "USUŃ GRUPĘ"
 
 msgctxt "#31763"
 msgid "CHANNEL"
-msgstr ""
+msgstr "KANAŁ"
 
 msgctxt "#31764"
 msgid "TELETEXT"
@@ -2839,11 +2860,11 @@ msgstr "IMPORTUJ GRY"
 
 msgctxt "#31778"
 msgid "ADD ROM COLLECTION"
-msgstr "DODAJ ZBIÓR ROM"
+msgstr "DODAJ KOLEKCJE ROM"
 
 msgctxt "#31779"
 msgid "EDIT ROM COLLECTION"
-msgstr "EDYTUJ ZBIÓR ROM"
+msgstr "EDYTUJ KOLEKCJĘ ROM"
 
 msgctxt "#31780"
 msgid "EDIT OFFLINE SCRAPERS"
@@ -2867,7 +2888,7 @@ msgstr "USUŃ GRĘ"
 
 msgctxt "#31785"
 msgid "DELETE ROM COLLECTIONS"
-msgstr "USUŃ ZBIÓR ROM"
+msgstr "USUŃ KOLEKCJE ROM"
 
 msgctxt "#31786"
 msgid "CLEAN DATABASE"
@@ -2957,7 +2978,7 @@ msgstr "ŚCIANA"
 #. 54, 55, 56
 msgctxt "#31806"
 msgid "WALL 3D"
-msgstr ""
+msgstr "ŚCIANA 3D"
 
 #. 551
 msgctxt "#31807"
@@ -3057,7 +3078,7 @@ msgstr ""
 
 msgctxt "#31828"
 msgid "RIGHT LIST"
-msgstr ""
+msgstr "LISTA PRAWOSTRONNA"
 
 #. ....
 msgctxt "#31840"
@@ -3198,11 +3219,11 @@ msgstr "USTAWIENIA POGODY"
 
 msgctxt "#31874"
 msgid "Possibility of rain"
-msgstr ""
+msgstr "Możliwe opady deszczu"
 
 msgctxt "#31875"
 msgid "Season"
-msgstr ""
+msgstr "Sezon"
 
 #. ....
 msgctxt "#31880"
@@ -3231,7 +3252,7 @@ msgstr "POBIERZ FILMOGRAFIE WYKONAWCY"
 
 msgctxt "#31886"
 msgid "PRESS LEFT/RIGHT TO CHANGE RATING"
-msgstr "NACIŚNIJ W LEWO/PRAWO ABY ZMIENIĆ RATING"
+msgstr "NACIŚNIJ W LEWO/PRAWO ABY ZMIENIĆ OCENĘ"
 
 msgctxt "#31887"
 msgid "PRESS ENTER TO CONFIRM"
@@ -3287,7 +3308,7 @@ msgstr "MOTYW LOSOWYCH OBRAZÓW"
 
 msgctxt "#31900"
 msgid "EXTRAPACK NECESSARY"
-msgstr ""
+msgstr "WYMAGANY EXTRAPACK"
 
 msgctxt "#31901"
 msgid "USE EXTERNAL PACKAGE IMAGES (USER DEFINED)"
@@ -3303,17 +3324,17 @@ msgstr "NACIŚNIJ PRAWO ABY PRZEGLĄDAĆ"
 
 msgctxt "#31904"
 msgid "MODERN IMAGES THEME"
-msgstr ""
+msgstr "MOTYW NOWOCZESNY"
 
 msgctxt "#31905"
 msgid ""
 "A new theme is loaded each time you start skin, your skin will never be the "
 "same"
-msgstr ""
+msgstr "Nowy motyw ładowany przy każdy uruchomieniu, twoja skóra nigdy nie będzie identyczna."
 
 msgctxt "#31906"
 msgid "DIRECTOR'S MOVIES"
-msgstr ""
+msgstr "WERSJE REŻYSERSKIE"
 
 msgctxt "#31907"
 msgid "FULLSCREEN"
@@ -3376,7 +3397,7 @@ msgstr "NACIŚNIJ GO ABY PRZEJŚĆ DO TRYBU LISTY"
 
 msgctxt "#31921"
 msgid "CLICK GO TO ADD-ON ROM COLLECTION BROWSER"
-msgstr "KLIKNIJ GO ABY DODAĆ PRZEGLĄDARKĘ ZBIORU ROM"
+msgstr "KLIKNIJ GO ABY DODAĆ PRZEGLĄDARKĘ KOLEKCJI ROM"
 
 msgctxt "#31922"
 msgid "CLICK GO TO ADD-ON ROM ADVANCED LAUNCHER"
@@ -3436,7 +3457,7 @@ msgstr "WYGLĄD: POSTER"
 
 msgctxt "#31936"
 msgid "CHANGE RATING"
-msgstr "ZMIEŃ RATING"
+msgstr "ZMIEŃ OCENĘ"
 
 msgctxt "#31937"
 msgid "VIDEO"
@@ -3532,23 +3553,23 @@ msgstr "POKAŻ WIZUALIZACJE AUDIO I WIDEO JAKO TŁO (GLOBALNIE)"
 
 msgctxt "#31960"
 msgid "CONTINUE LISTENING"
-msgstr ""
+msgstr "KONTYNUUJ ODTWARZANIE"
 
 msgctxt "#31961"
 msgid "minutes"
-msgstr ""
+msgstr "minut"
 
 msgctxt "#31962"
 msgid "NOT AVAILABLE TO VERTICAL MENU"
-msgstr ""
+msgstr "NIEDOSTĘPNE DLA MENU WERTYKALNEGO"
 
 msgctxt "#31963"
 msgid "VERTICAL MENU"
-msgstr ""
+msgstr "MENU WERTYKALNE"
 
 msgctxt "#31964"
 msgid "HORIZONTAL MENU"
-msgstr ""
+msgstr "MENU HORYZONTALNE"
 
 msgctxt "#31965"
 msgid "Images that mix digital art and futurist style."
@@ -3558,7 +3579,7 @@ msgctxt "#31966"
 msgid ""
 "Images that transmit a visual look fresh and modern. The default theme of "
 "Ace."
-msgstr ""
+msgstr "Obrazy o świeżym i nowoczesnym wyglądzie. Domyślny temat skóry ACE."
 
 msgctxt "#31967"
 msgid ""
@@ -3573,7 +3594,7 @@ msgstr ""
 #. ....
 msgctxt "#31970"
 msgid "Ace - Extrapack"
-msgstr ""
+msgstr "Ace - dodatek Extrapack"
 
 msgctxt "#31971"
 msgid "Update finished"
@@ -3594,15 +3615,15 @@ msgstr "Pobieranie:"
 #. ....
 msgctxt "#31980"
 msgid "NEXT EPISODE"
-msgstr ""
+msgstr "NASTĘPNY ODCINEK"
 
 msgctxt "#31981"
 msgid "EPISODES AIRED TODAY"
-msgstr ""
+msgstr "ODCINKI EMITOWANE DZISIAJ"
 
 msgctxt "#31982"
 msgid "SHOW PROGRESS PANEL"
-msgstr ""
+msgstr "POKAZUJ PASEK POSTĘPU"
 
 msgctxt "#31983"
 msgid "Rating"
@@ -3611,3 +3632,7 @@ msgstr "Ocena"
 msgctxt "#31985"
 msgid "CREDITS"
 msgstr ""
+
+msgctxt "#31986"
+msgid "SHOW NOW PLAYING PANEL"
+msgstr "POKAŻ PANEL TERAZ ODTWARZANE"
