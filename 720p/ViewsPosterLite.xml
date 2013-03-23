@@ -52,7 +52,7 @@
             <!-- Movies and TV shows -->
             <control type="textbox">
               <posx>0</posx>
-              <posy>33</posy>
+              <posy>34</posy>
               <width>881</width>
               <height>100</height>
               <font>Font_26</font>
@@ -61,7 +61,7 @@
             </control>
             <control type="fadelabel">
               <posx>0</posx>
-              <posy>12</posy>
+              <posy>14</posy>
               <width>878</width>
               <height>50</height>
               <scrollout>false</scrollout>

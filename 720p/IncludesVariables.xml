@@ -2048,6 +2048,7 @@
 	<value condition="Container.Content(seasons) + [SubString(skin.string(seasonsfanart),seasons) + IsEmpty(Control.GetLabel(5023))]">$INFO[ListItem.Art(fanart)]</value>
 	<value condition="Container.Content(episodes) + [SubString(skin.string(episodesfanart),fanart) | SubString(skin.string(episodesfanart),extra) + IsEmpty(Control.GetLabel(5022))]">$INFO[ListItem.Art(fanart)]</value>
 	<value condition="Container.Content(episodes) + [SubString(skin.string(episodesfanart),seasons) + IsEmpty(Control.GetLabel(5024))]">$INFO[ListItem.Art(fanart)]</value>
+	<value condition="Container.Content(sets)">$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 
 	<variable name="value_videofanart">
@@ -3128,6 +3129,13 @@
 	<value condition="SubString(skin.string(panel_seconds),5)"> - $LOCALIZE[31469]</value>
 	</variable>
 
+	<variable name="value_videostarrating">
+	<value condition="!IntegerGreaterThan(ListItem.Rating,2)">rating1.png</value>
+	<value condition="IntegerGreaterThan(ListItem.Rating,2) + !IntegerGreaterThan(ListItem.Rating,4)">rating2.png</value>
+	<value condition="IntegerGreaterThan(ListItem.Rating,4) + !IntegerGreaterThan(ListItem.Rating,7)">rating3.png</value>
+	<value condition="IntegerGreaterThan(ListItem.Rating,7) + !IntegerGreaterThan(ListItem.Rating,9)">rating4.png</value>
+	<value condition="IntegerGreaterThan(ListItem.Rating,9)">rating5.png</value>
+	</variable>
 	<!-- PosterLite -->
 	<variable name="PLIconVar">
 	<value condition="Container.Content(movies)">$INFO[Skin.String(PosterLiteMovies)]</value>

@@ -150,6 +150,14 @@
 	<include>FlagSeparator</include>
 	<visible>!IsEmpty(ListItem.Mpaa)</visible>
 	</control>
+	<control type="image"><!-- Video Star -->
+	<width>100</width>
+	<height>40</height>
+	<aspectratio>keep</aspectratio>
+	<colordiffuse>FFFFA500</colordiffuse>
+	<texture fallback="rating0.png">$VAR[value_videostarrating]</texture>
+	<visible>!IsEmpty(ListItem.Title)</visible>
+	</control>
 	<control type="label"><!-- Rating -->
 	<include>FlagLabel</include>
 	<label>$INFO[ListItem.Rating]</label>
