@@ -569,7 +569,7 @@
 	<label>$VAR[value_plot]</label>
 	<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 	<include>Animation_Fade</include>
-	<visible>![Control.HasFocus(562) | IsEmpty(Control.GetLabel(1018)) + IsEmpty(Control.GetLabel(1019))] + Window.IsActive(25) | ![Control.HasFocus(562) | IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>![Control.HasFocus(562) | IsEmpty(Control.GetLabel(1018)) + IsEmpty(Window(2003).Property(AudioLanguage.1)) + IsEmpty(Window(2003).Property(SubtitleLanguage.1))] + Window.IsActive(25) | ![Control.HasFocus(562) | IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	</control>
 	<control type="textbox"><!-- Video e audio para quando nao tem logo -->
 	<posx>20</posx>
@@ -580,7 +580,7 @@
 	<label>$VAR[value_plot]</label>
 	<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 	<include>Animation_Fade</include>
-	<visible>[!Control.HasFocus(562) + [IsEmpty(Control.GetLabel(1018)) + IsEmpty(Control.GetLabel(1019))]] + Window.IsActive(25) | [!Control.HasFocus(562) + IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>[!Control.HasFocus(562) + [IsEmpty(Control.GetLabel(1018)) + IsEmpty(Window(2003).Property(AudioLanguage.1)) + IsEmpty(Window(2003).Property(SubtitleLanguage.1))]] + Window.IsActive(25) | [!Control.HasFocus(562) + IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	</control>
 	<control type="textbox"><!-- Video e audio para quando tem logo + foco no painel -->
 	<posx>20</posx>
@@ -591,7 +591,7 @@
 	<label>$VAR[value_plot]</label>
 	<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 	<include>Animation_Fade</include>
-	<visible>[Control.HasFocus(562) + ![IsEmpty(Control.GetLabel(1018)) + IsEmpty(Control.GetLabel(1019))]] + Window.IsActive(25) | [Control.HasFocus(562) + !IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>[Control.HasFocus(562) + ![IsEmpty(Control.GetLabel(1018)) + IsEmpty(Window(2003).Property(AudioLanguage.1)) + IsEmpty(Window(2003).Property(SubtitleLanguage.1))]] + Window.IsActive(25) | [Control.HasFocus(562) + !IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	</control>
 	<control type="textbox"><!-- Video e audio para quando nao tem logo + foco no painel -->
 	<posx>20</posx>
@@ -602,7 +602,7 @@
 	<label>$VAR[value_plot]</label>
 	<autoscroll delay="15000" time="2000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 	<include>Animation_Fade</include>
-	<visible>[Control.HasFocus(562) + [IsEmpty(Control.GetLabel(1018)) + IsEmpty(Control.GetLabel(1019))]] + Window.IsActive(25) | [Control.HasFocus(562) + IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>[Control.HasFocus(562) + [IsEmpty(Control.GetLabel(1018)) + IsEmpty(Window(2003).Property(AudioLanguage.1)) + IsEmpty(Window(2003).Property(SubtitleLanguage.1))]] + Window.IsActive(25) | [Control.HasFocus(562) + IsEmpty(Control.GetLabel(1017))] + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	</control>
 	<control type="textbox"><!-- Addons -->
 	<posx>20</posx>
@@ -628,11 +628,11 @@
 	</control>
 	<control type="image">
 	<posx>10</posx>
-	<posy>573</posy>
-	<height>1</height>
+	<posy>573</posy>	
 	<width>620</width>
+	<height>1</height>
 	<texture>line.png</texture>
-	<visible>![IsEmpty(Control.GetLabel(1018)) + IsEmpty(Control.GetLabel(1019))] + Window.IsActive(25) | !IsEmpty(Control.GetLabel(1017)) + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>![IsEmpty(Control.GetLabel(1018)) + IsEmpty(Window(2003).Property(AudioLanguage.1)) + IsEmpty(Window(2003).Property(SubtitleLanguage.1))] + Window.IsActive(25) | !IsEmpty(Control.GetLabel(1017)) + [Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	</control>
 	<control type="image" id="1017"><!-- Logo Musicas -->
 	<posx>450</posx>
@@ -644,28 +644,29 @@
 	<fadetime>250</fadetime>
 	<aspectratio align="center" aligny="bottom">keep</aspectratio>
 	</control>
-	<control type="image" id="1018">
-	<posx>30</posx>
-	<posy>588</posy>
-	<width>160</width>
-	<height>62</height>
-	<align>right</align>
-	<aligny>center</aligny>
-	<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-	<fadetime>250</fadetime>
-	<aspectratio align="center" aligny="bottom">keep</aspectratio>
-	</control>
-	<control type="image" id="1019">
+	<control type="image" id="1018"><!-- clearlogo e clearart -->
 	<posx>450</posx>
 	<posy>578</posy>
 	<width>200</width>
 	<height>72</height>
 	<align>right</align>
 	<aligny>center</aligny>
-	<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+	<texture background="true">$VAR[value_logoandclearart]</texture>
 	<fadetime>250</fadetime>
 	<aspectratio align="center" aligny="bottom">keep</aspectratio>
 	</control>
+	<control type="group"><!-- Linguagem de audio e legendas -->
+	<posx>20</posx>
+	<posy>585</posy>
+    <include>AudioandSub</include>
+	</control>
+	<control type="image">
+	<posx>0</posx>
+	<posy>573</posy>
+	<width>640</width>
+	<height>77</height>
+	<texture>gradient_small.png</texture>
+	</control>	
 	</control>
 	<control type="group">
 	<animation effect="slide" start="700,0" end="0,0" time="400" easing="inout" tween="cubic">Visible</animation>

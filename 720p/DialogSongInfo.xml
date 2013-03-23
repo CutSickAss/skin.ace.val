@@ -263,7 +263,7 @@
 	<posy>650</posy>
 	<width>1280</width>
 	<height>70</height>
-	<colordiffuse>FFFFF0F0</colordiffuse>
+	<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
 	<texture>shadow_mask.png</texture>
 	</control>
 	<control type="grouplist"><!-- Etiquetas -->
@@ -299,7 +299,7 @@
 	<aligny>center</aligny>
 	<label>31939</label>
 	<font>Font_15</font>
-	<textcolor>FFFFFAF0</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
 	</control>
 	<control type="label">
@@ -310,7 +310,7 @@
 	<align>left</align>
 	<aligny>center</aligny>
 	<font>Font_15</font>
-	<textcolor>80FFFAF0</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)) + !IsEmpty(Window.Property(ArtistSlideshowRunning))</visible>
 	</control>
 	<control type="label"><!-- Discografia -->
@@ -321,7 +321,7 @@
 	<aligny>center</aligny>
 	<label>$LOCALIZE[21888]: $INFO[Container(50).NumItems] $LOCALIZE[31040]</label>
 	<font>Font_15</font>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
 	<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
@@ -334,7 +334,7 @@
 	<align>left</align>
 	<aligny>center</aligny>
 	<font>Font_12</font>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<label>$LOCALIZE[31941]: 50 $LOCALIZE[31040]</label>
 	<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>
 	</control>
@@ -346,7 +346,7 @@
 	<aligny>center</aligny>
 	<label>$INFO[Container(50).ListItem.Label]</label>
 	<font>Font_23</font>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
 	<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumName))</visible>

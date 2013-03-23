@@ -3,7 +3,6 @@
 	<window id="2003">
 	<defaultcontrol always="true">149</defaultcontrol>
 	<onload>ClearProperty(script.metadata.actors.isactive)</onload>
-	<onload condition="System.HasAddon(script.videolanguage) + [Container.Content(movies) | Container.Content(episodes)]">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
 	<controls>
 	<control type="group"><!-- default group -->
 	<include>Animation_Window</include>
@@ -306,6 +305,15 @@
 	<height>2</height>
 	<width>987</width>
 	<texture>separator.png</texture>
+	<visible>!Container.Content(episodes)</visible>
+	</control>
+	<control type="image">
+	<posx>0</posx>
+	<posy>310</posy>
+	<height>2</height>
+	<width>719</width>
+	<texture>separator.png</texture>
+	<visible>Container.Content(episodes)</visible>
 	</control>
 	<control type="textbox"><!-- Plot -->
 	<posx>30</posx>
@@ -317,6 +325,19 @@
 	<label>$INFO[ListItem.Plot]</label>
 	<textcolor>FFFFFAF0</textcolor>
 	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
+	<visible>!Container.Content(episodes)</visible>
+	</control>
+	<control type="textbox"><!-- Plot -->
+	<posx>30</posx>
+	<posy>320</posy>
+	<width>660</width>
+	<height>175</height>
+	<align>justify</align>
+	<font>Font_16</font>
+	<label>$INFO[ListItem.Plot]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<autoscroll delay="15000" time="5000" repeat="15000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
+	<visible>Container.Content(episodes)</visible>
 	</control>
 	<control type="image">
 	<posx>720</posx>
@@ -324,6 +345,7 @@
 	<width>2</width>
 	<height>230</height>
 	<texture>separator_v.png</texture>
+	<visible>!Container.Content(episodes)</visible>
 	</control>
 	<control type="image"><!-- Logo -->
 	<posx>755</posx>
@@ -332,6 +354,7 @@
 	<width>190</width>
 	<aspectratio>keep</aspectratio>
 	<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+	<visible>!Container.Content(episodes)</visible>
 	</control>
 	<control type="image"><!-- ClearArt -->
 	<posx>755</posx>
@@ -340,15 +363,17 @@
 	<width>190</width>
 	<aspectratio align="bottom">keep</aspectratio>
 	<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+	<visible>!Container.Content(episodes)</visible>
 	</control>
 	<control type="image"><!-- Thumb -->
 	<posx>987</posx>
 	<posy>82</posy>
-	<width>563</width>
+	<width>523</width>
 	<height>382</height>
 	<aspectratio align="left">keep</aspectratio>
 	<texture background="true">$VAR[value_poster]</texture>
 	<bordertexture border="-2">black.png</bordertexture>
+	<animation effect="slide" end="-266,0" time="0" condition="Container.Content(episodes)">Conditional</animation>
 	</control>
 	<control type="image">
 	<posx>986</posx>
@@ -356,6 +381,7 @@
 	<width>2</width>
 	<height>384</height>
 	<texture>separator_v.png</texture>
+	<animation effect="slide" end="-266,0" time="0" condition="Container.Content(episodes)">Conditional</animation>
 	</control>
 	<control type="image">
 	<posx>0</posx>
@@ -369,7 +395,7 @@
 	<posy>650</posy>
 	<width>1280</width>
 	<height>70</height>
-	<colordiffuse>FFFFF0F0</colordiffuse>
+	<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
 	<texture>shadow_mask.png</texture>
 	</control>
 	<control type="image">
@@ -475,7 +501,7 @@
 	<aligny>center</aligny>
 	<font>Font_15</font>
 	<label>31703</label>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	</control>
 	<control type="label">
 	<posx>315</posx>
@@ -485,7 +511,7 @@
 	<aligny>center</aligny>
 	<label>$INFO[Container(50).ListItem.Label]</label>
 	<font>Font_23</font>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
 	</control>

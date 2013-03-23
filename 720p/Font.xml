@@ -54,6 +54,11 @@
 	<linespacing>1.2</linespacing>
 	</font>
 	<font>
+	<name>Font_21</name><!-- nao usar uppercase -->
+	<filename>aller_ace.ttf</filename>
+	<size>21</size>
+	</font>
+	<font>
 	<name>Font_22</name>
 	<filename>aller_ace_CAPS.ttf</filename>
 	<size>22</size>

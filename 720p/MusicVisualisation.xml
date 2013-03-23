@@ -31,7 +31,7 @@
 	</control>
 	<control type="multiimage" id="5033"><!-- Extra Fanart Song -->
 	<include>WindowBG</include>
-	<imagepath background="true">$INFO[MusicPlayer.Path]extrafanart/</imagepath>
+	<imagepath background="true">$INFO[Player.FolderPath,,../extrafanart/]</imagepath>
 	<visible>[StringCompare(skin.string(vis_bg),fanart) | StringCompare(skin.string(vis_bg),fanartmix)] + SubString(skin.string(musicfanart),extra)</visible>
 	</control>
 	<control type="multiimage"><!-- Artist SlideShow -->

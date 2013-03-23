@@ -150,17 +150,22 @@
 	<onclick>Skin.ToggleSetting(nohomecdart)</onclick>
 	<selected>!Skin.HasSetting(nohomecdart)</selected>
 	</control>
-	<control type="radiobutton" id="1048"><!-- Fundos animados -->
+	<control type="radiobutton" id="1048"><!-- Data e Clima -->
+	<label>31250</label>
+	<onclick>Skin.ToggleSetting(nodateandweather)</onclick>
+	<selected>!Skin.HasSetting(nodateandweather)</selected>
+	</control>
+	<control type="radiobutton" id="1049"><!-- Fundos animados -->
 	<label>31463</label>
 	<onclick>Skin.ToggleSetting(animation_homepanscan)</onclick>
 	<selected>Skin.HasSetting(animation_homepanscan)</selected>
 	</control>
-	<control type="radiobutton" id="1049"><!-- Trailer em tela cheia -->
+	<control type="radiobutton" id="1050"><!-- Trailer em tela cheia -->
 	<label>31574</label>
 	<onclick>Skin.ToggleSetting(homefullscreentrailer)</onclick>
 	<selected>Skin.HasSetting(homefullscreentrailer)</selected>
 	</control>
-	<control type="button" id="1050"><!-- Ir para customizacao do menu -->
+	<control type="button" id="1051"><!-- Ir para customizacao do menu -->
 	<label>31207</label>
 	<onclick>ActivateWindow(6000)</onclick>
 	<onclick>Skin.SetBool(custommode)</onclick>
@@ -1954,7 +1959,7 @@
 	<onclick>SetFocus(9002)</onclick>
 	</item>
 	<item id="18"><!-- Menu Principal Widgets-->
-	<label>Widgets</label>
+	<label>31249</label>
 	<icon>-</icon>
 	<onclick>SetFocus(9006)</onclick>
 	</item>

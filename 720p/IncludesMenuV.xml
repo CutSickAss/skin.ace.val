@@ -505,7 +505,7 @@
 	<include>WeatherPopup</include>
 	<include>HomeVRSS</include>
 	<include>BackMenuV</include><!-- Fundo Menu -->
-	<include>Date</include>
+	<include condition="!Skin.HasSetting(nodateandweather)">Date</include>
 	<control type="button" id="5200"><!-- Somente para tela de toque -->
 	<posx>0</posx>
 	<posy>690</posy>

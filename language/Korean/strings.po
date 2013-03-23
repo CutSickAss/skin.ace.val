@@ -50,6 +50,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 #  <piodio@gmail.com>, 2013.
 #   <piodio@gmail.com>, 2012-2013.
 msgid ""
@@ -57,7 +58,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-21 14:08+0000\n"
+"PO-Revision-Date: 2013-03-22 13:54+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/skin-ace/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -671,6 +672,10 @@ msgctxt "#31229"
 msgid "MY MENU"
 msgstr "나의 메뉴"
 
+msgctxt "#31230"
+msgid "Playlist"
+msgstr ""
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -726,10 +731,18 @@ msgstr "위젯 표시:"
 
 msgctxt "#31247"
 msgid "CLEARART:"
-msgstr ""
+msgstr "클리어아트"
 
 msgctxt "#31248"
 msgid "CLEARLOGO"
+msgstr "클리어로고"
+
+msgctxt "#31249"
+msgid "WIDGETS"
+msgstr ""
+
+msgctxt "#31250"
+msgid "SHOW DATE AND WEATHER"
 msgstr ""
 
 #. ....
@@ -1898,7 +1911,7 @@ msgstr "재생목록 선택"
 
 msgctxt "#31533"
 msgid "FLAGS BAR - DARK STYLE"
-msgstr ""
+msgstr "플래그 막대 - 어두운 스타일"
 
 msgctxt "#31534"
 msgid "SHOW FIRST LETTERS DURING SCROLL"
@@ -2516,7 +2529,7 @@ msgstr "노래방 모드 가사"
 
 msgctxt "#31693"
 msgid "OPTIMIZE SKIN FOR TOUCH-SCREEN (A HELP TAB WILL APPEAR)"
-msgstr ""
+msgstr "터치 스크린에 최적화된 스킨 (도움말 탭 표시)"
 
 msgctxt "#31694"
 msgid "MOST PLAYED"

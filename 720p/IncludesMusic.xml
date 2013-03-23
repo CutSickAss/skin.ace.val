@@ -145,7 +145,7 @@
 	<font>Font_20</font>
 	<textoffsetx>20</textoffsetx>
 	<textoffsety>13</textoffsety>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<label>$INFO[ListItem.Genre]</label>
 	<visible>!IsEmpty(ListItem.Genre)</visible>

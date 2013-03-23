@@ -369,7 +369,7 @@
 	<posy>650</posy>
 	<width>1280</width>
 	<height>70</height>
-	<colordiffuse>FFFFF0F0</colordiffuse>
+	<colordiffuse>$VAR[value_flagsbar]</colordiffuse>
 	<texture>shadow_mask.png</texture>
 	</control>
 	<control type="image">
@@ -544,7 +544,7 @@
 	<aligny>center</aligny>
 	<font>Font_15</font>
 	<label>31703</label>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	</control>
 	<control type="label">
 	<posx>315</posx>
@@ -554,7 +554,7 @@
 	<aligny>center</aligny>
 	<label>$INFO[Container(150).ListItem.Label]$INFO[Container(150).ListItem.Label2, $LOCALIZE[20347] ]</label>
 	<font>Font_23</font>
-	<textcolor>FF101010</textcolor>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
 	</control>

@@ -226,14 +226,6 @@
 	<onload>Skin.SetString(vis_bg,slideshow)</onload>
 	<onload>Skin.SetString(shutdownbutton,shutdown)</onload>
 	<onload>Skin.SetString(games_link,rcb)</onload>
-	<onload>Skin.SetString(PLInfoPanelMovies,infopanelmanual)</onload>
-	<onload>Skin.SetString(PLInfoPanelTVShows,infopanelmanual)</onload>
-	<onload>Skin.SetString(PosterLiteMovies,poster)</onload>
-	<onload>Skin.SetString(PosterLiteTVShows,poster)</onload>
-	<onload>Skin.SetString(PosterLiteGenres,poster)</onload>
-	<onload>Skin.SetString(PosterLiteSets,poster)</onload>
-	<onload>Skin.SetString(PosterLitePlusMovies,noicon)</onload>
-	<onload>Skin.SetString(PosterLitePlusTVShows,banner)</onload>
 	<onload>AlarmClock(replace,ReplaceWindow(0),0:01,true)</onload>
 	<onload>Skin.SetBool(welcomedone5)</onload>
 	</include>
@@ -624,9 +616,9 @@
 	<texture flipx="true">shadow_mask_v.png</texture>
 	<aspectratio align="left" aligny="top">stretch</aspectratio>
 	<colordiffuse>60FFFAF0</colordiffuse>
-	<visible>!Skin.HasSetting(submode)</visible>
+	<visible>![Skin.HasSetting(submode) | Skin.HasSetting(nodateandweather)]</visible>
 	</control>
-	<include>DateH</include>
+	<include condition="!Skin.HasSetting(nodateandweather)">DateH</include>
 	<control type="image">
 	<posx>0</posx>
 	<posy>595</posy>
@@ -1024,6 +1016,77 @@
 	<include>Animation_Fade</include>
 	</control>
 	</include>
+	
+	<!-- #########################################################################  Etiquetas de audio e subtitulo ######################################################################### -->
+	<include name="AudioandSub">
+	<control type="image">
+	<posx>0</posx>
+	<posy>0</posy>
+	<height>150</height>
+	<width>1280</width>
+	<texture flipy="true">shadow_mask.png</texture>
+	<colordiffuse>85000000</colordiffuse>
+	<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(55)">Conditional</animation>
+	<animation effect="slide" end="-360,-15" time="0" condition="Control.IsVisible(57)">Conditional</animation>
+	<animation effect="slide" end="-30,-15" time="0" condition="Control.IsVisible(59)">Conditional</animation>
+	<visible>Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59)</visible>
+	</control>
+	<control type="image">
+	<posx>-15</posx>
+	<posy>0</posy>
+	<width>2</width>
+	<height>60</height>
+	<texture>line_v.png</texture>
+	<colordiffuse>FFFFFAF0</colordiffuse>
+	<visible>![Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59)]</visible>
+	</control>
+	<control type="image"><!-- Audio -->
+	<posx>0</posx>
+	<posy>0</posy>
+	<width>25</width>
+	<height>25</height>
+	<texture>osd_audio.png</texture>
+	<colordiffuse>FFFFFAF0</colordiffuse>
+	<aspectratio>keep</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<visible>!IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
+	</control>
+	<control type="label">
+	<posx>40</posx>
+	<posy>2</posy>
+	<width>400</width>
+	<height>25</height>
+	<font>Font_16</font>
+	<label>$INFO[Window(2003).Property(AudioLanguage.1)]$INFO[Window(2003).Property(AudioLanguage.2), / ]$INFO[Window(2003).Property(AudioLanguage.3), / ]$INFO[Window(2003).Property(AudioLanguage.4), / ]$INFO[Window(2003).Property(AudioLanguage.5), / ]$INFO[Window(2003).Property(AudioLanguage.6), / ]$INFO[Window(2003).Property(AudioLanguage.7), / ]$INFO[Window(2003).Property(AudioLanguage.8), / ]$INFO[Window(2003).Property(AudioLanguage.9), / ]$INFO[Window(2003).Property(AudioLanguage.10), / ]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	<scrollout>false</scrollout>
+	</control>
+	<control type="image"><!-- Legenda -->
+	<posx>0</posx>
+	<posy>30</posy>
+	<width>25</width>
+	<height>25</height>
+	<texture>osd_subtitle.png</texture>
+	<colordiffuse>FFFFFAF0</colordiffuse>
+	<aspectratio>keep</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(2003).Property(AudioLanguage.1))">Conditional</animation>
+	<visible>!IsEmpty(Window(2003).Property(SubtitleLanguage.1))</visible>
+	</control>
+	<control type="label">
+	<posx>40</posx>
+	<posy>32</posy>
+	<width>400</width>
+	<height>25</height>
+	<font>Font_16</font>
+	<label>$INFO[Window(2003).Property(SubtitleLanguage.1)]$INFO[Window(2003).Property(SubtitleLanguage.2), / ]$INFO[Window(2003).Property(SubtitleLanguage.3), / ]$INFO[Window(2003).Property(SubtitleLanguage.4), / ]$INFO[Window(2003).Property(SubtitleLanguage.5), / ]$INFO[Window(2003).Property(SubtitleLanguage.6), / ]$INFO[Window(2003).Property(SubtitleLanguage.7), / ]$INFO[Window(2003).Property(SubtitleLanguage.8), / ]$INFO[Window(2003).Property(SubtitleLanguage.9), / ]$INFO[Window(2003).Property(SubtitleLanguage.10), / ]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	<scrollout>false</scrollout>
+	<animation effect="slide" end="0,-28" time="0" tween="sine" easing="out" condition="IsEmpty(Window(2003).Property(AudioLanguage.1))">Conditional</animation>
+	</control>
+	</include>	
 
 	<!-- ######################################################################### Submenu Vertical List ######################################################################### -->
 	<include name="SubmenuVList">
@@ -2059,13 +2122,27 @@
 	<include>Animation_Fade</include>
 	</include>
 	
-	<!-- #########################################################################  PAra tela de toque ######################################################################### -->
+	<!-- #########################################################################  Para tela de toque ######################################################################### -->
 	<include name="TouchScreen">
-	<control type="button" id="5201">
-	<posx>1220</posx>
+	<control type="button" id="5202">
+	<posx>0</posx>
 	<posy>0</posy>
-	<width>60</width>
-	<height>60</height>
+	<width>40</width>
+	<height>40</height>
+	<onclick>Back</onclick>
+	<align>left</align>
+	<texturefocus>touchbutton_back.png</texturefocus>
+	<texturenofocus>touchbutton_back.png</texturenofocus>
+	<colordiffuse>FFFFFAF0</colordiffuse>
+	<include>Animation_Fade</include>
+	<animation effect="fade" start="100" end="75" time="0" condition="!Control.Hasfocus(5202)">conditional</animation>
+	<visible>Skin.HasSetting(touchscreen) + !Control.HasFocus(9920)</visible>
+	</control>
+	<control type="button" id="5201">
+	<posx>1240</posx>
+	<posy>0</posy>
+	<width>40</width>
+	<height>40</height>
 	<onclick>SetFocus(9900)</onclick>
 	<align>left</align>
 	<texturefocus>touchbutton.png</texturefocus>

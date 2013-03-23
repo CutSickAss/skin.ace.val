@@ -50,6 +50,8 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
 # Marco Vargas <mpvargas32@gmail.com>, 2013.
 #   <nelsonamen@gmail.com>, 2013.
 # nelson amen <nelsonamen@gmail.com>, 2013.
@@ -60,7 +62,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-21 14:08+0000\n"
+"PO-Revision-Date: 2013-03-22 19:34+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/skin-ace/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -674,6 +676,10 @@ msgctxt "#31229"
 msgid "MY MENU"
 msgstr "MEU MENU"
 
+msgctxt "#31230"
+msgid "Playlist"
+msgstr "Playlist"
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -725,15 +731,23 @@ msgstr "MANTER ASPECTO DAS IMAGENS DE FUNDO"
 
 msgctxt "#31246"
 msgid "SHOW WIDGETS FOR:"
-msgstr ""
+msgstr "MOSTRAR WIDGETS PARA:"
 
 msgctxt "#31247"
 msgid "CLEARART:"
-msgstr ""
+msgstr "CLEARART"
 
 msgctxt "#31248"
 msgid "CLEARLOGO"
-msgstr ""
+msgstr "CLEARLOGO"
+
+msgctxt "#31249"
+msgid "WIDGETS"
+msgstr "WIDGETS"
+
+msgctxt "#31250"
+msgid "SHOW DATE AND WEATHER"
+msgstr "EXIBIR DATA E CLIMA"
 
 #. ....
 msgctxt "#31253"
@@ -1901,7 +1915,7 @@ msgstr "ESCOLHER LISTA DE REPRODUÇÃO"
 
 msgctxt "#31533"
 msgid "FLAGS BAR - DARK STYLE"
-msgstr ""
+msgstr "BARRA DE ETIQUETAS - ESTILO ESCURO"
 
 msgctxt "#31534"
 msgid "SHOW FIRST LETTERS DURING SCROLL"
@@ -2519,7 +2533,7 @@ msgstr "LETRAS EM MODO KARAOKÊ"
 
 msgctxt "#31693"
 msgid "OPTIMIZE SKIN FOR TOUCH-SCREEN (A HELP TAB WILL APPEAR)"
-msgstr ""
+msgstr "OTIMIZAR SKIN PARA USO EM TELAS DE TOQUE (UMA ABA DE AUXÍLIO SERÁ EXIBIDA)"
 
 msgctxt "#31694"
 msgid "MOST PLAYED"
@@ -3634,4 +3648,4 @@ msgstr "CRÉDITOS"
 
 msgctxt "#31986"
 msgid "SHOW NOW PLAYING PANEL"
-msgstr ""
+msgstr "MOSTRAR PAINEL AGORA REPRODUZINDO"

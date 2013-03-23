@@ -509,7 +509,6 @@
 	</control>
 
 	<control type="group">
-	<include>Animation_Menu</include>
 	<visible>Control.IsVisible(57)</visible>
 	<control type="button" id="9916">
 	<include>InvisibleButton</include>

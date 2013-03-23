@@ -50,6 +50,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 # Tadej Novak <tadej@tano.si>, 2012.
 # Wanilton Campos <>, 2012.
 msgid ""
@@ -57,7 +58,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-21 14:08+0000\n"
+"PO-Revision-Date: 2013-03-22 13:54+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/skin-ace/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -671,6 +672,10 @@ msgctxt "#31229"
 msgid "MY MENU"
 msgstr "MOJ MENI"
 
+msgctxt "#31230"
+msgid "Playlist"
+msgstr ""
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -730,6 +735,14 @@ msgstr ""
 
 msgctxt "#31248"
 msgid "CLEARLOGO"
+msgstr ""
+
+msgctxt "#31249"
+msgid "WIDGETS"
+msgstr ""
+
+msgctxt "#31250"
+msgid "SHOW DATE AND WEATHER"
 msgstr ""
 
 #. ....

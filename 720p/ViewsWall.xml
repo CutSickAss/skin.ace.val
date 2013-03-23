@@ -38,36 +38,36 @@
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	</itemlayout>
-	<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(novideomediacase)" width="98" height="195"><!-- POSTER ESTOJO -->
+	<itemlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(novideomediacase)" width="116" height="184"><!-- POSTER ESTOJO -->
 	<control type="image">
 	<posx>4</posx>
-	<posy>14</posy>
-	<width>95</width>
-	<height>134</height>
+	<posy>18</posy>
+	<width>113</width>
+	<height>158</height>
 	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 	<aspectratio align="center">stretch</aspectratio>
 	</control>
 	<control type="image"><!-- Estojo -->
-	<posx>-5</posx>
+	<posx>-6</posx>
 	<posy>-5</posy>
-	<width>115</width>
-	<height>165</height>	
+	<width>135</width>
+	<height>197</height>	
 	<texture>$VAR[value_videocase0]</texture>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	</control>
 	<control type="image"><!-- Codec -->
-	<posx>39</posx>
+	<posx>45</posx>
 	<posy>-7</posy>
-	<width>30</width>
-	<height>30</height>
+	<width>34</width>
+	<height>34</height>
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
 	<texture>$VAR[value_videocodec0]</texture>
 	</control>
 	<control type="image">
-	<posx>76</posx>
-	<posy>13</posy>
+	<posx>91</posx>
+	<posy>18</posy>
 	<width>25</width>
 	<height>25</height>
 	<info>ListItem.Overlay</info>
@@ -103,54 +103,54 @@
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	</focusedlayout>
-	<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(novideomediacase)" width="98.5" height="195"><!-- POSTER ESTOJO -->
+	<focusedlayout condition="[Container.Content(movies) | Container.Content(musicvideos)] + !Skin.HasSetting(novideomediacase)" width="116" height="184"><!-- POSTER ESTOJO -->
 	<control type="image">
 	<posx>4</posx>
-	<posy>14</posy>
-	<width>94</width>
-	<height>134</height>
+	<posy>18</posy>
+	<width>113</width>
+	<height>158</height>
 	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 	<aspectratio align="center">stretch</aspectratio>
 	<animation type="Focus" reversible="false">
-	<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+	<effect type="zoom" center="auto" start="80" end="113" time="400" tween="back" easing="out" />
 	<effect type="fade" start="80" end="100" time="400" />
 	</animation>
 	</control>
 	<control type="image"><!-- Estojo -->
-	<posx>-5</posx>
+	<posx>-6</posx>
 	<posy>-5</posy>
-	<width>115</width>
-	<height>165</height>	
+	<width>135</width>
+	<height>197</height>	
 	<texture>$VAR[value_videocase0]</texture>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	<animation type="Focus" reversible="false">
-	<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
+	<effect type="zoom" center="auto" start="80" end="113" time="400" tween="back" easing="out" />
 	<effect type="fade" start="80" end="100" time="400" />
 	</animation>
 	</control>
 	<control type="image"><!-- Codec -->
-	<posx>39</posx>
+	<posx>45</posx>
 	<posy>-7</posy>
-	<width>30</width>
-	<height>30</height>
+	<width>34</width>
+	<height>34</height>
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
 	<texture>$VAR[value_videocodec0]</texture>
 	<animation type="Focus" reversible="false">
-	<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
+	<effect type="zoom" center="60,90" start="80" end="113" time="400" tween="back" easing="out" />
 	<effect type="fade" start="80" end="100" time="400" />
 	</animation>
 	</control>
 	<control type="image">
-	<posx>76</posx>
-	<posy>13</posy>
+	<posx>91</posx>
+	<posy>18</posy>
 	<width>25</width>
 	<height>25</height>
 	<info>ListItem.Overlay</info>
 	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<animation type="Focus" reversible="false">
-	<effect type="zoom" center="60,60" start="80" end="100" time="400" tween="back" easing="out" />
+	<effect type="zoom" center="70,70" start="80" end="113" time="400" tween="back" easing="out" />
 	<effect type="fade" start="80" end="100" time="400" />
 	</animation>
 	<visible>!Skin.HasSetting(nooverlays)</visible>

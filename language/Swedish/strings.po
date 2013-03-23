@@ -50,6 +50,8 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
 #  <christofer.berggren@gmail.com>, 2013.
 #   <christofer.berggren@gmail.com>, 2013.
 # Robin Björnsvik <r.bjornsvik@gmail.com>, 2013.
@@ -58,8 +60,8 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-21 14:08+0000\n"
-"Last-Translator: Wanilton Campos <>\n"
+"PO-Revision-Date: 2013-03-22 17:11+0000\n"
+"Last-Translator: thedarer <r.bjornsvik@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/projects/p/skin-ace/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -672,6 +674,10 @@ msgctxt "#31229"
 msgid "MY MENU"
 msgstr "MIN MENY"
 
+msgctxt "#31230"
+msgid "Playlist"
+msgstr "Spellista"
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -732,6 +738,14 @@ msgstr "CLEARART"
 msgctxt "#31248"
 msgid "CLEARLOGO"
 msgstr "CLEARLOGO"
+
+msgctxt "#31249"
+msgid "WIDGETS"
+msgstr "WIDGETS"
+
+msgctxt "#31250"
+msgid "SHOW DATE AND WEATHER"
+msgstr "VISA DATUM OCH VÄDER"
 
 #. ....
 msgctxt "#31253"
@@ -2517,7 +2531,7 @@ msgstr "TEXTER I KARAOKELÄGE"
 
 msgctxt "#31693"
 msgid "OPTIMIZE SKIN FOR TOUCH-SCREEN (A HELP TAB WILL APPEAR)"
-msgstr ""
+msgstr "OPTIMERA SKALET FÖR TOUCH-SKÄRM (EN HJÄLP FLIK KOMMER ATT VISAS)"
 
 msgctxt "#31694"
 msgid "MOST PLAYED"

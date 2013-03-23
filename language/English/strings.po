@@ -50,12 +50,13 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-21 14:08+0000\n"
+"PO-Revision-Date: 2013-03-22 13:54+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: English (http://www.transifex.com/projects/p/Ace/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -669,6 +670,10 @@ msgctxt "#31229"
 msgid "MY MENU"
 msgstr "MY MENU"
 
+msgctxt "#31230"
+msgid "Playlist"
+msgstr "Playlist"
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -729,6 +734,14 @@ msgstr "CLEARART"
 msgctxt "#31248"
 msgid "CLEARLOGO"
 msgstr "CLEARLOGO"
+
+msgctxt "#31249"
+msgid "WIDGETS"
+msgstr "WIDGETS"
+
+msgctxt "#31250"
+msgid "SHOW DATE AND WEATHER"
+msgstr "SHOW DATE AND WEATHER"
 
 #. ....
 msgctxt "#31253"

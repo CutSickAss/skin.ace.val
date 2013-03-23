@@ -4,7 +4,9 @@
 	<defaultcontrol always="true">51</defaultcontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<onunload condition="Skin.HasSetting(trailers)">Skin.Reset(trailers)</onunload>
+	<onunload condition="Skin.HasSetting(playlists)">Skin.Reset(playlists)</onunload>
 	<onload condition="Skin.HasSetting(ontvtunes) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
+	<onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,backend=True)</onload> 
 	<allowoverlay>no</allowoverlay>
 	<views>51,52,53,54,55,56,57,58,59,60,61,62,63,528</views>
 	<controls>
@@ -95,8 +97,37 @@
 	<height>150</height>
 	<width>1280</width>
 	<texture flipy="true">shadow_mask.png</texture>
-	<colordiffuse>75000000</colordiffuse>
+	<colordiffuse>85000000</colordiffuse>
 	</control>
+	<control type="group">
+	<visible>!IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
+	<control type="label"><!-- Title -->
+	<posx>30</posx>
+	<posy>8</posy>
+	<width>750</width>
+	<height>40</height>
+	<font>Font_40</font>
+	<label>$VAR[value_videotitle]</label>
+	<textcolor>FFFFFAF0</textcolor>
+	<scroll>true</scroll>
+	<scrollout>false</scrollout>
+	<visible>!IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
+	</control>
+	<control type="label">
+	<posx>30</posx>
+	<posy>50</posy>
+	<width>750</width>
+	<height>25</height>
+	<font>Font_19</font>
+	<label>$INFO[ListItem.Tagline]</label>
+	<textcolor>90FFFFFF</textcolor>
+	<scroll>true</scroll>
+	<scrollout>false</scrollout>
+	<visible>!IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
+	</control>
+	</control>
+	<control type="group">
+	<visible>IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
 	<control type="label"><!-- Title -->
 	<posx>30</posx>
 	<posy>8</posy>
@@ -107,6 +138,7 @@
 	<textcolor>FFFFFAF0</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
+	<visible>IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
 	</control>
 	<control type="label">
 	<posx>30</posx>
@@ -118,9 +150,24 @@
 	<textcolor>90FFFFFF</textcolor>
 	<scroll>true</scroll>
 	<scrollout>false</scrollout>
+	<visible>IsEmpty(Window(2003).Property(AudioLanguage.1))</visible>
 	</control>
 	</control>
-	<control type="group"><!-- Grupo ocultar flags ou fanart -->
+	</control>	
+	<control type="group"><!-- Linguagem de audio e legendas -->
+	<animation effect="slide" time="400" start="0,-250" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
+	<animation effect="slide" time="400" start="0,-250" end="0,0" easing="inout" tween="cubic">Visible</animation>
+	<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">WindowClose</animation>
+	<animation effect="slide" time="400" start="0,0" end="0,-250" easing="inout" tween="cubic">Hidden</animation>
+	<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(55)">Conditional</animation>
+	<animation effect="slide" end="-450,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
+	<animation effect="slide" end="-780,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
+	<visible>![SubString(ListItem.Label,..) | IsEmpty(Window(2003).Property(AudioLanguage.1)) + IsEmpty(Window(2003).Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Window.IsActive(2003)]</visible>
+	<posx>810</posx>
+	<posy>15</posy>
+    <include>AudioandSub</include>
+	</control>
+    <control type="group"><!-- Grupo ocultar flags ou fanart -->
 	<include>Animation_HiddenView</include>
 
 	<control type="group">
@@ -140,7 +187,7 @@
 	<posx>20</posx>
 	<posy>651</posy>
 	<orientation>horizontal</orientation>
-	<itemgap>19</itemgap>
+	<itemgap>27</itemgap>
 	<control type="image"><!-- Mpaa -->
 	<include>FlagImage</include>
 	<texture>$VAR[value_mpaa]</texture>
@@ -193,15 +240,6 @@
 	<control type="image">
 	<include>FlagSeparator</include>
 	<visible>!IsEmpty(ListItem.VideoAspect)</visible>
-	</control>
-	<control type="label"><!-- Audio Language -->
-	<include>FlagLabel</include>
-	<label>$INFO[ListItem.AudioLanguage]</label>
-	<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
-	</control>
-	<control type="image">
-	<include>FlagSeparator</include>
-	<visible>!IsEmpty(ListItem.AudioLanguage)</visible>
 	</control>
 	<control type="image"><!-- Audio Codec -->
 	<include>FlagImage</include>

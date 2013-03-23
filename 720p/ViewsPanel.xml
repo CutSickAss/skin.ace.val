@@ -87,7 +87,7 @@
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	</itemlayout>
-	<itemlayout condition="Window.IsActive(25) + [Container.Content(movies) | Container.Content(tvshows] + Skin.HasSetting(noviewpanelposter)" width="120" height="160"><!-- ARTE -->
+	<itemlayout condition="Window.IsActive(25) + [Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(noviewpanelposter)" width="120" height="160"><!-- ARTE -->
 	<control type="image"><!-- clearlogo e clearart -->
 	<posx>8</posx>
 	<posy>6</posy>

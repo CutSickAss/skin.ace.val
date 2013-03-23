@@ -50,6 +50,8 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
 #  <cutsickass@yahoo.com>, 2013.
 #   <cutsickass@yahoo.com>, 2012-2013.
 msgid ""
@@ -57,7 +59,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-21 14:08+0000\n"
+"PO-Revision-Date: 2013-03-22 17:09+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/skin-ace/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -671,6 +673,10 @@ msgctxt "#31229"
 msgid "MY MENU"
 msgstr "ΜΕΝΟΥ ΜΟΥ"
 
+msgctxt "#31230"
+msgid "Playlist"
+msgstr ""
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -731,6 +737,14 @@ msgstr "CLEARART"
 msgctxt "#31248"
 msgid "CLEARLOGO"
 msgstr "ΛΟΓΟΤΥΠΟ"
+
+msgctxt "#31249"
+msgid "WIDGETS"
+msgstr "WIDGET"
+
+msgctxt "#31250"
+msgid "SHOW DATE AND WEATHER"
+msgstr "ΠΡΟΒΟΛΗ ΗΜ/ΝΙΑΣ ΚΑΙ ΚΑΙΡΟΥ"
 
 #. ....
 msgctxt "#31253"
@@ -2516,7 +2530,7 @@ msgstr "ΣΤΙΧΟΙ ΣΕ ΛΕΙΤΟΥΡΓΙΑ ΚΑΡΑΟΚΕ"
 
 msgctxt "#31693"
 msgid "OPTIMIZE SKIN FOR TOUCH-SCREEN (A HELP TAB WILL APPEAR)"
-msgstr ""
+msgstr "ΛΕΙΤΟΥΡΓΙΑ ΚΕΛΥΦΟΥΣ ΓΙΑ ΟΘΟΝΕΣ ΑΦΗΣ (ΘΑ ΕΜΦΑΝΙΣΤΕΙ ΕΝΑ ΠΑΡΑΘΥΡΟ ΒΟΗΘΕΙΑΣ)"
 
 msgctxt "#31694"
 msgid "MOST PLAYED"
@@ -3636,4 +3650,3 @@ msgstr "ΕΜΦΑΝΙΣΗ ΠΑΝΕΛ 'ΤΩΡΑ ΕΚΤΕΛΕΙΤΑΙ'"
 msgctxt "#31999"
 msgid "POSTERLITE"
 msgstr "ΑΦΙΣΕΣ LITE"
-
