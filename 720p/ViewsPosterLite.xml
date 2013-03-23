@@ -12,35 +12,35 @@
   <include name="ViewPosterLite">
     <control type="group">
       <visible>Control.IsVisible(528)</visible>
-    <control type="group">
-	<visible>!StringCompare(Control.GetLabel(528421),infopaneloff)</visible>
-      <control type="image">
-        <posx>0</posx>
-        <posy>506</posy>
-        <width>1280</width>
-        <height>30</height>
-        <texture background="true">shadow_h.png</texture>
-        <colordiffuse>C3FFFFFF</colordiffuse>
-        <include>Animation_Fade</include>
+      <control type="group">
+        <visible>!StringCompare(Control.GetLabel(528421),infopaneloff)</visible>
+        <control type="image">
+          <posx>0</posx>
+          <posy>506</posy>
+          <width>1280</width>
+          <height>30</height>
+          <texture background="true">shadow_h.png</texture>
+          <colordiffuse>C3FFFFFF</colordiffuse>
+          <include>Animation_Fade</include>
+        </control>
+        <control type="image">
+          <posx>0</posx>
+          <posy>650</posy>
+          <width>1280</width>
+          <height>30</height>
+          <texture background="true" flipy="true">shadow_h.png</texture>
+          <colordiffuse>C3FFFFFF</colordiffuse>
+        </control>
+        <control type="image">
+          <posx>0</posx>
+          <posy>535</posy>
+          <width>1280</width>
+          <height>115</height>
+          <texture background="true">darkgrey.png</texture>
+          <colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+          <animation effect="fade" end="85" condition="true">Conditional</animation>
+        </control>
       </control>
-      <control type="image">
-        <posx>0</posx>
-        <posy>650</posy>
-        <width>1280</width>
-        <height>30</height>
-        <texture background="true" flipy="true">shadow_h.png</texture>
-        <colordiffuse>C3FFFFFF</colordiffuse>
-      </control>
-      <control type="image">
-        <posx>0</posx>
-        <posy>535</posy>
-        <width>1280</width>
-        <height>115</height>
-        <texture background="true">darkgrey.png</texture>
-        <colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-        <animation effect="fade" end="85" condition="true">Conditional</animation>
-      </control>
-	  </control>
       <control type="group">
         <posx>371</posx>
         <posy>520</posy>
@@ -227,8 +227,8 @@
     <posy>-41</posy>
     <width>1920</width>
     <height>1080</height>
-    <onup condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)">9916</onup>
-    <onup condition="!Stringcompare(Control.GetLabel(528421),infopanelmanual)">9900</onup>
+    <onup condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)+!StringCompare(ListItem.Label,..)">9916</onup>
+    <onup condition="[!Stringcompare(Control.GetLabel(528421),infopanelmanual)|StringCompare(ListItem.Label,..)]">9900</onup>
     <ondown>80</ondown>
     <orientation>horizontal</orientation>
     <focusposition>2</focusposition>
@@ -332,7 +332,7 @@
         <animation effect="zoom" center="-150,684" start="44" end="100" time="480" tween="cubic" easing="inout" reversible="false" condition="Container.OnPrevious">Focus</animation>
         <animation type="Unfocus" reversible="false" condition="Container.OnPrevious">
           <effect type="zoom" center="-31,684" start="100" end="44" time="240" tween="cubic" easing="inout" />
-		  <effect type="slide" end="-180" />
+          <effect type="slide" end="-180" />
         </animation>
         <include>PLCharacter</include>
       </control>
@@ -362,7 +362,6 @@
       </control>
     </focusedlayout>
   </include>
-
   <include name="plfixed">
     <control type="fixedlist" id="528">
       <include>contents528list</include>
@@ -373,7 +372,6 @@
       <include>contents528list</include>
     </control>
   </include>
-
   <include name="PLPoster">
     <animation effect="slide" time="200" start="0,0" end="0,-20" tween="cubic" easing="out" condition="!Skin.HasSetting(novideomediacase)">Conditional</animation>
     <control type="image">
@@ -381,7 +379,7 @@
       <height>455</height>
       <fadetime>FanartCrossFadeTime</fadetime>
       <texture background="true" fallback="DefaultVideoPoster.png">$VAR[value_poster]</texture>
-	  <bordertexture background="true" border="-2">black.png</bordertexture>
+      <bordertexture background="true" border="-2">black.png</bordertexture>
       <aspectratio>stretch</aspectratio>
     </control>
     <control type="image">
@@ -390,30 +388,30 @@
       <height>455</height>
       <fadetime>FanartCrossFadeTime</fadetime>
       <texture background="true" flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png">$VAR[value_poster]</texture>
-	  <bordertexture background="true" flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
+      <bordertexture background="true" flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>
       <aspectratio aligny="top">stretch</aspectratio>
-	  <visible>Skin.HasSetting(novideomediacase)</visible>
+      <visible>Skin.HasSetting(novideomediacase)</visible>
     </control>
     <control type="image">
-	  <posx>-30</posx>
-	  <posy>-73</posy>
+      <posx>-30</posx>
+      <posy>-73</posy>
       <width>375</width>
       <height>577</height>
       <fadetime>FanartCrossFadeTime</fadetime>
       <texture background="true">$VAR[value_videocase0]</texture>
       <aspectratio>stretch</aspectratio>
-	  <visible>!Skin.HasSetting(novideomediacase)</visible>
+      <visible>!Skin.HasSetting(novideomediacase)</visible>
     </control>
-	<control type="image">
-	  <posx>102</posx>
-	  <posy>-80</posy>
-	  <width>99</width>
-	  <height>99</height>
-	  <align>center</align>
-	  <aligny>center</aligny>
-	  <aspectratio>keep</aspectratio>
-	  <texture background="true">$VAR[value_videocodec]</texture>
-	  <visible>!Skin.HasSetting(novideomediacase)</visible>
+    <control type="image">
+      <posx>102</posx>
+      <posy>-80</posy>
+      <width>99</width>
+      <height>99</height>
+      <align>center</align>
+      <aligny>center</aligny>
+      <aspectratio>keep</aspectratio>
+      <texture background="true">$VAR[value_videocodec]</texture>
+      <visible>!Skin.HasSetting(novideomediacase)</visible>
     </control>
     <control type="image">
       <posx>257</posx>
@@ -446,7 +444,7 @@
       <fadetime>FanartCrossFadeTime</fadetime>
       <aspectratio aligny="bottom">stretch</aspectratio>
       <texture background="true">$VAR[PLLandscapeVar]</texture>
-	  <bordertexture background="true" border="-2">black.png</bordertexture>
+      <bordertexture background="true" border="-2">black.png</bordertexture>
     </control>
     <control type="image">
       <posx>9</posx>
@@ -457,16 +455,16 @@
       <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
       <visible>IsEmpty(ListItem.Art(landscape))</visible>
     </control>
-      <control type="image">
-        <posx>268</posx>
-        <posy>0</posy>
-        <width>50</width>
-        <height>50</height>
-        <aspectratio>keep</aspectratio>
-        <colordiffuse>$VAR[value_headercolor]</colordiffuse>
-        <texture background="true">$INFO[ListItem.Overlay]</texture>
-        <visible>!Skin.HasSetting(nooverlays)</visible>
-      </control>
+    <control type="image">
+      <posx>268</posx>
+      <posy>0</posy>
+      <width>50</width>
+      <height>50</height>
+      <aspectratio>keep</aspectratio>
+      <colordiffuse>$VAR[value_headercolor]</colordiffuse>
+      <texture background="true">$INFO[ListItem.Overlay]</texture>
+      <visible>!Skin.HasSetting(nooverlays)</visible>
+    </control>
   </include>
   <include name="PLLogo">
     <control type="textbox">
@@ -539,7 +537,7 @@
       <fadetime>FanartCrossFadeTime</fadetime>
       <aspectratio>stretch</aspectratio>
       <texture background="true">$VAR[PLBannerVar]</texture>
-	  <bordertexture background="true" border="-2">black.png</bordertexture>
+      <bordertexture background="true" border="-2">black.png</bordertexture>
       <visible>[!IsEmpty(ListItem.Art(banner))|!IsEmpty(ListItem.Art(tvshow.banner))]</visible>
     </control>
     <control type="image">
@@ -548,7 +546,7 @@
       <fadetime>FanartCrossFadeTime</fadetime>
       <aspectratio>scale</aspectratio>
       <texture background="true">$VAR[PLBannerVar]</texture>
-	  <bordertexture background="true" border="-2">black.png</bordertexture>
+      <bordertexture background="true" border="-2">black.png</bordertexture>
       <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(tvshow.banner))</visible>
     </control>
     <control type="image">

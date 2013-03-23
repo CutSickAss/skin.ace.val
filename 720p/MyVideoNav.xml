@@ -268,7 +268,7 @@
 	</control>
 	<control type="button" id="528194">
 	<include>InvisibleButton</include>
-	<visible>Stringcompare(Control.GetLabel(528421),infopanelauto)+![Container.OnNext|Container.OnPrevious]+!Control.IsVisible(80)</visible>
+	<visible>Stringcompare(Control.GetLabel(528421),infopanelauto)+![Container.OnNext|Container.OnPrevious]+!Control.IsVisible(80)+!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="button" id="528195">
 	<include>InvisibleButton</include>
