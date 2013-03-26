@@ -346,6 +346,7 @@
 	<label>31999</label>
 	<onfocus>Container.SetViewMode(528)</onfocus>
 	<onclick>SetFocus(528)</onclick>
+	<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(genres)</visible>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31999])</selected>
 	</control>
 	</control>
