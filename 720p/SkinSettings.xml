@@ -367,10 +367,8 @@
 	<height>100</height>
 	<texture flipx="true">arrow_settings.png</texture>
 	<colordiffuse>80FFFAF0</colordiffuse>
-	<animation type="Visible">
-	<effect type="fade" start="0" end="100" time="600" />
-	<effect type="slide" start="100,0" end="0,0" time="600" tween="back" easing="out" />
-	</animation>
+     <animation effect="slide" start="100,0" end="0,0" time="600" tween="back" easing="out" condition="true">Visible</animation>
+	<animation effect="fade" start="20" end="40" time="700" condition="true" pulse="true">Conditional</animation>
 	<visible>Control.HasFocus(403)</visible>
 	</control>
 	<control type="image">
@@ -380,10 +378,8 @@
 	<height>100</height>
 	<texture>arrow_settings.png</texture>
 	<colordiffuse>80FFFAF0</colordiffuse>
-	<animation type="Visible">
-	<effect type="fade" start="0" end="100" time="600" />
-	<effect type="slide" start="-100,0" end="0,0" time="600" tween="back" easing="out" />
-	</animation>
+     <animation effect="slide" start="-100,0" end="0,0" time="600" tween="back" easing="out" condition="true">Visible</animation>
+	<animation effect="fade" start="20" end="40" time="700" condition="true" pulse="true">Conditional</animation>
 	<visible>Control.HasFocus(403)</visible>
 	</control>
 	<control type="wraplist" id="403">
@@ -440,6 +436,11 @@
 	<visible>Container(403).HasFocus(6)</visible>
 	</control>
 	<control type="image">
+	<include>CaseSelectorDimensions</include>
+	<texture>$VAR[value_colorsetcase]</texture>
+	<visible>Container(403).HasFocus(7)</visible>
+	</control>
+	<control type="image">
 	<posx>392</posx>
 	<posy>-3</posy>
 	<width>45</width>
@@ -488,6 +489,11 @@
 	<include>CaseSelectorDimensions</include>
 	<texture>$VAR[value_colordvdcase]</texture>
 	<visible>Container(403).HasFocus(6)</visible>
+	</control>
+	<control type="image">
+	<include>CaseSelectorDimensions</include>
+	<texture>$VAR[value_colorsetcase]</texture>
+	<visible>Container(403).HasFocus(7)</visible>
 	</control>
 	<control type="image">
 	<posx>392</posx>
@@ -541,6 +547,13 @@
 	<icon>$VAR[value_codecdvd]</icon>
 	<onclick>Skin.SetString(custom_case,case_dvd)</onclick>
 	<onclick>Skin.SetString(custom_codec,codec_dvd)</onclick>
+	<onclick>SetFocus(165)</onclick>
+	</item>
+	<item id="7"><!-- set -->
+	<label>-</label>
+	<icon>$VAR[value_codecset]</icon>
+	<onclick>Skin.SetString(custom_case,case_set)</onclick>
+	<onclick>Skin.SetString(custom_codec,codec_set)</onclick>
 	<onclick>SetFocus(165)</onclick>
 	</item>
 	</content>
@@ -610,7 +623,7 @@
 	<colordiffuse>20FFFFFF</colordiffuse>
 	</control>
 	<control type="grouplist" id="150">
-	<posx>350</posx>
+	<posx>290</posx>
 	<posy>540</posy>
 	<width>1040</width>
 	<height>80</height>
@@ -681,6 +694,15 @@
 	<onclick>AlarmClock(casedone,SetFocus(403),0:01,true)</onclick>
 	<animation effect="fade" start="100" end="50" time="100" condition="![ControlGroup(150).HasFocus + ControlGroup(150).HasFocus(157)]">conditional</animation>
 	</control>
+	<control type="button" id="158">
+	<include>CodecSelectorDimensions</include>
+	<label>-</label>
+	<texturefocus>flags/source/set.png</texturefocus>
+	<texturenofocus>flags/source/set.png</texturenofocus>
+	<onclick>Skin.SetString($INFO[skin.string(custom_codec)],set)</onclick>
+	<onclick>AlarmClock(casedone,SetFocus(403),0:01,true)</onclick>
+	<animation effect="fade" start="100" end="50" time="100" condition="![ControlGroup(150).HasFocus + ControlGroup(150).HasFocus(158)]">conditional</animation>
+	</control>
 	</control>
 	<control type="group"><!-- Seletor de cores do estojo -->
 	<posx>240</posx>
@@ -717,7 +739,7 @@
 	<colordiffuse>20FFFFFF</colordiffuse>
 	</control>
 	<control type="grouplist" id="165">
-	<posx>80</posx>
+	<posx>68</posx>
 	<posy>155</posy>
 	<width>9100</width>
 	<height>30</height>
@@ -807,6 +829,7 @@
 	<include>ButtonColorDimensions</include>
 	<label>31626</label>
 	<colordiffuse>FFB20000</colordiffuse>
+	<onfocus>Skin.SetString(colorcasepreview,blood)</onfocus>
 	<onclick>Skin.SetString($INFO[skin.string(custom_case)],blood)</onclick>
 	<onclick>SetFocus(150)</onclick>
 	</control>

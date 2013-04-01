@@ -51,6 +51,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 #   <duke.junks@gmail.com>, 2012.
 # Wanilton Campos <>, 2012.
 msgid ""
@@ -58,7 +59,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-22 13:54+0000\n"
+"PO-Revision-Date: 2013-03-28 18:19+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/skin-ace/language/vi/)\n"
 "MIME-Version: 1.0\n"
@@ -426,7 +427,7 @@ msgstr ""
 
 msgctxt "#31085"
 msgid ""
-"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH, YOU HAVE UP TO 15 "
+"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH.[CR]YOU HAVE UP TO 12 "
 "ITEMS OF EACH TYPE TO ADD TO ANY SUBMENU."
 msgstr ""
 
@@ -772,16 +773,16 @@ msgstr "Kiểu mới đã được thiết lập"
 msgctxt "#31257"
 msgid ""
 "1. Create a root folder with any name, for example MY THEME.[CR][CR]2. "
-"Inside the root folder create 19 folders by these names:[CR]addons, "
+"Inside the root folder create 20 folders by these names:[CR]addons, "
 "aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, "
-"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vplaylist, "
-"winter.[CR][CR]3. Place within each of these folders the images you chose, "
-"MY THEME supports multiple files, you can include as many pictures as you "
-"want per folder.[CR][CR]4. After the theme ready enter the path of the "
-"root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720 JPG format "
-"and I would suggest using the program FastStone Photo Resize to obtain good "
-"quality images and low size.[CR]If wish you can also use images with "
-"1980x1080 pixels/72dpi, in format jpg."
+"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vnodes, "
+"vplaylist, winter.[CR][CR]3. Place within each of these folders the images "
+"you chose, MY THEME supports multiple files, you can include as many "
+"pictures as you want per folder.[CR][CR]4. After the theme ready enter the "
+"path of the root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720"
+" JPG format and I would suggest using the program FastStone Photo Resize to "
+"obtain good quality images and low size.[CR]If wish you can also use images "
+"with 1980x1080 pixels/72dpi, in format jpg."
 msgstr ""
 
 #. ....
@@ -877,15 +878,15 @@ msgstr "CHỌN MỘT HỘP VÀ NHẤN PHÍM ENTER ĐỂ ĐIỀU CHỈNH"
 
 msgctxt "#31282"
 msgid ""
-"IF THERE IS A 'BLURAY' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL"
-" BE USED."
-msgstr "NẾU CÓ THẺ 'BLURAY' TRONG TÊN CỦA TỆP HOẶC THƯ MỤC, HỘP NÀY SẼ ĐƯỢC SỬ DỤNG"
+"IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
+"FOLDER, THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31283"
 msgid ""
-"IF THERE IS A BD '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE "
-"WILL BE USED."
-msgstr "NẾU CÓ THẺ '3DBD' TRONG TÊN CỦA TỆP HOẶC THƯ MỤC, HỘP NÀY SẼ ĐƯỢC SỬ DỤNG"
+"IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
+"THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31284"
 msgid ""
@@ -1810,8 +1811,8 @@ msgid "USE LANDSCAPE.JPG"
 msgstr "DÙNG LANDSCAPE.JPG"
 
 msgctxt "#31508"
-msgid "USE LOGO AND CLEARART.PNG"
-msgstr "DÙNG LOGO VÀ CLEARART.PNG"
+msgid "SHOW CLEARLOGO AND CLEARART"
+msgstr ""
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -2249,6 +2250,18 @@ msgstr ""
 
 msgctxt "#31617"
 msgid "MODERN"
+msgstr ""
+
+msgctxt "#31618"
+msgid "IF THERE A MOVIE SETS, THIS CASE WILL BE USED"
+msgstr ""
+
+msgctxt "#31619"
+msgid "MOVIE SETS LABEL WILL BE SHOWN."
+msgstr ""
+
+msgctxt "#31620"
+msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
 msgstr ""
 
 msgctxt "#31624"

@@ -51,6 +51,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 #  <fox_rider38@hotmail.fr>, 2013.
 #   <jaybbb@free.fr>, 2013.
 #  <mick.ondroid@gmail.com>, 2013.
@@ -61,7 +62,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-22 13:54+0000\n"
+"PO-Revision-Date: 2013-03-28 18:19+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/skin-ace/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -429,9 +430,9 @@ msgstr "FERMER"
 
 msgctxt "#31085"
 msgid ""
-"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH, YOU HAVE UP TO 15 "
+"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH.[CR]YOU HAVE UP TO 12 "
 "ITEMS OF EACH TYPE TO ADD TO ANY SUBMENU."
-msgstr "UTILISE LE POUR AJOUTER DE NOUVELLES EXTENSIONS, PUIS PERSONNALISÉES LES COMME VOUS VOULEZ. VOUS POUVEZ INSTALLER JUSQU’À 15 EXTENSIONS DANS LES SOUS-MENUS."
+msgstr ""
 
 msgctxt "#31086"
 msgid "Concerts"
@@ -775,17 +776,17 @@ msgstr "Le nouveau style a été appliqué"
 msgctxt "#31257"
 msgid ""
 "1. Create a root folder with any name, for example MY THEME.[CR][CR]2. "
-"Inside the root folder create 19 folders by these names:[CR]addons, "
+"Inside the root folder create 20 folders by these names:[CR]addons, "
 "aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, "
-"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vplaylist, "
-"winter.[CR][CR]3. Place within each of these folders the images you chose, "
-"MY THEME supports multiple files, you can include as many pictures as you "
-"want per folder.[CR][CR]4. After the theme ready enter the path of the "
-"root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720 JPG format "
-"and I would suggest using the program FastStone Photo Resize to obtain good "
-"quality images and low size.[CR]If wish you can also use images with "
-"1980x1080 pixels/72dpi, in format jpg."
-msgstr "1. Créer un dossier racine avec le nom de votre choix, par exemple MON THÈME.[CR][CR]2. Dans le dossier racine, créer 19 dossiers avec ces noms : [CR]addons, aplaylist, autumn, concerts, disc, favourites, games, livetv, movies, music, mymenu, pictures, settings, shutdown, spring, summer, tvshows, vplaylist, winter.[CR][CR]3. Mettre dans chaque dossier les images que vous avez choisis, MON THÈME supporte des fichiers différents, vous pouvez inclure autant d'image que vous voulez par dossier.[CR][CR]4. Après que le thème soit prêt, entrez le chemin du dossier racine.[CR][CR]Les images par défaut pour Ace ont une résolution/format de  72dpi/12800x720 en JPG. Nous vous suggérons d'utiliser le logiciel FastStone Photo pour redimensionner vos images.[CR]Nous espérons ce vous pourrez également utiliser des images de 1980x1080 pixel en format JPG."
+"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vnodes, "
+"vplaylist, winter.[CR][CR]3. Place within each of these folders the images "
+"you chose, MY THEME supports multiple files, you can include as many "
+"pictures as you want per folder.[CR][CR]4. After the theme ready enter the "
+"path of the root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720"
+" JPG format and I would suggest using the program FastStone Photo Resize to "
+"obtain good quality images and low size.[CR]If wish you can also use images "
+"with 1980x1080 pixels/72dpi, in format jpg."
+msgstr ""
 
 #. ....
 msgctxt "#31260"
@@ -880,15 +881,15 @@ msgstr "CHOISISSEZ UN BOÎTIER ET PRESSEZ ENTRER POUR PERSONNALISER."
 
 msgctxt "#31282"
 msgid ""
-"IF THERE IS A 'BLURAY' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL"
-" BE USED."
-msgstr "SI LE FICHIER OU LE DOSSIER CONTIENT LE TAG 'BLURAY', CE BOÎTIER SERA UTILISÉ."
+"IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
+"FOLDER, THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31283"
 msgid ""
-"IF THERE IS A BD '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE "
-"WILL BE USED."
-msgstr "SI LE FICHIER OU LE DOSSIER CONTIENT LE TAG '3DBD', CE BOÎTIER SERA UTILISÉ."
+"IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
+"THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31284"
 msgid ""
@@ -1813,8 +1814,8 @@ msgid "USE LANDSCAPE.JPG"
 msgstr "UTILISER LANDSCAPE.JPG"
 
 msgctxt "#31508"
-msgid "USE LOGO AND CLEARART.PNG"
-msgstr "UTILISER LOGO ET CLEARART.PNG"
+msgid "SHOW CLEARLOGO AND CLEARART"
+msgstr ""
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -2253,6 +2254,18 @@ msgstr "STYLE MODERNE"
 msgctxt "#31617"
 msgid "MODERN"
 msgstr "MODERNE"
+
+msgctxt "#31618"
+msgid "IF THERE A MOVIE SETS, THIS CASE WILL BE USED"
+msgstr ""
+
+msgctxt "#31619"
+msgid "MOVIE SETS LABEL WILL BE SHOWN."
+msgstr ""
+
+msgctxt "#31620"
+msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
+msgstr ""
 
 msgctxt "#31624"
 msgid "PRESS ENTER TO SELECT"

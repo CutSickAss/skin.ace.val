@@ -15,6 +15,8 @@
 	<include file="ViewsMultiplex.xml"/><!-- 61 -->
 	<include file="ViewsPanel.xml"/><!-- 62 -->
 	<include file="ViewsShelf.xml"/><!-- 63 -->
+	<include file="ViewsLandScapeX.xml"/><!-- 64 -->
+    <include file="ViewsSets.xml"/><!-- 65 -->	
 	<include file="ViewsPhotoShow.xml"/><!-- 79 -->
 	<include file="ViewsGames.xml"/>
 	<include file="ViewsLiveTV.xml"/>
@@ -203,12 +205,14 @@
 	<onload>Skin.SetString(case_webtv,red)</onload>
 	<onload>Skin.SetString(case_hdtv,violet)</onload>
 	<onload>Skin.SetString(case_dvd,grey)</onload>
+	<onload>Skin.SetString(case_set,blood)</onload>
 	<onload>Skin.SetString(codec_default,default)</onload>
 	<onload>Skin.SetString(codec_bluray,bluray)</onload>
 	<onload>Skin.SetString(codec_3dbd,3dbd)</onload>
 	<onload>Skin.SetString(codec_webtv,webtv)</onload>
 	<onload>Skin.SetString(codec_hdtv,hdtv)</onload>
 	<onload>Skin.SetString(codec_dvd,dvd)</onload>
+	<onload>Skin.SetString(codec_set,set)</onload>
 	<onload>Skin.SetString(panel_seconds,3)</onload>
 	<onload>Skin.SetString(games_video,auto)</onload>
 	<onload>Skin.SetString(moviesfanart,fanart)</onload>
@@ -220,6 +224,7 @@
 	<onload>Skin.SetString(programsfanart,fanart)</onload>
 	<onload>Skin.SetString(gamesfanart,fanart)</onload>
 	<onload>Skin.SetString(multiplexlayout,fanart)</onload>
+	<onload>Skin.SetString(landscapexlayout,fanart)</onload>
 	<onload>Skin.SetString(weather_mode,7days)</onload>
 	<onload>Skin.SetString(weatherconditionbg,northamerica)</onload>
 	<onload>Skin.SetString(LyricScript_Path,script.cu.lrclyrics)</onload>
@@ -239,8 +244,10 @@
 	</include>
 	
 	<include name="Quickfix">
-	<onload>Skin.SetString(multiplexlayout,fanart)</onload>
-	<onload>Skin.SetBool(fix1)</onload>
+	<onload>Skin.SetString(case_set,blood)</onload>
+	<onload>Skin.SetString(codec_set,set)</onload>
+	<onload>Skin.SetString(landscapexlayout,fanart)</onload>
+	<onload>Skin.SetBool(fix2)</onload>
 	</include>
 	
 	<!-- ######################################################################### Animations ######################################################################### -->
@@ -2234,7 +2241,7 @@
 	<posy>210</posy>
 	<width>625</width>
 	<height>38</height>
-	<font>Font_WeatherTitle</font>
+	<font>Font_16</font>
 	<textcolor>c0FFFFFF</textcolor>
 	<align>center</align>
 	<aligny>top</aligny>
@@ -2271,7 +2278,7 @@
 	<include name="Dialogs_Label3">
 	<posx>10</posx>
 	<posy>34</posy>
-	<width>500</width>
+	<width>470</width>
 	<height>35</height>
 	<align>left</align>
 	<textcolor>FFFFFAF0</textcolor>
@@ -2281,7 +2288,7 @@
 	<include name="Dialogs_Label4">
 	<posx>1270</posx>
 	<posy>34</posy>
-	<width>500</width>
+	<width>470</width>
 	<height>35</height>
 	<align>right</align>
 	<textcolor>FFFFFAF0</textcolor>
@@ -2316,6 +2323,7 @@
 	<animation effect="slide" start="0,0" end="0,70" time="300" easing="inout" tween="cubic">Hidden</animation>
 	<animation effect="slide" end="0,40" time="500" tween="sine" easing="out" condition="Control.IsVisible(79) | Skin.HasSetting(noinfobar)">Conditional</animation>
 	<animation effect="slide" start="0,0" end="0,800" time="400" tween="cubic" easing="in" condition="Control.HasFocus(9920) | Control.IsVisible(608)">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="50" tween="cubic" easing="in" condition="Control.HasFocus(160)">Conditional</animation>
 	<control type="image">
 	<posx>0</posx>
 	<posy>660</posy>
@@ -2506,7 +2514,7 @@
 	<posy>697</posy>
 	<width>1030</width>
 	<height>20</height>
-	<font>Font_15</font>
+	<font>Font_16</font>
 	<urlset>1</urlset>
 	<textcolor>FFFFFAF0</textcolor>
 	<headlinecolor>FFFFFAF0</headlinecolor>
@@ -2557,7 +2565,7 @@
 	<posy>697</posy>
 	<width>970</width>
 	<height>20</height>
-	<font>Font_15</font>
+	<font>Font_16</font>
 	<urlset>1</urlset>
 	<textcolor>FFFFFAF0</textcolor>
 	<headlinecolor>FFFFFAF0</headlinecolor>
@@ -2587,7 +2595,7 @@
 	<posy>661</posy>
 	<width>1025</width>
 	<height>20</height>
-	<font>Font_15</font>
+	<font>Font_16</font>
 	<urlset>1</urlset>
 	<textcolor>FFFFFAF0</textcolor>
 	<headlinecolor>FFFFFAF0</headlinecolor>
@@ -2605,15 +2613,18 @@
 	<width>330</width>
 	<height>232</height>
 	<animation effect="slide" end="340,330" time="0" condition="Control.IsVisible(51)">Conditional</animation>
-	<animation effect="slide" end="610,330" time="0" condition="Control.IsVisible(52)">Conditional</animation>
-	<animation effect="slide" end="610,430" time="0" condition="Control.IsVisible(53)">Conditional</animation>
-	<animation effect="slide" end="610,330" time="0" condition="Control.IsVisible(54)">Conditional</animation>
+	<animation effect="slide" end="605,330" time="0" condition="Control.IsVisible(52)">Conditional</animation>
+	<animation effect="slide" end="605,430" time="0" condition="Control.IsVisible(53)">Conditional</animation>
+	<animation effect="slide" end="605,330" time="0" condition="Control.IsVisible(54)">Conditional</animation>
 	<animation effect="slide" end="570,550" time="0" condition="Control.IsVisible(55)">Conditional</animation>
-	<animation effect="slide" end="610,430" time="0" condition="Control.IsVisible(56)">Conditional</animation>
+	<animation effect="slide" end="605,430" time="0" condition="Control.IsVisible(56)">Conditional</animation>
 	<animation effect="slide" end="100,330" time="0" condition="Control.IsVisible(57)">Conditional</animation>
-	<animation effect="slide" end="600,450" time="0" condition="Control.IsVisible(58)">Conditional</animation>
-	<animation effect="slide" end="1100,80" time="0" condition="Control.IsVisible(59)">Conditional</animation>
+	<animation effect="slide" end="605,450" time="0" condition="Control.IsVisible(58)">Conditional</animation>
+	<animation effect="slide" end="1100,80" time="0" condition="Control.IsVisible(59)">Conditional</animation>	
+	<animation effect="slide" end="605,550" time="0" condition="Control.IsVisible(60)">Conditional</animation>
+	<animation effect="slide" end="605,550" time="0" condition="Control.IsVisible(61)">Conditional</animation>
 	<animation effect="slide" end="570,550" time="0" condition="Control.IsVisible(63)">Conditional</animation>
+	<animation effect="slide" end="605,480" time="0" condition="Control.IsVisible(64)">Conditional</animation>
 	<animation effect="fade" start="0" end="100" time="100">Visible</animation>
 	<animation effect="fade" start="100" end="0" time="500" delay="200">Hidden</animation>
 	<visible>!Skin.HasSetting(noscrollletters) + Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>

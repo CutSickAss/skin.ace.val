@@ -51,6 +51,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 #  <dpalaciosj@gmail.com>, 2013.
 #   <linkinstg@hotmail.com>, 2013.
 # terratec <terratec2k4@gmail.com>, 2013.
@@ -61,7 +62,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-22 15:07+0000\n"
+"PO-Revision-Date: 2013-03-28 18:19+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/skin-ace/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -429,9 +430,9 @@ msgstr "CERRAR"
 
 msgctxt "#31085"
 msgid ""
-"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH, YOU HAVE UP TO 15 "
+"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH.[CR]YOU HAVE UP TO 12 "
 "ITEMS OF EACH TYPE TO ADD TO ANY SUBMENU."
-msgstr "USE PARA AÑADIR UN NUEVO ITEM, LUEGO PERSONALICE COMO DESEE, TIENE HASTA 15 ITEMS DE CADA TIPO PARA AGREGAR A CUALQUIER SUBMENU"
+msgstr ""
 
 msgctxt "#31086"
 msgid "Concerts"
@@ -677,7 +678,7 @@ msgstr "MI MENÚ"
 
 msgctxt "#31230"
 msgid "Playlist"
-msgstr ""
+msgstr "Lista de reproducción "
 
 #. ....
 msgctxt "#31234"
@@ -775,17 +776,17 @@ msgstr "Se ha establecido el nuevo estilo"
 msgctxt "#31257"
 msgid ""
 "1. Create a root folder with any name, for example MY THEME.[CR][CR]2. "
-"Inside the root folder create 19 folders by these names:[CR]addons, "
+"Inside the root folder create 20 folders by these names:[CR]addons, "
 "aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, "
-"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vplaylist, "
-"winter.[CR][CR]3. Place within each of these folders the images you chose, "
-"MY THEME supports multiple files, you can include as many pictures as you "
-"want per folder.[CR][CR]4. After the theme ready enter the path of the "
-"root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720 JPG format "
-"and I would suggest using the program FastStone Photo Resize to obtain good "
-"quality images and low size.[CR]If wish you can also use images with "
-"1980x1080 pixels/72dpi, in format jpg."
-msgstr "1.Crea una carpeta raíz con un nombre cualquiera, por ejemplo MI TEMA. [CR] [CR]2. Dentro de la carpeta raíz crea 19 carpetas con estos nombres:[CR]addons, aplaylist, autumn, concerts, disc, favourites, games, livetv, movies, music, mymenu, pictures, settings, shutdown, spring, summer, tvshows, vplaylist, winter.[CR] [CR]3. Coloca dentro de cada una de estas carpetas  las imágenes que has elegido, MI TEMA sopota múltiples archivos, se pueden incluir tantas imágenes como quieras por carpeta. [CR] [CR]4. Después de que el tema este listo introduzca la ruta de la carpeta raíz.[CR][CR]Las imágenes por defecto para ACE tienen 72dpi por 1280x720 pixeles en formato JPG y debería sugerirte usar programas como FastStone Photo Resize para obtener buena calidad en las imágenes y poco peso.[CR]Si lo deseas también puedes usar imagenes a 1980x1080 pixeles/72dpi, en formato JPG."
+"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vnodes, "
+"vplaylist, winter.[CR][CR]3. Place within each of these folders the images "
+"you chose, MY THEME supports multiple files, you can include as many "
+"pictures as you want per folder.[CR][CR]4. After the theme ready enter the "
+"path of the root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720"
+" JPG format and I would suggest using the program FastStone Photo Resize to "
+"obtain good quality images and low size.[CR]If wish you can also use images "
+"with 1980x1080 pixels/72dpi, in format jpg."
+msgstr ""
 
 #. ....
 msgctxt "#31260"
@@ -880,15 +881,15 @@ msgstr "ESCOJA UNA CAJA Y PRESIONE ENTER PARA PERSONALIZARLO."
 
 msgctxt "#31282"
 msgid ""
-"IF THERE IS A 'BLURAY' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL"
-" BE USED."
-msgstr "SI HAY UNA ETIQUETA DE \\\"BLURAY\\\" EN EL NOMBRE DEL ARCHIVO O CARPETA, ESTA CAJA SERA USADA"
+"IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
+"FOLDER, THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31283"
 msgid ""
-"IF THERE IS A BD '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE "
-"WILL BE USED."
-msgstr "SI HAY UNA ETIQUETA DE BD \\\"3DBD\\\" EN EL NOMBRE DEL ARCHIVO O CARPETA, ESTA CAJA SERA USADA"
+"IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
+"THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31284"
 msgid ""
@@ -1813,8 +1814,8 @@ msgid "USE LANDSCAPE.JPG"
 msgstr "USAR LANDSCAPE.JPG"
 
 msgctxt "#31508"
-msgid "USE LOGO AND CLEARART.PNG"
-msgstr "USAR LOGO Y CLEARART.PNG"
+msgid "SHOW CLEARLOGO AND CLEARART"
+msgstr ""
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -2253,6 +2254,18 @@ msgstr "ESTILO MODERNO"
 msgctxt "#31617"
 msgid "MODERN"
 msgstr "MODERNO"
+
+msgctxt "#31618"
+msgid "IF THERE A MOVIE SETS, THIS CASE WILL BE USED"
+msgstr ""
+
+msgctxt "#31619"
+msgid "MOVIE SETS LABEL WILL BE SHOWN."
+msgstr ""
+
+msgctxt "#31620"
+msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
+msgstr ""
 
 msgctxt "#31624"
 msgid "PRESS ENTER TO SELECT"

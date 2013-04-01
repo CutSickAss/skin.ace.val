@@ -52,7 +52,7 @@
 	<texture background="true">$VAR[value_logoandclearart]</texture>
 	<aspectratio align="right" aligny="bottom">keep</aspectratio>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<visible>Window.IsActive(25)</visible>
+	<visible>Window.IsActive(25) + !Skin.HasSetting(noartlowlistvideo)</visible>
 	</control>
 	</control>
 	<control type="image">
@@ -454,7 +454,7 @@
 
 	<control type="group"><!-- VIDEO SEM ESTOJO -->
 	<include>Animation_Fade</include>
-	<visible>![!Skin.HasSetting(novideomediacase) + Container.Content(movies) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>![!Skin.HasSetting(novideomediacase) + [Container.Content(movies) | Container.Content(musicvideos)  | Container.Content(sets)] | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	<control type="image"><!-- Filmes/Fotos/Arquivos reflexo -->
 	<posx>-5</posx>
 	<posy>419</posy>
@@ -479,7 +479,7 @@
 
 	<control type="group"><!-- FILMES ESTOJO -->
 	<include>Animation_Fade</include>
-	<visible>!Skin.HasSetting(novideomediacase) + Container.Content(movies)</visible>
+	<visible>!Skin.HasSetting(novideomediacase) + [Container.Content(movies) | Container.Content(musicvideos)  | Container.Content(sets)]</visible>
 	<control type="image"><!-- Poster reflexo -->
 	<posx>-3</posx>
 	<posy>434</posy>

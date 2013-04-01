@@ -51,6 +51,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 #   <andrebostan@gmail.com>, 2012.
 # Basil <BasilK@tut.by>, 2013.
 # Evgeny Grin <karlson2k@gmail.com>, 2012.
@@ -66,7 +67,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-22 13:54+0000\n"
+"PO-Revision-Date: 2013-03-28 18:19+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/skin-ace/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -434,7 +435,7 @@ msgstr "ЗАКРЫТЬ"
 
 msgctxt "#31085"
 msgid ""
-"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH, YOU HAVE UP TO 15 "
+"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH.[CR]YOU HAVE UP TO 12 "
 "ITEMS OF EACH TYPE TO ADD TO ANY SUBMENU."
 msgstr ""
 
@@ -501,7 +502,7 @@ msgstr ""
 
 msgctxt "#31101"
 msgid "Watch tv"
-msgstr ""
+msgstr "Смотреть ТВ"
 
 msgctxt "#31102"
 msgid "Executables and emulators"
@@ -525,11 +526,11 @@ msgstr ""
 
 msgctxt "#31107"
 msgid "Playlist"
-msgstr ""
+msgstr "Плейлист"
 
 msgctxt "#31108"
 msgid "Add-on"
-msgstr ""
+msgstr "Дополнение"
 
 msgctxt "#31109"
 msgid "Shutdown"
@@ -537,7 +538,7 @@ msgstr ""
 
 msgctxt "#31110"
 msgid "CD, DVD, Bluray"
-msgstr ""
+msgstr "CD, DVD, Bluray"
 
 msgctxt "#31111"
 msgid "DISC ART (IF AVAILABLE)"
@@ -682,7 +683,7 @@ msgstr "МОЁ МЕНЮ"
 
 msgctxt "#31230"
 msgid "Playlist"
-msgstr ""
+msgstr "Плейлист"
 
 #. ....
 msgctxt "#31234"
@@ -747,7 +748,7 @@ msgstr ""
 
 msgctxt "#31249"
 msgid "WIDGETS"
-msgstr ""
+msgstr "виджеты"
 
 msgctxt "#31250"
 msgid "SHOW DATE AND WEATHER"
@@ -780,16 +781,16 @@ msgstr "Новый стиль был установлен"
 msgctxt "#31257"
 msgid ""
 "1. Create a root folder with any name, for example MY THEME.[CR][CR]2. "
-"Inside the root folder create 19 folders by these names:[CR]addons, "
+"Inside the root folder create 20 folders by these names:[CR]addons, "
 "aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, "
-"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vplaylist, "
-"winter.[CR][CR]3. Place within each of these folders the images you chose, "
-"MY THEME supports multiple files, you can include as many pictures as you "
-"want per folder.[CR][CR]4. After the theme ready enter the path of the "
-"root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720 JPG format "
-"and I would suggest using the program FastStone Photo Resize to obtain good "
-"quality images and low size.[CR]If wish you can also use images with "
-"1980x1080 pixels/72dpi, in format jpg."
+"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vnodes, "
+"vplaylist, winter.[CR][CR]3. Place within each of these folders the images "
+"you chose, MY THEME supports multiple files, you can include as many "
+"pictures as you want per folder.[CR][CR]4. After the theme ready enter the "
+"path of the root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720"
+" JPG format and I would suggest using the program FastStone Photo Resize to "
+"obtain good quality images and low size.[CR]If wish you can also use images "
+"with 1980x1080 pixels/72dpi, in format jpg."
 msgstr ""
 
 #. ....
@@ -885,15 +886,15 @@ msgstr "ВЫБЕРИТЕ УПАКОВКУ И НАЖМИТЕ ENTER ДЛЯ НАС�
 
 msgctxt "#31282"
 msgid ""
-"IF THERE IS A 'BLURAY' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL"
-" BE USED."
-msgstr "ЕСЛИ ИМЯ ФАЙЛА ИЛИ ПАПКИ СОДЕРЖИТ МЕТКУ 'BLURAY', ТО БУДЕТ ИСПОЛЬЗОВАНА ЭТА УПАКОВКА."
+"IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
+"FOLDER, THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31283"
 msgid ""
-"IF THERE IS A BD '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE "
-"WILL BE USED."
-msgstr "ЕСЛИ ИМЯ ФАЙЛА ИЛИ ПАПКИ СОДЕРЖИТ МЕТКУ '3DBD', ТО БУДЕТ ИСПОЛЬЗОВАНА ЭТА УПАКОВКА."
+"IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
+"THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31284"
 msgid ""
@@ -1267,7 +1268,7 @@ msgstr "УПРАВЛЕНИЕ ПРОФИЛЯМИ"
 
 msgctxt "#31375"
 msgid "General settings"
-msgstr ""
+msgstr "Общие параметры"
 
 msgctxt "#31376"
 msgid "A HIGH DEFINITION MEDIA ENVIROMENT"
@@ -1818,8 +1819,8 @@ msgid "USE LANDSCAPE.JPG"
 msgstr "ИСПОЛЬЗОВАТЬ LANDSCAPE.JPG"
 
 msgctxt "#31508"
-msgid "USE LOGO AND CLEARART.PNG"
-msgstr "ИСПОЛЬЗОВАТЬ LOGO И CLEARART.PNG"
+msgid "SHOW CLEARLOGO AND CLEARART"
+msgstr ""
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -2257,6 +2258,18 @@ msgstr ""
 
 msgctxt "#31617"
 msgid "MODERN"
+msgstr ""
+
+msgctxt "#31618"
+msgid "IF THERE A MOVIE SETS, THIS CASE WILL BE USED"
+msgstr ""
+
+msgctxt "#31619"
+msgid "MOVIE SETS LABEL WILL BE SHOWN."
+msgstr ""
+
+msgctxt "#31620"
+msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
 msgstr ""
 
 msgctxt "#31624"
@@ -3582,11 +3595,11 @@ msgstr ""
 
 msgctxt "#31963"
 msgid "VERTICAL MENU"
-msgstr ""
+msgstr "вертикальное меню"
 
 msgctxt "#31964"
 msgid "HORIZONTAL MENU"
-msgstr ""
+msgstr "горизонтальное меню"
 
 msgctxt "#31965"
 msgid "Images that mix digital art and futurist style."

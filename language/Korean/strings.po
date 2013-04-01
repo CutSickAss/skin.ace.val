@@ -51,6 +51,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 #  <piodio@gmail.com>, 2013.
 #   <piodio@gmail.com>, 2012-2013.
 msgid ""
@@ -58,7 +59,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-22 13:54+0000\n"
+"PO-Revision-Date: 2013-03-28 18:19+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/skin-ace/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -133,7 +134,7 @@ msgstr "설정"
 
 msgctxt "#31012"
 msgid "EXIT"
-msgstr ""
+msgstr "나가기"
 
 msgctxt "#31013"
 msgid "CONCERTS"
@@ -426,9 +427,9 @@ msgstr "닫기"
 
 msgctxt "#31085"
 msgid ""
-"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH, YOU HAVE UP TO 15 "
+"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH.[CR]YOU HAVE UP TO 12 "
 "ITEMS OF EACH TYPE TO ADD TO ANY SUBMENU."
-msgstr "새 항목을 추가하고 원하는 대로 바꾸세요, 하위메뉴에 15개의 항목을 추가할 수 있습니다."
+msgstr ""
 
 msgctxt "#31086"
 msgid "Concerts"
@@ -674,7 +675,7 @@ msgstr "나의 메뉴"
 
 msgctxt "#31230"
 msgid "Playlist"
-msgstr ""
+msgstr "재생목록"
 
 #. ....
 msgctxt "#31234"
@@ -739,11 +740,11 @@ msgstr "클리어로고"
 
 msgctxt "#31249"
 msgid "WIDGETS"
-msgstr ""
+msgstr "위젯"
 
 msgctxt "#31250"
 msgid "SHOW DATE AND WEATHER"
-msgstr ""
+msgstr "날짜와 날씨 표시"
 
 #. ....
 msgctxt "#31253"
@@ -772,17 +773,17 @@ msgstr "새 스타일이 설정되었습니다."
 msgctxt "#31257"
 msgid ""
 "1. Create a root folder with any name, for example MY THEME.[CR][CR]2. "
-"Inside the root folder create 19 folders by these names:[CR]addons, "
+"Inside the root folder create 20 folders by these names:[CR]addons, "
 "aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, "
-"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vplaylist, "
-"winter.[CR][CR]3. Place within each of these folders the images you chose, "
-"MY THEME supports multiple files, you can include as many pictures as you "
-"want per folder.[CR][CR]4. After the theme ready enter the path of the "
-"root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720 JPG format "
-"and I would suggest using the program FastStone Photo Resize to obtain good "
-"quality images and low size.[CR]If wish you can also use images with "
-"1980x1080 pixels/72dpi, in format jpg."
-msgstr "1. 임의의 이름으로 루트 폴더를 생성하세요. 예) MY THEME[CR][CR]2. 루트 폴더안에 다음의 이름으로 19개의 폴더를 만드세요:[CR]addons, aplaylist, autumn, concerts, disc, favourites, games, livetv, movies, music, mymenu, pictures, settings, shutdown, spring, summer, tvshows, vplaylist, winter.[CR][CR]3. 각 폴더안에 여러분의 이미지를 저장하세요. MY THEME은 복수 이미지를 지원하므로 각 폴더에 원하는 만큼 이미지를 포함시킬 수 있습니다.[CR][CR]4. 테마가 준비되면 루트 경로를 입력하세요.[CR][CR]Ace의 기본 이미지는 72dpi 1280x720 JPG 형식입니다. 저용량 고품질의 이미지를 얻으려면 FastStone Photo Resize 프로그램 사용을 추천합니다.[CR]원한다면 1980x1080/72dpi JPG 이미지를 사용할 수 있습니다."
+"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vnodes, "
+"vplaylist, winter.[CR][CR]3. Place within each of these folders the images "
+"you chose, MY THEME supports multiple files, you can include as many "
+"pictures as you want per folder.[CR][CR]4. After the theme ready enter the "
+"path of the root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720"
+" JPG format and I would suggest using the program FastStone Photo Resize to "
+"obtain good quality images and low size.[CR]If wish you can also use images "
+"with 1980x1080 pixels/72dpi, in format jpg."
+msgstr ""
 
 #. ....
 msgctxt "#31260"
@@ -877,15 +878,15 @@ msgstr "원하는대로 변경하려면 케이스를 선택하고 엔터를 누�
 
 msgctxt "#31282"
 msgid ""
-"IF THERE IS A 'BLURAY' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL"
-" BE USED."
-msgstr "파일 또는 폴더 이름에 'BLURAY' 태그가 있으면이 이 케이스를 사용합니다."
+"IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
+"FOLDER, THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31283"
 msgid ""
-"IF THERE IS A BD '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE "
-"WILL BE USED."
-msgstr "파일 또는 폴더 이름에 '3DBD' 태그가 있으면 이 케이스를 사용합니다."
+"IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
+"THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31284"
 msgid ""
@@ -1572,7 +1573,7 @@ msgstr "스킨 초기화 단추 보기 (임시)"
 
 msgctxt "#31449"
 msgid "SOLO MODE"
-msgstr ""
+msgstr "SOLO 모드"
 
 msgctxt "#31450"
 msgid "RESTORE SETTINGS"
@@ -1810,8 +1811,8 @@ msgid "USE LANDSCAPE.JPG"
 msgstr "LANDSCAPE.JPG 사용"
 
 msgctxt "#31508"
-msgid "USE LOGO AND CLEARART.PNG"
-msgstr "LOGO.PNG, CLEARART.PNG 사용"
+msgid "SHOW CLEARLOGO AND CLEARART"
+msgstr ""
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -2250,6 +2251,18 @@ msgstr "모던 스타일"
 msgctxt "#31617"
 msgid "MODERN"
 msgstr "모던"
+
+msgctxt "#31618"
+msgid "IF THERE A MOVIE SETS, THIS CASE WILL BE USED"
+msgstr ""
+
+msgctxt "#31619"
+msgid "MOVIE SETS LABEL WILL BE SHOWN."
+msgstr ""
+
+msgctxt "#31620"
+msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
+msgstr ""
 
 msgctxt "#31624"
 msgid "PRESS ENTER TO SELECT"

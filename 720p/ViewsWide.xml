@@ -85,7 +85,7 @@
 	<height>584</height>
 	<texture>grey.png</texture>
 	<animation effect="fade" end="20" condition="true">conditional</animation>
-	<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(songs) | Container.Content(albums) | Container.Content(years)]</visible>
+	<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(songs) | Container.Content(albums) | Container.Content(years)]</visible>
 	</control>
 	<control type="button" id="562">
 	<include>InvisibleButton</include>
@@ -396,7 +396,7 @@
 
 	<control type="group"><!-- EPISODIOS -->
 	<include>Animation_Fade</include>
-	<visible>![Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
+	<visible>![Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)]</visible>
 	<control type="image"><!-- episodios reflexo -->
 	<posx>20</posx>
 	<posy>401</posy>
@@ -422,7 +422,7 @@
 	<control type="group"><!-- VIDEO SEM ESTOJO -->
 	<include>Animation_Fade</include>
 	<animation effect="slide" start="0,0" end="-45,0" time="500" delay="50" tween="cubic" easing="in" condition="!Skin.HasSetting(nodiscart) + !IsEmpty(ListItem.Art(discart))">Conditional</animation>
-	<visible>Skin.HasSetting(novideomediacase) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos)] | Container.Content(tvshows) + SubString(skin.string(widetvshows.art),poster) | Container.Content(seasons)</visible>
+	<visible>Skin.HasSetting(novideomediacase) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos)  | Container.Content(sets)] | Container.Content(tvshows) + SubString(skin.string(widetvshows.art),poster) | Container.Content(seasons)</visible>
 	<control type="image"><!-- Filmes/Fotos/Arquivos reflexo -->
 	<posx>20</posx>
 	<posy>401</posy>
@@ -448,7 +448,7 @@
 	<control type="group"><!-- FILMES ESTOJO -->
 	<include>Animation_Fade</include>
 	<animation effect="slide" start="0,0" end="-33,0" time="500" delay="50" tween="cubic" easing="in" condition="!Skin.HasSetting(nodiscart) + !IsEmpty(ListItem.Art(discart))">Conditional</animation>
-	<visible>!Skin.HasSetting(novideomediacase) + Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | !Skin.HasSetting(novideomediacase) + Container.Content(musicvideos)</visible>
+	<visible>!Skin.HasSetting(novideomediacase) + Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | !Skin.HasSetting(novideomediacase) + [Container.Content(musicvideos) | Container.Content(sets)]</visible>
 	<control type="image"><!-- Poster reflexo -->
 	<posx>205</posx>
 	<posy>416</posy>
@@ -639,26 +639,25 @@
 	<posy>578</posy>
 	<width>200</width>
 	<height>72</height>
-	<aligny>center</aligny>
-	<texture background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/logo.png]</texture>
-	<fadetime>250</fadetime>
 	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture background="true">$INFO[Skin.String(CustomMusicLogoPath)]$INFO[ListItem.Artist,,/logo.png]</texture>
+	<fadetime>250</fadetime>	
 	</control>
 	<control type="image" id="1018"><!-- clearlogo e clearart -->
 	<posx>450</posx>
 	<posy>578</posy>
 	<width>200</width>
 	<height>72</height>
-	<align>right</align>
-	<aligny>center</aligny>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
 	<texture background="true">$VAR[value_logoandclearart]</texture>
 	<fadetime>250</fadetime>
-	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<visible>!Skin.HasSetting(noartwidevideo)</visible>
 	</control>
 	<control type="group"><!-- Linguagem de audio e legendas -->
 	<posx>20</posx>
 	<posy>585</posy>
     <include>AudioandSub</include>
+	<visible>!Skin.HasSetting(nolanguageflags)</visible>
 	</control>
 	<control type="image">
 	<posx>0</posx>

@@ -51,6 +51,7 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
 # Wanilton Campos <>, 2012.
 # Zoran Mitić <mitic.zoran@hotmail.com>, 2013.
 msgid ""
@@ -58,7 +59,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-22 13:54+0000\n"
+"PO-Revision-Date: 2013-03-28 18:19+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/skin-ace/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -426,9 +427,9 @@ msgstr "ZATVORI"
 
 msgctxt "#31085"
 msgid ""
-"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH, YOU HAVE UP TO 15 "
+"USE TO ADD A NEW ITEM, THEN CUSTOMIZE IT AS YOU WISH.[CR]YOU HAVE UP TO 12 "
 "ITEMS OF EACH TYPE TO ADD TO ANY SUBMENU."
-msgstr "KORISTI ZA DODAVANJE NOVIH STAVKI, A ZATIM GA UREDITE KAO ŽELITE, MOŽETE IMATI DO 15 STAVKI TE IH MOŽETE DODATI NA BILO KOJI PODIZBORNIK."
+msgstr ""
 
 msgctxt "#31086"
 msgid "Concerts"
@@ -674,7 +675,7 @@ msgstr "MOJ IZBORNIK"
 
 msgctxt "#31230"
 msgid "Playlist"
-msgstr ""
+msgstr "Lista Izvedbi"
 
 #. ....
 msgctxt "#31234"
@@ -727,23 +728,23 @@ msgstr "ZADRŽITE  ASPEKT POZADINE"
 
 msgctxt "#31246"
 msgid "SHOW WIDGETS FOR:"
-msgstr ""
+msgstr "PRIKAŽI WJDGETE ZA:"
 
 msgctxt "#31247"
 msgid "CLEARART:"
-msgstr ""
+msgstr "CLEARART"
 
 msgctxt "#31248"
 msgid "CLEARLOGO"
-msgstr ""
+msgstr "CLEARLOGO"
 
 msgctxt "#31249"
 msgid "WIDGETS"
-msgstr ""
+msgstr "WIDGETS"
 
 msgctxt "#31250"
 msgid "SHOW DATE AND WEATHER"
-msgstr ""
+msgstr "PRIKAŽI DATUM I VRIJEME"
 
 #. ....
 msgctxt "#31253"
@@ -772,17 +773,17 @@ msgstr "Novi stil je postavljen"
 msgctxt "#31257"
 msgid ""
 "1. Create a root folder with any name, for example MY THEME.[CR][CR]2. "
-"Inside the root folder create 19 folders by these names:[CR]addons, "
+"Inside the root folder create 20 folders by these names:[CR]addons, "
 "aplaylist,autumn, concerts, disc, favourites, games, livetv, movies, music, "
-"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vplaylist, "
-"winter.[CR][CR]3. Place within each of these folders the images you chose, "
-"MY THEME supports multiple files, you can include as many pictures as you "
-"want per folder.[CR][CR]4. After the theme ready enter the path of the "
-"root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720 JPG format "
-"and I would suggest using the program FastStone Photo Resize to obtain good "
-"quality images and low size.[CR]If wish you can also use images with "
-"1980x1080 pixels/72dpi, in format jpg."
-msgstr "1. Stvaranje korijenske mape za bilo koje ime, npr. Moja tema. [CR] [CR] 2. Unutar korijena mape stvara 19 mapa ovim imenima: [CR] dodaci, alista izvedbi, jesen, koncerti, disk, favoriti, igre, LiveTV, filmovi, glazba, moj izbornik, slike, postavke, ugasi, proljeće, ljeto, tvshows, vlista izvedbit, zime. [CR] [CR] 3. Mjesto unutar svake od tih mapa slike koje ste izabrali, Moja tema podržava više datoteka, možete uključiti što više slika kao što želite po mapi. [CR] [CR] 4. Nakon tema spremni ste ići u put korijena. [CR] [CR] Zadana slika za Ace ima piksela 72dpi 1280x720 JPG format, a ja bih predlažemo korištenje Foto Resize programa FastStone za dobivanje dobre kvalitete slike i niske rezolucije. [CR] Ako želite možete koristiti i slike s 1980x1080 pixels/72dpi, u formatu jpg."
+"mymenu, pictures,settings, shutdown, spring, summer, tvshows, vnodes, "
+"vplaylist, winter.[CR][CR]3. Place within each of these folders the images "
+"you chose, MY THEME supports multiple files, you can include as many "
+"pictures as you want per folder.[CR][CR]4. After the theme ready enter the "
+"path of the root.[CR][CR]The default image for Ace has pixels 72dpi 1280x720"
+" JPG format and I would suggest using the program FastStone Photo Resize to "
+"obtain good quality images and low size.[CR]If wish you can also use images "
+"with 1980x1080 pixels/72dpi, in format jpg."
+msgstr ""
 
 #. ....
 msgctxt "#31260"
@@ -877,15 +878,15 @@ msgstr "IZBERITE OKVIR I PRITISNITE ENTER ZA SPREMANJE."
 
 msgctxt "#31282"
 msgid ""
-"IF THERE IS A 'BLURAY' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE WILL"
-" BE USED."
-msgstr "AKO JE  IME TAG-a 'BLURAY' ISTOVJETNO SA  DATOTEKOM ILI MAPOM, OKVIR ĆE SE KORISTITI."
+"IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
+"FOLDER, THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31283"
 msgid ""
-"IF THERE IS A BD '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, THIS CASE "
-"WILL BE USED."
-msgstr "AKO JE  IME TAG-a BD '3DBD ISTOVJETNO SA  DATOTEKOM ILI MAPOM, OKVIR ĆE SE KORISTITI."
+"IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
+"THIS CASE WILL BE USED."
+msgstr ""
 
 msgctxt "#31284"
 msgid ""
@@ -1810,8 +1811,8 @@ msgid "USE LANDSCAPE.JPG"
 msgstr "KORISTI PEJSAŽNI.JPG"
 
 msgctxt "#31508"
-msgid "USE LOGO AND CLEARART.PNG"
-msgstr "KORISTI POJEDNOSTAVLJENI.PNG"
+msgid "SHOW CLEARLOGO AND CLEARART"
+msgstr ""
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -1911,7 +1912,7 @@ msgstr "ODABERITE  LISTU IZVEDBI"
 
 msgctxt "#31533"
 msgid "FLAGS BAR - DARK STYLE"
-msgstr ""
+msgstr "ZASTAVE  - TAMNI STIL"
 
 msgctxt "#31534"
 msgid "SHOW FIRST LETTERS DURING SCROLL"
@@ -2251,6 +2252,18 @@ msgctxt "#31617"
 msgid "MODERN"
 msgstr "MODERNI"
 
+msgctxt "#31618"
+msgid "IF THERE A MOVIE SETS, THIS CASE WILL BE USED"
+msgstr ""
+
+msgctxt "#31619"
+msgid "MOVIE SETS LABEL WILL BE SHOWN."
+msgstr ""
+
+msgctxt "#31620"
+msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
+msgstr ""
+
 msgctxt "#31624"
 msgid "PRESS ENTER TO SELECT"
 msgstr "PRITISNI ENTER ZA ODABIR"
@@ -2529,7 +2542,7 @@ msgstr "LYRICS U KARAOKE MODU"
 
 msgctxt "#31693"
 msgid "OPTIMIZE SKIN FOR TOUCH-SCREEN (A HELP TAB WILL APPEAR)"
-msgstr ""
+msgstr "OPTIMIZIRATI IZGLED ZA TOUCH-SCREEN (POMOĆ DOSTUPNA PRITISKOM NA TAB )"
 
 msgctxt "#31694"
 msgid "MOST PLAYED"
@@ -3644,4 +3657,4 @@ msgstr "PRIZNANJA"
 
 msgctxt "#31986"
 msgid "SHOW NOW PLAYING PANEL"
-msgstr ""
+msgstr "PRIKAŽI TRENUTNO SE IZVODI PANEL"

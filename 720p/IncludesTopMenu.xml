@@ -133,7 +133,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
 	<posx>1</posx>
@@ -251,6 +251,14 @@
 	<onclick>SetFocus(51)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31813])</selected>
 	</control>
+	<control type="radiobutton" id="9265"><!-- Sets --><!-- 65 -->
+	<include>TopMenuRadioButton</include>
+	<label>31826</label>
+	<onfocus>Container.SetViewMode(65)</onfocus>
+	<onclick>SetFocus(65)</onclick>
+    <selected>StringCompare(Container.Viewmode,$LOCALIZE[31826])</selected>
+	<visible>Container.Content(sets)</visible>
+	</control>
 	<control type="radiobutton" id="9252"><!-- Banner --><!-- 52 -->
 	<include>TopMenuRadioButton</include>
 	<label>31811</label>
@@ -287,7 +295,7 @@
 	<onfocus>Container.SetViewMode(56)</onfocus>
 	<onclick>SetFocus(56)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31805])</selected>
-	<visible>!Container.Content(episodes)</visible>
+	<visible>![Container.Content(episodes) | Container.Content(sets)]</visible>
 	</control>
 	<control type="radiobutton" id="9257"><!-- GlassList --><!-- 57 -->
 	<include>TopMenuRadioButton</include>
@@ -318,7 +326,7 @@
 	<onfocus>Container.SetViewMode(60)</onfocus>
 	<onclick>SetFocus(60)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31821])</selected>
-	<visible>!Container.Content(episodes)</visible>
+	<visible>![Container.Content(episodes) | Container.Content(sets)]</visible>
 	</control>
 	<control type="radiobutton" id="9261"><!-- Multiplex --><!-- 61 -->
 	<include>TopMenuRadioButton</include>
@@ -326,6 +334,7 @@
 	<onfocus>Container.SetViewMode(61)</onfocus>
 	<onclick>SetFocus(61)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31803])</selected>
+	<visible>!Container.Content(episodes)</visible>
 	</control>
 	<control type="radiobutton" id="9262"><!-- Panel --><!-- 62 -->
 	<include>TopMenuRadioButton</include>
@@ -340,6 +349,15 @@
 	<onfocus>Container.SetViewMode(63)</onfocus>
 	<onclick>SetFocus(63)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31809])</selected>
+	<visible>!Container.Content(episodes)</visible>
+	</control>
+	<control type="radiobutton" id="9264"><!-- LandScapeX --><!-- 64 -->
+	<include>TopMenuRadioButton</include>
+	<label>31804</label>
+	<onfocus>Container.SetViewMode(64)</onfocus>
+	<onclick>SetFocus(64)</onclick>
+	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31804])</selected>
+	<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
 	</control>
 	<control type="radiobutton" id="92528"><!-- PosterLite --><!-- 528 -->
 	<include>TopMenuRadioButton</include>
@@ -351,11 +369,11 @@
 	</control>
 	</control>
 	<control type="grouplist" id="9301"><!-- Colletion -->
-	<animation effect="slide" start="0,0" end="0,530" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9300) | ControlGroup(9301).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,560" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9300) | ControlGroup(9301).HasFocus">Conditional</animation>
 	<posx>513</posx>
-	<posy>-480</posy>
+	<posy>-510</posy>
 	<width>254</width>
-	<height>520</height>
+	<height>540</height>
 	<onup>9300</onup>
 	<ondown>9301</ondown>
 	<onleft>9200</onleft>
@@ -404,7 +422,7 @@
 	<label>31486</label>
 	<onclick>Skin.ToggleSetting(novideomediacase)</onclick>
 	<selected>!Skin.HasSetting(novideomediacase)</selected>
-	<visible>[Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(528)] + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos)]</visible>
+	<visible>Control.IsVisible(51) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)] | [Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(65)] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 	</control>
 	<control type="button" id="9305">
 	<include>TopMenuButton</include>
@@ -412,7 +430,7 @@
 	<onclick>SetFocus(51)</onclick>
 	<onclick>Skin.SetString(customwindow,video)</onclick>
 	<onclick>ActivateWindowAndFocus(SkinSettings, 9100,2 ,403,0)</onclick>
-	<visible>!Skin.HasSetting(novideomediacase) + [Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62)] + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos)]</visible>
+	<visible>!Skin.HasSetting(novideomediacase) + [Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(65)] + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 	</control>
 	<!-- Glass List -->
 	<control type="radiobutton" id="9306">
@@ -445,7 +463,7 @@
 	<visible>Control.IsVisible(55)</visible>
 	</control>
 	<!-- Poster -->
-	<control type="radiobutton" id="9311">
+	<control type="radiobutton" id="9312">
 	<include>TopMenuRadioButton</include>
 	<label>31493</label>
 	<onclick>Skin.ToggleSetting(posterfixedlist)</onclick>
@@ -454,7 +472,7 @@
 	<visible>Control.IsVisible(54)</visible>
 	</control>
 	<!-- Multiplex -->
-	<control type="radiobutton" id="9313">
+	<control type="radiobutton" id="9314">
 	<include>TopMenuRadioButton</include>
 	<label>31493</label>
 	<onclick>Skin.ToggleSetting(multiplexfixedlist)</onclick>
@@ -462,21 +480,21 @@
 	<onclick>ReloadSkin</onclick>
 	<visible>Control.IsVisible(61) | Control.IsVisible(528)</visible>
 	</control>
-	<control type="radiobutton" id="9314">
+	<control type="radiobutton" id="9315">
 	<include>TopMenuRadioButton</include>
 	<label>31472</label>
 	<onclick>Skin.ToggleSetting(multiplexpanel_on)</onclick>
 	<selected>Skin.HasSetting(multiplexpanel_on)</selected>
 	<visible>Control.IsVisible(61)</visible>
 	</control>
-	<control type="radiobutton" id="9315">
+	<control type="radiobutton" id="9316">
 	<include>TopMenuRadioButton</include>
 	<label>31474</label>
 	<onclick>Skin.SetString(multiplexlayout,fanart)</onclick>
 	<selected>SubString(skin.string(multiplexlayout),fanart)</selected>
 	<visible>Control.IsVisible(61)</visible>
 	</control>
-	<control type="radiobutton" id="9316">
+	<control type="radiobutton" id="9317">
 	<include>TopMenuRadioButton</include>
 	<label>31477</label>
 	<onclick>Skin.SetString(multiplexlayout,extrathumbs)</onclick>
@@ -484,7 +502,7 @@
 	<visible>Control.IsVisible(61)</visible>
 	</control>
 	<!-- Showart -->
-	<control type="radiobutton" id="9319">
+	<control type="radiobutton" id="9318">
 	<include>TopMenuRadioButton</include>
 	<label>31472</label>
 	<onclick>Skin.ToggleSetting(showartpanel_on)</onclick>
@@ -492,7 +510,7 @@
 	<visible>Control.IsVisible(60)</visible>
 	</control>
 	<!-- Panel -->
-	<control type="togglebutton" id="9318">
+	<control type="togglebutton" id="9319">
 	<include>TopMenuButton</include>
 	<label>$LOCALIZE[31320]: $LOCALIZE[31408]</label>
 	<altlabel>$LOCALIZE[31320]: $LOCALIZE[31317]</altlabel>
@@ -656,13 +674,53 @@
 	</control>
 
 	<!-- General -->
+	<!-- Wide -->
+	<control type="radiobutton" id="9341">
+	<include>TopMenuRadioButton</include>
+	<label>31508</label>
+	<onclick>Skin.ToggleSetting(noartwidevideo)</onclick>
+	<selected>!Skin.HasSetting(noartwidevideo)</selected>
+	<visible>Control.IsVisible(51)</visible>
+	</control>
+	<!-- Glass List -->
+	<control type="radiobutton" id="9342">
+	<include>TopMenuRadioButton</include>
+	<label>31508</label>
+	<onclick>Skin.ToggleSetting(noartglasslistvideo)</onclick>
+	<selected>!Skin.HasSetting(noartglasslistvideo)</selected>
+	<visible>Control.IsVisible(57)</visible>
+	</control>
+	<!-- Low List -->
+	<control type="radiobutton" id="9343">
+	<include>TopMenuRadioButton</include>
+	<label>31508</label>
+	<onclick>Skin.ToggleSetting(noartlowlistvideo)</onclick>
+	<selected>!Skin.HasSetting(noartlowlistvideo)</selected>
+	<visible>Control.IsVisible(55)</visible>
+	</control>
+	<!-- Poster -->
+	<control type="radiobutton" id="9345">
+	<include>TopMenuRadioButton</include>
+	<label>31508</label>
+	<onclick>Skin.ToggleSetting(noartpostervideo)</onclick>
+	<selected>!Skin.HasSetting(noartpostervideo)</selected>
+	<visible>Control.IsVisible(54)</visible>
+	</control>
+	<!-- Right List -->
+	<control type="radiobutton" id="9346">
+	<include>TopMenuRadioButton</include>
+	<label>31508</label>
+	<onclick>Skin.ToggleSetting(noartrightlistvideo)</onclick>
+	<selected>!Skin.HasSetting(noartrightlistvideo)</selected>
+	<visible>Control.IsVisible(59)</visible>
+	</control>
 	<control type="togglebutton" id="9349">
 	<include>TopMenuRadioButton</include>
 	<label>31495</label>
 	<altlabel>31494</altlabel>
 	<onclick>Skin.ToggleSetting(nopreferclearart)</onclick>
 	<selected>!Skin.HasSetting(nopreferclearart)</selected>
-	<visible>Control.IsVisible(55) | Control.IsVisible(59) | Control.IsVisible(60) | Control.IsVisible(62) + Skin.HasSetting(noviewpanelposter) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+	<visible>Control.IsVisible(51) + !Skin.HasSetting(noartwidevideo) | Control.IsVisible(54) + !Skin.HasSetting(noartpostervideo) | Control.IsVisible(55) + !Skin.HasSetting(noartlowlistvideo) | Control.IsVisible(57) + !Skin.HasSetting(noartglasslistvideo) | Control.IsVisible(59) + !Skin.HasSetting(noartrightlistvideo) | Control.IsVisible(60) | Control.IsVisible(62) + Skin.HasSetting(noviewpanelposter) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 	</control>
 	<control type="radiobutton" id="9350">
 	<include>TopMenuRadioButton</include>
@@ -672,43 +730,49 @@
 	</control>
 	<control type="radiobutton" id="9351">
 	<include>TopMenuRadioButton</include>
+	<label>31620</label>
+	<onclick>Skin.ToggleSetting(nolanguageflags)</onclick>
+	<selected>!Skin.HasSetting(nolanguageflags)</selected>
+	</control>
+	<control type="radiobutton" id="9352">
+	<include>TopMenuRadioButton</include>
 	<label>31227</label>
 	<onclick>Skin.ToggleSetting(noinfobar)</onclick>
 	<selected>!Skin.HasSetting(noinfobar)</selected>
 	</control>
-	<control type="radiobutton" id="9352">
+	<control type="radiobutton" id="9353">
 	<include>TopMenuRadioButton</include>
 	<label>31485</label>
 	<onclick>Skin.ToggleSetting(nooverlays)</onclick>
 	<selected>!Skin.HasSetting(nooverlays)</selected>
 	</control>
-	<control type="radiobutton" id="9353">
+	<control type="radiobutton" id="9354">
 	<include>TopMenuRadioButton</include>
 	<label>31535</label>
 	<onclick>Skin.ToggleSetting(noallowscroll)</onclick>
 	<selected>!Skin.HasSetting(noallowscroll)</selected>
 	</control>
-	<control type="radiobutton" id="9354">
+	<control type="radiobutton" id="9355">
 	<include>TopMenuRadioButton</include>
 	<label>31696</label>
 	<onclick>Skin.ToggleSetting(originaltitle)</onclick>
 	<selected>Skin.HasSetting(originaltitle)</selected>
 	<visible>Container.Content(movies)</visible>
 	</control>
-	<control type="radiobutton" id="9355">
+	<control type="radiobutton" id="9356">
 	<include>TopMenuRadioButton</include>
 	<label>31574</label>
 	<onclick>Skin.ToggleSetting(fullscreentrailer)</onclick>
 	<selected>Skin.HasSetting(fullscreentrailer)</selected>
 	<visible>Container.Content(movies)</visible>
 	</control>
-	<control type="radiobutton" id="9356">
+	<control type="radiobutton" id="9357">
 	<include>TopMenuRadioButton</include>
 	<label>31534</label>
 	<onclick>Skin.ToggleSetting(noscrollletters)</onclick>
 	<selected>!Skin.HasSetting(noscrollletters)</selected>
 	</control>
-	<control type="radiobutton" id="9357">
+	<control type="radiobutton" id="9358">
 	<include>TopMenuRadioButton</include>
 	<label>31533</label>
 	<onclick>Skin.ToggleSetting(darkbar)</onclick>
@@ -1024,7 +1088,7 @@
 	<include>TopMenuRadioButton</include>
 	<label>$VAR[value_addon2]</label>
 	<onclick condition="system.hasaddon(script.tvtunes)">Skin.ToggleSetting(ontvtunes)</onclick>
-	<onclick condition="!system.hasaddon(script.tvtunes)">ActivateWindow(Video,Addons,return)</onclick>
+	<onclick condition="!system.hasaddon(script.tvtunes)">ActivateWindow(Programs,Addons,return)</onclick>
 	<selected>Skin.HasSetting(ontvtunes)</selected>
 	<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 	</control>
@@ -1123,7 +1187,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
 	<posx>1</posx>
@@ -1654,7 +1718,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
@@ -1897,7 +1961,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
@@ -2145,7 +2209,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
@@ -2428,7 +2492,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
@@ -2704,7 +2768,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>
@@ -3034,7 +3098,7 @@
 	<include>TopMenu_BG</include>
 	<control type="group" id="9000">
 	<posy>-100</posy>
-	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+	<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus | ControlGroup(9101).HasFocus | ControlGroup(9201).HasFocus | ControlGroup(9301).HasFocus | ControlGroup(9401).HasFocus | ControlGroup(9501).HasFocus">Conditional</animation>
 
 	<control type="grouplist" id="9101"><!-- Go to -->
 	<animation effect="slide" start="0,0" end="0,350" time="600" tween="sine" easing="inout" condition="Control.HasFocus(9100) | ControlGroup(9101).HasFocus">Conditional</animation>

@@ -134,26 +134,16 @@
 	<texture>black.png</texture>
 	<colordiffuse>70FFFFFF</colordiffuse>
 	</control>
-	<control type="image" id="1008"><!-- clearart -->
+	<control type="image" id="1008"><!-- clearlogo e clearart -->
 	<posx>1035</posx>
 	<posy>540</posy>
 	<width>220</width>
 	<height>110</height>
 	<aligny>center</aligny>
-	<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+	<texture background="true">$VAR[value_logoandclearart]</texture>
 	<aspectratio align="right">keep</aspectratio>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	</control>
-	<control type="image" id="1009"><!-- logo -->
-	<posx>1035</posx>
-	<posy>540</posy>
-	<width>220</width>
-	<height>110</height>
-	<aligny>center</aligny>
-	<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-	<aspectratio align="right">keep</aspectratio>
-	<fadetime>FanartCrossFadeTime</fadetime>
-	<visible>IsEmpty(Control.GetLabel(1008))</visible>
+	<visible>!Skin.HasSetting(noartpostervideo)</visible>
 	</control>
 	<control type="image">
 	<posx>0</posx>
@@ -175,7 +165,7 @@
 	<width>2</width>
 	<height>134</height>
 	<texture>separator_v.png</texture>
-	<visible>![IsEmpty(Control.GetLabel(1008)) + IsEmpty(Control.GetLabel(1009))]</visible>
+	<visible>![IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
 	</control>
 	<control type="label">
 	<include>PosterLabel</include>
@@ -222,7 +212,7 @@
 	<font>Font_16</font>
 	<label>$VAR[value_plot]</label>
 	<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-	<visible>![IsEmpty(Control.GetLabel(1008)) + IsEmpty(Control.GetLabel(1009))]</visible>
+	<visible>![IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)]</visible>
 	</control>
 	<control type="textbox">
 	<posx>366</posx>
@@ -233,7 +223,7 @@
 	<font>Font_16</font>
 	<label>$VAR[value_plot]</label>
 	<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
-	<visible>IsEmpty(Control.GetLabel(1008)) + IsEmpty(Control.GetLabel(1009))</visible>
+	<visible>IsEmpty(Control.GetLabel(1008)) | Skin.HasSetting(noartpostervideo)</visible>
 	</control>
 	<include condition="Skin.HasSetting(posterfixedlist)">PosterFixedList</include>
 	<include condition="!Skin.HasSetting(posterfixedlist)">PosterWrapList</include>

@@ -11,9 +11,16 @@
   </include>
   <include name="ViewPosterLite">
 	<control type="group">
+	  <control type="button" id="99528">
+		<include>InvisibleButton</include>
+		<onleft>528</onleft>
+		<onright>528</onright>
+		<onup>9900</onup>
+		<ondown>528</ondown>
+	  </control>
 	  <visible>Control.IsVisible(528)</visible>
 	  <control type="group">
-		<animation effect="fade" start="100" end="0" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[[[StringCompare(Control.GetLabel(528421),infopanelmanual)+[!Control.HasFocus(9916)|Control.IsVisible(528195)]]|[StringCompare(Control.GetLabel(528421),infopanelauto)+!Control.IsVisible(528200)]]+StringCompare(Control.GetLabel(528707),noicon)]]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[[[StringCompare(Control.GetLabel(528421),infopanelmanual)+[!Control.HasFocus(99528)|Control.IsVisible(528195)]]|[StringCompare(Control.GetLabel(528421),infopanelauto)+!Control.IsVisible(528200)]]+StringCompare(Control.GetLabel(528707),noicon)]]">Conditional</animation>
 		<control type="image">
 		  <posx>0</posx>
 		  <posy>506</posy>
@@ -46,7 +53,7 @@
 		<posy>520</posy>
 		<!-- Labels -->
 		<control type="group" id="528200">
-		  <visible>[[Control.IsVisible(528197)+![Container.OnNext|Container.OnPrevious]+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+Control.HasFocus(9916)+!Control.IsVisible(528195)]|StringCompare(Control.GetLabel(528421),infopanelon)]</visible>
+		  <visible>[[Control.IsVisible(528197)+![Container.OnNext|Container.OnPrevious]+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+Control.HasFocus(99528)+!Control.IsVisible(528195)]|StringCompare(Control.GetLabel(528421),infopanelon)]</visible>
 		  <animation effect="fade" time="320">Visible</animation>
 		  <control type="group">
 			<!-- Movies and TV shows -->
@@ -75,7 +82,7 @@
 		</control>
 		<!-- +1 icons -->
 		<control type="group">
-		  <visible>[[Stringcompare(Control.GetLabel(528421),infopanelauto)+StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]|[Control.IsVisible(528197)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+[[Control.HasFocus(9916)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]]|Control.IsVisible(528196)]</visible>
+		  <visible>[[Stringcompare(Control.GetLabel(528421),infopanelauto)+StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]|[Control.IsVisible(528197)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+[[Control.HasFocus(99528)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]]|Control.IsVisible(528196)]</visible>
 		  <animation effect="fade" time="80" delay="10" reversible="false" condition="StringCompare(Control.GetLabel(528421),infopanelmanual)">Conditional</animation>
 		  <control type="image">
 			<posx>610</posx>
@@ -129,7 +136,7 @@
 			  <fadetime>FanartCrossFadeTime</fadetime>
 			  <aspectratio>stretch</aspectratio>
 			  <texture background="true">$VAR[PLLandscapeVar]</texture>
-			  <visible>IsEmpty(Control.GetLabel(528201))+[!IsEmpty(ListItem.Art(landscape))|[IsEmpty(ListItem.Art(landscape))+!IsEmpty(ListItem.Art(fanart))]]</visible>
+			  <visible>IsEmpty(Control.GetLabel(528201))</visible>
 			</control>
 		  </control>
 		  <control type="group">
@@ -227,7 +234,7 @@
 	<posy>-41</posy>
 	<width>1920</width>
 	<height>1080</height>
-	<onup condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)+!StringCompare(ListItem.Label,..)+!SubString(ListItem.Path,videodb://1/7/,left)">9916</onup>
+	<onup condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)+!StringCompare(ListItem.Label,..)+!SubString(ListItem.Path,videodb://1/7/,left)">99528</onup>
 	<onup condition="[!Stringcompare(Control.GetLabel(528421),infopanelmanual)|StringCompare(ListItem.Label,..)|SubString(ListItem.Path,videodb://1/7/,left)]">9900</onup>
 	<ondown>80</ondown>
 	<orientation>horizontal</orientation>
@@ -362,6 +369,7 @@
 	  </control>
 	</focusedlayout>
   </include>
+
   <include name="plfixed">
 	<control type="fixedlist" id="528">
 	  <include>contents528list</include>
@@ -372,6 +380,7 @@
 	  <include>contents528list</include>
 	</control>
   </include>
+
   <include name="PLPoster">
 	<animation effect="slide" time="200" start="0,0" end="0,-20" tween="cubic" easing="out" condition="!Skin.HasSetting(novideomediacase)">Conditional</animation>
 	<control type="image">
