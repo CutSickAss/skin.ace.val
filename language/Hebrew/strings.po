@@ -52,6 +52,11 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
 # CaTz <catzil@gmail.com>, 2013.
 # Idan Bushari <ibushari@outlook.com>, 2012-2013.
 msgid ""
@@ -59,7 +64,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-28 18:19+0000\n"
+"PO-Revision-Date: 2013-04-04 12:00+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/skin-ace/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -230,8 +235,8 @@ msgid "PLAYLIST"
 msgstr "רשימת השמעה"
 
 msgctxt "#31036"
-msgid "YEARS"
-msgstr "שנים"
+msgid "Years"
+msgstr ""
 
 msgctxt "#31037"
 msgid "ARTISTS"
@@ -677,6 +682,10 @@ msgctxt "#31230"
 msgid "Playlist"
 msgstr "רשימת השמעה"
 
+msgctxt "#31231"
+msgid "CLEAN LIBRARY"
+msgstr ""
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -880,13 +889,13 @@ msgctxt "#31282"
 msgid ""
 "IF THERE IS A 'BLURAY', 'BLU-RAY' OR 'BDRIP' TAG IN THE NAME OF THE FILE OR "
 "FOLDER, THIS CASE WILL BE USED."
-msgstr ""
+msgstr "מצב זה יופעל במידה ויש ציון של 'BLURAY', 'BLU-RAY' או 'BDRIP' בשם הקובץ או התקייה."
 
 msgctxt "#31283"
 msgid ""
 "IF THERE IS A BD '3DBD' OR '3DBD' TAG IN THE NAME OF THE FILE OR FOLDER, "
 "THIS CASE WILL BE USED."
-msgstr ""
+msgstr "מצב זה יופעל במידה ויהיה זה תוכן '3DBD' או שיוציין בשם הקובץ או התקייה '3DBD'."
 
 msgctxt "#31284"
 msgid ""
@@ -1580,18 +1589,16 @@ msgid "RESTORE SETTINGS"
 msgstr "שחזור הגדרות"
 
 msgctxt "#31451"
-msgid "ALWAYS USE AFTER A SKIN UPDATE"
-msgstr "תמיד השתמש לאחר עדכון מעטפת"
+msgid "EXPORT/IMPORT OR RESTART SETTINGS"
+msgstr ""
 
 msgctxt "#31452"
-msgid ""
-"THIS OPTION APPLY TO NEW SETTINGS OR REAPLLY ONLY THE MOST IMPORTANT "
-"ONES.[CR]AVOIDS LOSS OF ALL SKIN CUSTOMIZATION."
-msgstr "אפשרות זו חלה על הגדרות חדשות או חלה מחדש רק על החשובים יותר.[CR]המנע מאיבוד כל ההתאמות האישיות של המעטפת."
+msgid "SAVE AN COPY OF SETTINGS"
+msgstr ""
 
 msgctxt "#31453"
-msgid "APPLY OR REAPPLY STANDARD SETTINGS"
-msgstr "החל או החל מחדש הגדרות רגילות"
+msgid "APPLY SETTINGS SAVED"
+msgstr ""
 
 msgctxt "#31454"
 msgid "SETTING BY SYSTEM"
@@ -1812,7 +1819,7 @@ msgstr "השתמש LANDSCAPE.JPG"
 
 msgctxt "#31508"
 msgid "SHOW CLEARLOGO AND CLEARART"
-msgstr ""
+msgstr "הצג ClearLogo ו-ClearArt"
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -2170,25 +2177,25 @@ msgstr "שחזר כל האפשרויות עבור מעטפת ברירת מחדל
 
 msgctxt "#31598"
 msgid ""
-"ERRORS OR OTHERS TROUBLES CAN BE SOLVED HERE.[CR]PRESS RIGHT TO ACCESS THE "
-"PURGE BUTTON, RESTORING ALL OPTIONS FOR DEFAULT SKIN"
-msgstr "שגיאות ובעיות אחרות יכולות להיפתר כאן.[CR]לחץ ימינה כדי לגשת לכפתור הטיהור, שחזור כל האפשרויות למעטפת לברירת המחדל"
+"Error or others troubles can be solved here.[CR]Press Enter to access the "
+"button that will reset the settings to the skin defaults."
+msgstr ""
 
 msgctxt "#31599"
 msgid "CAREFUL: THIS PROCESS IS IRREVERSIBLE !"
 msgstr "זהירות: תהליך זה בלתי הפיך!"
 
 msgctxt "#31600"
-msgid "MOVE ANY DIRECTION IF YOU WANT TO CANCEL, PRESS ENTER TO PROCEED"
-msgstr "הזז לכל כיוון כדי לבטל, לחץ ENTER כדי להמשיך"
+msgid "Move for any direction to cancel.[CR]Press Enter to proceed"
+msgstr ""
 
 msgctxt "#31601"
 msgid "KIOSK MODE - PREVENTS MENU ACCESS IN COLLECTIONS"
 msgstr "מצב קיוסק  - מונע גישת תפריט באוספים"
 
 msgctxt "#31602"
-msgid "INFO KIOSK MODE- PREVENTS INFORMATION PANEL ACCESS IN COLLECTIONS"
-msgstr "מצב מידע קיוסק - מונע גישה לפאנל המידע באוספים"
+msgid "INFO KIOSK MODE- PREVENTS CHANGE SETTINGS IN INFORMATION WINDOW"
+msgstr ""
 
 msgctxt "#31603"
 msgid ""
@@ -2205,12 +2212,12 @@ msgid "SHOW OPTMIZED POPUP FOR VOXCOMMANDO"
 msgstr "הצג פופ-אפ משופר עבור VOXCOMMANDO"
 
 msgctxt "#31606"
-msgid "WANT A DIFFERENT VISUAL FOR SKIN?"
-msgstr "האם תרצה תצוגה שונה למעטפת זו?"
+msgid "Want a different visual for skin?[CR]Choose a new images theme"
+msgstr ""
 
 msgctxt "#31607"
-msgid "CHOOSE A NEW IMAGES THEME"
-msgstr "בחר תמונות ערכת נושא חדשות"
+msgid "IMAGES THEMES"
+msgstr ""
 
 msgctxt "#31608"
 msgid "ENABLE PVR FUNCTIONS"
@@ -2262,6 +2269,18 @@ msgstr ""
 
 msgctxt "#31620"
 msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
+msgstr "הצג אייקוני שפת אודיו וכתוביות"
+
+msgctxt "#31621"
+msgid "SET TIME FOR EACH IMAGE"
+msgstr ""
+
+msgctxt "#31622"
+msgid "EXPORT SKIN SETTINGS"
+msgstr ""
+
+msgctxt "#31623"
+msgid "IMPORT SKIN SETTINGS"
 msgstr ""
 
 msgctxt "#31624"
@@ -2459,6 +2478,10 @@ msgstr "הצג שעון"
 msgctxt "#31670"
 msgid "HIDE WATCH"
 msgstr "הסתר שעון"
+
+msgctxt "#31671"
+msgid "EDIT DATA"
+msgstr ""
 
 msgctxt "#31672"
 msgid "SHOW LIBRARY"
@@ -3634,7 +3657,6 @@ msgctxt "#31974"
 msgid "Downloading:"
 msgstr "מוריד:"
 
-#. ....
 msgctxt "#31980"
 msgid "NEXT EPISODE"
 msgstr "פרק הבא"
@@ -3658,3 +3680,22 @@ msgstr "קרדיט"
 msgctxt "#31986"
 msgid "SHOW NOW PLAYING PANEL"
 msgstr "הצג פאנל מתנגן עכשיו"
+
+msgctxt "#31987"
+msgid ""
+"You can save all settings made in the skin.[CR]You also transfer the "
+"settings to another computer"
+msgstr ""
+
+msgctxt "#31988"
+msgid ""
+"Here you reapply all settings saved previously.[CR]You can also do a fresh "
+"install and apply the saved settings.[CR]This option will override all "
+"settings made currently."
+msgstr ""
+
+msgctxt "#31989"
+msgid ""
+"Export settings as backup.[CR]Import settings to configure the skin in a "
+"simple way.[CR]Restore all settings to skin defaults."
+msgstr ""

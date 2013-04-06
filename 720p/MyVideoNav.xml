@@ -19,10 +19,10 @@
 	<include>WindowBG</include>
 	<texture background="true">$VAR[value_defaultvideofanart]</texture>
 	</control>
-	<control type="multiimage" id="5020"><!-- Extra Fanart Movies/TvShows/MusicVideos -->
+	<control type="multiimage" id="5020"><!-- Extra Fanart Movies/TvShows/MusicVideos/Sets -->
 	<include>InvisibleButton</include>
 	<imagepath background="true">$INFO[ListItem.Path]extrafanart/</imagepath>
-	<visible>Container.Content(movies) + !Skin.HasSetting(trailers) + SubString(skin.string(moviesfanart),extra) | Container.Content(tvshows) + SubString(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + SubString(skin.string(musicvideosfanart),extra)</visible>
+	<visible>Container.Content(movies) + !Skin.HasSetting(trailers) + SubString(skin.string(moviesfanart),extra) | Container.Content(tvshows) + SubString(skin.string(tvshowsfanart),extra) | Container.Content(musicvideos) + SubString(skin.string(musicvideosfanart),extra) | Container.Content(sets) + SubString(skin.string(setsfanart),extra)</visible>
 	</control>
 	<control type="multiimage" id="5021"><!-- Extra Fanart Seasons -->
 	<include>InvisibleButton</include>

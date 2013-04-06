@@ -52,6 +52,11 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
 # Mark Peters <forkless@gmail.com>, 2013.
 # Mitch <mitchlwaterman@gmail.com>, 2013.
 #  <schumi2004@gmail.com>, 2013.
@@ -62,7 +67,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-28 18:19+0000\n"
+"PO-Revision-Date: 2013-04-04 12:00+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/skin-ace/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -233,8 +238,8 @@ msgid "PLAYLIST"
 msgstr "AFSPEELLIJST"
 
 msgctxt "#31036"
-msgid "YEARS"
-msgstr "JAREN"
+msgid "Years"
+msgstr ""
 
 msgctxt "#31037"
 msgid "ARTISTS"
@@ -680,6 +685,10 @@ msgctxt "#31230"
 msgid "Playlist"
 msgstr "Afspeellijst"
 
+msgctxt "#31231"
+msgid "CLEAN LIBRARY"
+msgstr ""
+
 #. ....
 msgctxt "#31234"
 msgid "MENU IN WRAP LIST MODE"
@@ -786,7 +795,7 @@ msgid ""
 " JPG format and I would suggest using the program FastStone Photo Resize to "
 "obtain good quality images and low size.[CR]If wish you can also use images "
 "with 1980x1080 pixels/72dpi, in format jpg."
-msgstr ""
+msgstr "1. Maak een basis map aan met een willekeurige naam, bijvoorbeeld MIJN THEMA.[CR][CR]2. In deze map maakt u 16 mappen aan met de volgende namen:[CR]addons, autumn, concerts, custom, games, LiveTV, movies, music, MyMenu, pictures, settings, spring, summer, tvshows, videos, winter.[CR][CR]3. Plaats de afbeeldingen naar keuze in deze mappen, MIJN THEMA ondersteunt meerdere bestanden. U kunt per map zoveel afbeeldingen toevoegen als u wilt.[CR][CR]4. Geef het pad naar de basis map op wanneer uw thema klaar is.[CR][CR]De kwaliteit van de standaardafbeelding voor Ace is 72dpi met een resolutie van 1280x720 in het JPG-formaat en het wordt aangeraden om het programma FastStone Photo Resize te gebruiken om goede kwaliteit afbeeldingen te krijgen van kleine grootte.[CR]Indien gewenst kunt u ook afbeeldingen van 1980x1080 pixels/72dpi in JPG-formaat gebruiken."
 
 #. ....
 msgctxt "#31260"
@@ -1583,18 +1592,16 @@ msgid "RESTORE SETTINGS"
 msgstr "HERSTEL INSTELLINGEN"
 
 msgctxt "#31451"
-msgid "ALWAYS USE AFTER A SKIN UPDATE"
-msgstr "GEBRUIK ALTIJD NA EEN SKIN UPDATE"
+msgid "EXPORT/IMPORT OR RESTART SETTINGS"
+msgstr ""
 
 msgctxt "#31452"
-msgid ""
-"THIS OPTION APPLY TO NEW SETTINGS OR REAPLLY ONLY THE MOST IMPORTANT "
-"ONES.[CR]AVOIDS LOSS OF ALL SKIN CUSTOMIZATION."
-msgstr "VOOR DEZE OPTIE KIEZEN VOOR NIEUWE INSTELLINGEN OF OPNIEUW TOEPASSEN OP DE MEEST BELANGRIJKE.[CR]VOORKOM VERLIES VAN ALLE SKIN AANPASSINGEN."
+msgid "SAVE AN COPY OF SETTINGS"
+msgstr ""
 
 msgctxt "#31453"
-msgid "APPLY OR REAPPLY STANDARD SETTINGS"
-msgstr "TOEPASSEN OF OPNIEUW TOEPASSEN VAN STANDAARD INSTELLINGEN"
+msgid "APPLY SETTINGS SAVED"
+msgstr ""
 
 msgctxt "#31454"
 msgid "SETTING BY SYSTEM"
@@ -1815,7 +1822,7 @@ msgstr "GEBRUIK LANDSCAPE.JPG"
 
 msgctxt "#31508"
 msgid "SHOW CLEARLOGO AND CLEARART"
-msgstr ""
+msgstr "TOON CLEARLOGO EN CLEARART"
 
 msgctxt "#31509"
 msgid "ALTERNATIVE GENRE ICONS"
@@ -2173,25 +2180,25 @@ msgstr "HERSTEL ALLE STANDAARDOPTIES VOOR DE SKIN"
 
 msgctxt "#31598"
 msgid ""
-"ERRORS OR OTHERS TROUBLES CAN BE SOLVED HERE.[CR]PRESS RIGHT TO ACCESS THE "
-"PURGE BUTTON, RESTORING ALL OPTIONS FOR DEFAULT SKIN"
-msgstr "ERRORS OF ANDERE PROBLEMEN KUNNEN HIER OPGELOST WORDEN.[CR]DRUK RECHTS VOOR TOEGANG TOT DE RESETKNOP, ALLE SKINOPTIES WORDEN NAAR HUN STANDAARDINSTELLING TERUGGEZET."
+"Error or others troubles can be solved here.[CR]Press Enter to access the "
+"button that will reset the settings to the skin defaults."
+msgstr ""
 
 msgctxt "#31599"
 msgid "CAREFUL: THIS PROCESS IS IRREVERSIBLE !"
 msgstr "VOORZICHTIG: DIT PROCES IS ONOMKEERBAAR !"
 
 msgctxt "#31600"
-msgid "MOVE ANY DIRECTION IF YOU WANT TO CANCEL, PRESS ENTER TO PROCEED"
-msgstr "BEWEEG IN EEN RICHTING OM TE ANNULEREN, DRUK ENTER OM DOOR TE GAAN"
+msgid "Move for any direction to cancel.[CR]Press Enter to proceed"
+msgstr ""
 
 msgctxt "#31601"
 msgid "KIOSK MODE - PREVENTS MENU ACCESS IN COLLECTIONS"
 msgstr "KIOSKMODUS - VOORKOMT TOEGANG TOT LINKER SUBMENU IN BIBLIOTHEKEN"
 
 msgctxt "#31602"
-msgid "INFO KIOSK MODE- PREVENTS INFORMATION PANEL ACCESS IN COLLECTIONS"
-msgstr "INFO KIOSKMODUS - VOORKOMT TOEGANG TOT INFOPANEEL IN BIBLIOTHEKEN"
+msgid "INFO KIOSK MODE- PREVENTS CHANGE SETTINGS IN INFORMATION WINDOW"
+msgstr ""
 
 msgctxt "#31603"
 msgid ""
@@ -2208,12 +2215,12 @@ msgid "SHOW OPTMIZED POPUP FOR VOXCOMMANDO"
 msgstr "TOON POPUP VOOR VOXCOMMANDO"
 
 msgctxt "#31606"
-msgid "WANT A DIFFERENT VISUAL FOR SKIN?"
-msgstr "U WILT EEN ANDERE LOOK VOOR DE SKIN?"
+msgid "Want a different visual for skin?[CR]Choose a new images theme"
+msgstr ""
 
 msgctxt "#31607"
-msgid "CHOOSE A NEW IMAGES THEME"
-msgstr "KIES EEN NIEUW AFBEELDINGEN THEMA"
+msgid "IMAGES THEMES"
+msgstr ""
 
 msgctxt "#31608"
 msgid "ENABLE PVR FUNCTIONS"
@@ -2266,6 +2273,18 @@ msgstr ""
 msgctxt "#31620"
 msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
 msgstr ""
+
+msgctxt "#31621"
+msgid "SET TIME FOR EACH IMAGE"
+msgstr ""
+
+msgctxt "#31622"
+msgid "EXPORT SKIN SETTINGS"
+msgstr "EXPORTEER SKIN INSTELLINGEN"
+
+msgctxt "#31623"
+msgid "IMPORT SKIN SETTINGS"
+msgstr "IMPORTEER SKIN INSTELLINGEN"
 
 msgctxt "#31624"
 msgid "PRESS ENTER TO SELECT"
@@ -2462,6 +2481,10 @@ msgstr "BEKEKEN TONEN"
 msgctxt "#31670"
 msgid "HIDE WATCH"
 msgstr "BEKEKEN VERBERGEN"
+
+msgctxt "#31671"
+msgid "EDIT DATA"
+msgstr ""
 
 msgctxt "#31672"
 msgid "SHOW LIBRARY"
@@ -3637,7 +3660,6 @@ msgctxt "#31974"
 msgid "Downloading:"
 msgstr "Downloaden:"
 
-#. ....
 msgctxt "#31980"
 msgid "NEXT EPISODE"
 msgstr "VOLGENDE AFLEVERING"
@@ -3661,3 +3683,22 @@ msgstr "CREDITS"
 msgctxt "#31986"
 msgid "SHOW NOW PLAYING PANEL"
 msgstr "VOORTGANG PANEEL TONEN"
+
+msgctxt "#31987"
+msgid ""
+"You can save all settings made in the skin.[CR]You also transfer the "
+"settings to another computer"
+msgstr ""
+
+msgctxt "#31988"
+msgid ""
+"Here you reapply all settings saved previously.[CR]You can also do a fresh "
+"install and apply the saved settings.[CR]This option will override all "
+"settings made currently."
+msgstr ""
+
+msgctxt "#31989"
+msgid ""
+"Export settings as backup.[CR]Import settings to configure the skin in a "
+"simple way.[CR]Restore all settings to skin defaults."
+msgstr ""

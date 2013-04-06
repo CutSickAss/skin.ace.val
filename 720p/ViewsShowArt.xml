@@ -172,11 +172,12 @@
 	</control>
 	<control type="image">
 	<posx>168</posx>
-	<posy>-1</posy>
-	<width>40</width>
-	<height>40</height>
+	<posy>84</posy>
+	<width>30</width>
+	<height>30</height>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+	<texture flipy="true">$INFO[ListItem.Overlay]</texture>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	<control type="label">
@@ -211,12 +212,12 @@
 	</control>
 	<control type="image">
 	<posx>168</posx>
-	<posy>-1</posy>
-	<width>40</width>
-	<height>40</height>
+	<posy>84</posy>
+	<width>30</width>
+	<height>30</height>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-	<animation effect="zoom" center="106,50" start="80" end="110" time="200" tween="cubic" easing="inout">Focus</animation>
+	<texture flipy="true">$INFO[ListItem.Overlay]</texture>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	<control type="label">

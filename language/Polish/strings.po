@@ -52,6 +52,11 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
 #  <etharr@hacjenda.info>, 2013.
 #   <krystianen@gmail.com>, 2012.
 # Maciek Fornalczyk <maciomanus@gmail.com>, 2012.
@@ -64,7 +69,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-28 18:19+0000\n"
+"PO-Revision-Date: 2013-04-04 12:00+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/skin-ace/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -235,8 +240,8 @@ msgid "PLAYLIST"
 msgstr "LISTA ODTWARZANIA"
 
 msgctxt "#31036"
-msgid "YEARS"
-msgstr "LATA"
+msgid "Years"
+msgstr ""
 
 msgctxt "#31037"
 msgid "ARTISTS"
@@ -681,6 +686,10 @@ msgstr "MOJE MENU"
 msgctxt "#31230"
 msgid "Playlist"
 msgstr "Lista odtwarzania"
+
+msgctxt "#31231"
+msgid "CLEAN LIBRARY"
+msgstr ""
 
 #. ....
 msgctxt "#31234"
@@ -1585,18 +1594,16 @@ msgid "RESTORE SETTINGS"
 msgstr "PRZYWRÓĆ USTAWIENIA"
 
 msgctxt "#31451"
-msgid "ALWAYS USE AFTER A SKIN UPDATE"
-msgstr "ZAWSZE UŻYWAJ PO AKTUALIZACJI SKÓRY"
+msgid "EXPORT/IMPORT OR RESTART SETTINGS"
+msgstr ""
 
 msgctxt "#31452"
-msgid ""
-"THIS OPTION APPLY TO NEW SETTINGS OR REAPLLY ONLY THE MOST IMPORTANT "
-"ONES.[CR]AVOIDS LOSS OF ALL SKIN CUSTOMIZATION."
-msgstr "OPCJA TA DOTYCZY ZASTOSOWANIA NOWYCH USTAWIEŃ LUB PONOWNEGO ZASTOSOWANIA NAJWAŻNIEJSZYCH USTAWIEŃ.[CR] ZAPOBIEGA UTRACIE OSOBISTYCH DOSTOSOWAŃ."
+msgid "SAVE AN COPY OF SETTINGS"
+msgstr ""
 
 msgctxt "#31453"
-msgid "APPLY OR REAPPLY STANDARD SETTINGS"
-msgstr "ZASTOSUJ STANDARDOWE USTAWIENIA"
+msgid "APPLY SETTINGS SAVED"
+msgstr ""
 
 msgctxt "#31454"
 msgid "SETTING BY SYSTEM"
@@ -2175,25 +2182,25 @@ msgstr "PRZYWRÓĆ USTAWIENIA DLA DOMYŚLNEJ SKÓRY"
 
 msgctxt "#31598"
 msgid ""
-"ERRORS OR OTHERS TROUBLES CAN BE SOLVED HERE.[CR]PRESS RIGHT TO ACCESS THE "
-"PURGE BUTTON, RESTORING ALL OPTIONS FOR DEFAULT SKIN"
-msgstr "BŁĘDY ORAZ INNE PROBLEMY MOGĄ ZOSTAĆ ROZWIĄZANE TUTAJ.[CR]NACIŚNIJ ENTER ABY UZYSKAĆ DOSTĘP DO PRZYCISKU CZYSZCZENIA, PRZYWRACAJĄC WSZYSTKIE OPCJE DOMYŚLNEJ SKÓRY"
+"Error or others troubles can be solved here.[CR]Press Enter to access the "
+"button that will reset the settings to the skin defaults."
+msgstr ""
 
 msgctxt "#31599"
 msgid "CAREFUL: THIS PROCESS IS IRREVERSIBLE !"
 msgstr "UWAGA: TEN PROCES JEST NIEODWRACALNY!"
 
 msgctxt "#31600"
-msgid "MOVE ANY DIRECTION IF YOU WANT TO CANCEL, PRESS ENTER TO PROCEED"
-msgstr "NACIŚNIJ STRZAŁKĘ JEŻELI CHCESZ PRZERWAĆ, NACIŚNIJ ENTER JEŻELI CHCESZ KONTYNUOWAĆ"
+msgid "Move for any direction to cancel.[CR]Press Enter to proceed"
+msgstr ""
 
 msgctxt "#31601"
 msgid "KIOSK MODE - PREVENTS MENU ACCESS IN COLLECTIONS"
 msgstr "TRYB KIOSKU - BLOKADA DOSTĘPU DO MENU"
 
 msgctxt "#31602"
-msgid "INFO KIOSK MODE- PREVENTS INFORMATION PANEL ACCESS IN COLLECTIONS"
-msgstr "TRYB INFO KIOSKU - BLOKADA DOSTĘPU DO PANELU INFORMACYJNEGO"
+msgid "INFO KIOSK MODE- PREVENTS CHANGE SETTINGS IN INFORMATION WINDOW"
+msgstr ""
 
 msgctxt "#31603"
 msgid ""
@@ -2210,12 +2217,12 @@ msgid "SHOW OPTMIZED POPUP FOR VOXCOMMANDO"
 msgstr "WYŚWIETL ZOPTYMALIZOWANE OKNO DLA VOXCOMMANDO"
 
 msgctxt "#31606"
-msgid "WANT A DIFFERENT VISUAL FOR SKIN?"
-msgstr "CHCESZ INNY WIDOK DLA SKÓRY?"
+msgid "Want a different visual for skin?[CR]Choose a new images theme"
+msgstr ""
 
 msgctxt "#31607"
-msgid "CHOOSE A NEW IMAGES THEME"
-msgstr "WYBIERZ NOWE OBRAZY DLA MOTYWU"
+msgid "IMAGES THEMES"
+msgstr ""
 
 msgctxt "#31608"
 msgid "ENABLE PVR FUNCTIONS"
@@ -2267,6 +2274,18 @@ msgstr ""
 
 msgctxt "#31620"
 msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
+msgstr ""
+
+msgctxt "#31621"
+msgid "SET TIME FOR EACH IMAGE"
+msgstr ""
+
+msgctxt "#31622"
+msgid "EXPORT SKIN SETTINGS"
+msgstr ""
+
+msgctxt "#31623"
+msgid "IMPORT SKIN SETTINGS"
 msgstr ""
 
 msgctxt "#31624"
@@ -2464,6 +2483,10 @@ msgstr "POKAŻ ZEGAR"
 msgctxt "#31670"
 msgid "HIDE WATCH"
 msgstr "UKRYJ ZEGAR"
+
+msgctxt "#31671"
+msgid "EDIT DATA"
+msgstr ""
 
 msgctxt "#31672"
 msgid "SHOW LIBRARY"
@@ -3639,7 +3662,6 @@ msgctxt "#31974"
 msgid "Downloading:"
 msgstr "Pobieranie:"
 
-#. ....
 msgctxt "#31980"
 msgid "NEXT EPISODE"
 msgstr "NASTĘPNY ODCINEK"
@@ -3663,3 +3685,22 @@ msgstr "AUTORZY"
 msgctxt "#31986"
 msgid "SHOW NOW PLAYING PANEL"
 msgstr "POKAŻ PANEL TERAZ ODTWARZANE"
+
+msgctxt "#31987"
+msgid ""
+"You can save all settings made in the skin.[CR]You also transfer the "
+"settings to another computer"
+msgstr ""
+
+msgctxt "#31988"
+msgid ""
+"Here you reapply all settings saved previously.[CR]You can also do a fresh "
+"install and apply the saved settings.[CR]This option will override all "
+"settings made currently."
+msgstr ""
+
+msgctxt "#31989"
+msgid ""
+"Export settings as backup.[CR]Import settings to configure the skin in a "
+"simple way.[CR]Restore all settings to skin defaults."
+msgstr ""

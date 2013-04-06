@@ -57,7 +57,6 @@
 	<width>60</width>
 	<height>60</height>
 	<aspectratio>keep</aspectratio>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</include>
 	<include name="CoverFlowMusicThumb">

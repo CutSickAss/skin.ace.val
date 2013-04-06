@@ -3,7 +3,7 @@
 	<includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-	<value>1.3.2[COLOR=80FFFFFF] | [/COLOR]04/01/2013</value>
+	<value>1.4.0[COLOR=80FFFFFF] | [/COLOR]04/05/2013</value>
 	</variable>
 	<variable name="Sub_GoTo">
 	<value condition="Container(9000).HasFocus(1)">5001</value>
@@ -1707,6 +1707,7 @@
 	<value condition="Control.HasFocus(1084)">$INFO[Skin.String(extrapackstyle)]</value>
 	<value condition="Control.HasFocus(1085)">$INFO[Skin.String(CustomMyStyle)]</value>
 	<value condition="Control.HasFocus(1086)">$INFO[Skin.String(CustomMyStyle)]</value>
+	<value condition="Control.HasFocus(1088)">$INFO[Skin.String(CustomMyStyle)]</value>
 	</variable>
 	<variable name="value_mainmenu_style">
 	<value condition="StringCompare(skin.string(style),modern)">grey.png</value>
@@ -1732,6 +1733,7 @@
 	<value condition="Control.HasFocus(1060)">$INFO[Skin.String(CustomMyTheme)]/</value>
 	</variable>
 	<variable name="value_themedescription">
+	<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(22)">$LOCALIZE[31606]</value>
 	<value condition="Control.HasFocus(1060)">$LOCALIZE[31254]</value>
 	<value condition="Control.HasFocus(1061)">$LOCALIZE[31967]</value>
 	<value condition="Control.HasFocus(1063)">$LOCALIZE[31966]</value>
@@ -1743,9 +1745,11 @@
 	<value condition="Control.HasFocus(1069)">$LOCALIZE[31905]</value>
 	</variable>
 	<variable name="value_resetdescription">
-	<value condition="Container(9100).HasFocus(32) + ![Control.HasFocus(1050) | Control.HasFocus(891)]">$LOCALIZE[31598]</value>
-	<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1050)">$LOCALIZE[31452]</value>
-	<value condition="Control.HasFocus(891)">$LOCALIZE[31600]</value>
+	<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">$LOCALIZE[31989]</value>
+	<value condition="Control.HasFocus(1150)">$LOCALIZE[31987]</value>
+	<value condition="Control.HasFocus(1151)">$LOCALIZE[31988]</value>
+	<value condition="Control.HasFocus(1152)">$LOCALIZE[31598]</value>
+	<value condition="Control.HasFocus(1153)">$LOCALIZE[31600]</value>
 	</variable>
 	<variable name="value_mainmenulabel_shutdown">
 	<value condition="IsEmpty(skin.string(shutdown.label)) + SubString(skin.string(shutdownbutton),shutdown)">$LOCALIZE[31012]</value>
@@ -2183,7 +2187,7 @@
 	<value condition="Container.Content(seasons) + [SubString(skin.string(seasonsfanart),seasons) + IsEmpty(Control.GetLabel(5023))]">$INFO[ListItem.Art(fanart)]</value>
 	<value condition="Container.Content(episodes) + [SubString(skin.string(episodesfanart),fanart) | SubString(skin.string(episodesfanart),extra) + IsEmpty(Control.GetLabel(5022))]">$INFO[ListItem.Art(fanart)]</value>
 	<value condition="Container.Content(episodes) + [SubString(skin.string(episodesfanart),seasons) + IsEmpty(Control.GetLabel(5024))]">$INFO[ListItem.Art(fanart)]</value>
-	<value condition="Container.Content(sets)">$INFO[ListItem.Art(fanart)]</value>
+	<value condition="Container.Content(sets) + [SubString(skin.string(setsfanart),fanart) | SubString(skin.string(setsfanart),extra) + IsEmpty(Control.GetLabel(5020))]">$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 
 	<variable name="value_videofanart">
@@ -2204,6 +2208,9 @@
 	<value condition="Container.Content(episodes) + SubString(skin.string(episodesfanart),curtains)">special://skin/backgrounds/extras/curtains.jpg</value>
 	<value condition="Container.Content(episodes) + SubString(skin.string(episodesfanart),extra)">$INFO[ListItem.Path,,../extrafanart/]</value>
 	<value condition="Container.Content(episodes) + SubString(skin.string(episodesfanart),seasons)">$INFO[ListItem.Path,,fanart.jpg]</value>
+	<value condition="Container.Content(sets) + SubString(skin.string(setsfanart),fallback)">$INFO[Skin.String(CustomFallbackSetsBG)]</value>
+	<value condition="Container.Content(sets) + SubString(skin.string(setsfanart),curtains)">special://skin/backgrounds/extras/curtains.jpg</value>
+	<value condition="Container.Content(sets) + SubString(skin.string(setsfanart),extra)">$INFO[ListItem.Path]extrafanart/</value>
 	<value condition="Container.Content(genres)">$INFO[Skin.String(CustomVideoGenreFolder)]$INFO[ListItem.Label,,.jpg]</value>
 	</variable>
 
@@ -2304,7 +2311,6 @@
 	<value condition="ControlGroup(250).HasFocus">$LOCALIZE[31689]</value>
 	<value condition="Window.IsVisible(2901)">$LOCALIZE[31698]</value>
 	<value condition="Window.IsVisible(2003)">$LOCALIZE[31699]</value>
-	<value condition="Control.HasFocus(891)">$LOCALIZE[31599]</value>
 	<value condition="Control.HasFocus(403) + Container(403).HasFocus(1)">$LOCALIZE[31276] $LOCALIZE[31277]</value>
 	<value condition="Control.HasFocus(403) + Container(403).HasFocus(2)">$LOCALIZE[31276] $LOCALIZE[31266]</value>
 	<value condition="Control.HasFocus(403) + Container(403).HasFocus(3)">$LOCALIZE[31276] $LOCALIZE[31267]</value>
@@ -2319,8 +2325,10 @@
 	<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(23) | ControlGroup(9005).HasFocus">$LOCALIZE[31594]</value>
 	<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(31)">$LOCALIZE[31278]</value>
 	<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">$LOCALIZE[31451]</value>
-	<value condition="Container(9100).HasFocus(32) + ![Control.HasFocus(1050) | Control.HasFocus(891)]">$LOCALIZE[31597]</value>
-	<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1050)">$LOCALIZE[31451]</value>
+	<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1150)">$LOCALIZE[31452]</value>
+	<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1151)">$LOCALIZE[31453]</value>
+	<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1152)">$LOCALIZE[31597]</value>
+	<value condition="Container(9100).HasFocus(32) + Control.HasFocus(1153)">$LOCALIZE[31599]</value>
 	<value condition="ControlGroup(150).HasFocus + ControlGroup(150).HasFocus(151)">$LOCALIZE[31287] - $LOCALIZE[31288]</value>
 	<value condition="ControlGroup(150).HasFocus + ControlGroup(150).HasFocus(152)">$LOCALIZE[31287] - $LOCALIZE[31277]</value>
 	<value condition="ControlGroup(150).HasFocus + ControlGroup(150).HasFocus(153)">$LOCALIZE[31287] - $LOCALIZE[31266]</value>
@@ -2353,10 +2361,16 @@
 	<value condition="ControlGroup(165).HasFocus + ControlGroup(165).HasFocus(189)">$LOCALIZE[31296] - $LOCALIZE[31645]</value>
 	</variable>
 	<variable name="value_resetalertcolor">
-	<value condition="![Control.HasFocus(889) | Control.HasFocus(891)]">B6FFFFFF</value>
-	<value condition="Control.HasFocus(889)">FFDAA520</value>
-	<value condition="Control.HasFocus(891)">FFB20000</value>
+	<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">FFFFFFFF</value>
+	<value condition="Control.HasFocus(1150)">FF228B22</value>
+	<value condition="Control.HasFocus(1151)">FFDAA520</value>
+	<value condition="Control.HasFocus(1152)">FFFF4500</value>
+	<value condition="Control.HasFocus(1153)">FFB20000</value>
 	</variable>
+	<variable name="value_restoreimage">
+	<value condition="Control.HasFocus(9100) + Container(9100).HasFocus(32)">DefaultExtraThumbs.png</value>
+	<value condition="Control.HasFocus(1150) | Control.HasFocus(1151) | Control.HasFocus(1152) | Control.HasFocus(1153)">resetalert.png</value>
+	</variable>	
 	<variable name="value_virtualsublabel">
 	<value condition="Control.HasFocus(403) + Container(403).HasFocus(1)">$LOCALIZE[31280][CR]$LOCALIZE[31281]</value>
 	<value condition="Control.HasFocus(403) + Container(403).HasFocus(2)">$LOCALIZE[31282][CR]$LOCALIZE[31281]</value>
@@ -2485,10 +2499,12 @@
 	<value condition="SubString(ListItem.Rating,5)">rating5.png</value>
 	</variable>
 	<variable name="value_videotitle">
-	<value condition="!Control.IsVisible(608) + ![Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)]">$INFO[ListItem.Label]</value>
-	<value condition="!Control.IsVisible(608) + Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle]</value>
-	<value condition="Control.IsVisible(608) + ![Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)]">$INFO[ListItem.Label] ($LOCALIZE[31701])</value>
-	<value condition="Control.IsVisible(608) + Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle] ($LOCALIZE[31701])</value>
+	<value condition="![Control.IsVisible(608) | Control.IsVisible(65)] + ![Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)]">$INFO[ListItem.Label]</value>
+	<value condition="![Control.IsVisible(608) | Control.IsVisible(65)] + Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle]</value>
+	<value condition="Control.IsVisible(608) + ![Control.IsVisible(65) | Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)]">$INFO[ListItem.Label] ($LOCALIZE[31701])</value>
+	<value condition="Control.IsVisible(608) + !Control.IsVisible(65) + Skin.HasSetting(originaltitle) + !IsEmpty(ListItem.OriginalTitle)">$INFO[ListItem.OriginalTitle] ($LOCALIZE[31701])</value>
+	<value condition="Control.IsVisible(65) + !Control.HasFocus(5801)">$INFO[ListItem.Label]</value>
+	<value condition="Control.IsVisible(65) + Control.HasFocus(5801)">$INFO[Container(5801).ListItem.Label]</value>
 	</variable>
 	<variable name="value_videoosdtitle">
 	<value condition="![Skin.HasSetting(originaltitle) + !IsEmpty(VideoPlayer.OriginalTitle)]">$INFO[VideoPlayer.Title]</value>
@@ -2688,13 +2704,21 @@
 	<value condition="SubString(ListItem.Path,videodb://1/7,left)">$INFO[Window(0).Property(Set.Movies.Studio)]</value>
 	</variable>
 	<variable name="value_ground5_label"><!-- Para vistas que sejam lista -->
-	<value condition="Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180]: [/COLOR]</value><!-- Duracao -->
+	<value condition="Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[180][/COLOR]</value><!-- Duracao -->
 	</variable>
 	<variable name="value_ground5_value">
 	<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + ![SubString(ListItem.Duration,min) | SubString(ListItem.Path,videodb://1/7,left)]">$INFO[ListItem.Duration] $LOCALIZE[31961]</value>
 	<value condition="[Container.Content(movies) | Container.Content(musicvideos)] + SubString(ListItem.Duration,min) + !SubString(ListItem.Path,videodb://1/7,left)">$INFO[ListItem.Duration]</value>
-	<value condition="!SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://1/7,left)]">$INFO[Window(0).Property(Set.Movies.Runtime)] $LOCALIZE[31961]</value>
+	<value condition="![SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://1/7,left)]">$INFO[Window(0).Property(Set.Movies.Runtime)] $LOCALIZE[31961]</value>
 	<value condition="SubString(ListItem.Duration,min) + SubString(ListItem.Path,videodb://1/7,left)">$INFO[Window(0).Property(Set.Movies.Runtime)]</value>
+	</variable>
+	<variable name="value_ground6_label"><!-- Anos - comum -->
+	<value condition="!SubString(ListItem.Path,videodb://1/7,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31028][/COLOR]</value><!-- Ano -->
+	<value condition="SubString(ListItem.Path,videodb://1/7,left)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[31036][/COLOR]</value><!-- Anos -->
+	</variable>
+	<variable name="value_ground6_value">
+	<value condition="!SubString(ListItem.Path,videodb://1/7,left)">$INFO[ListItem.Year]</value>
+	<value condition="SubString(ListItem.Path,videodb://1/7,left)">$INFO[Window(0).Property(Set.Movies.Years)]</value>
 	</variable>
 
 	<variable name="value_ground11_label"><!-- Para vistas que sejam lista -->
@@ -2877,13 +2901,15 @@
 	<value condition="Library.HasContent(Movies)">$INFO[Window(0).Property(Movies.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(Movies.UnWatched)]</value>
 	</variable>
 	<variable name="value_librarytvshows">
-	<value condition="Library.HasContent(TVShows)">$INFO[Window(0).Property(TVShows.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(TVShows.UnWatched)]</value>
+	<value condition="Library.HasContent(TVShows) + SubString(skin.string(menu),vertical)">$INFO[Window(0).Property(TVShows.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(TVShows.UnWatched)]</value>
+	<value condition="Library.HasContent(TVShows) + SubString(skin.string(menu),horizontal)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20343]:[/COLOR] $INFO[Window.Property(TVShows.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[20360]:[/COLOR] $INFO[Window.Property(Episodes.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]:[/COLOR] $INFO[Window.Property(Episodes.UnWatched)]</value>
 	</variable>
 	<variable name="value_libraryconcerts">
 	<value condition="Library.HasContent(MusicVideos)">$INFO[Window(0).Property(MusicVideos.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]] $LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(MusicVideos.UnWatched)]</value>
 	</variable>
 	<variable name="value_librarymusic">
-	<value condition="Library.HasContent(Music)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[132]:[/COLOR] $INFO[Window(0).Property(Music.AlbumsCount)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[182]:[/COLOR] $INFO[Window(0).Property(Music.SongsCount)]</value>
+	<value condition="Library.HasContent(Music) + SubString(skin.string(menu),vertical)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[132]:[/COLOR] $INFO[Window(0).Property(Music.AlbumsCount)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[182]:[/COLOR] $INFO[Window(0).Property(Music.SongsCount)]</value>
+	<value condition="Library.HasContent(Music) + SubString(skin.string(menu),horizontal)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[133]:[/COLOR] $INFO[Window.Property(Music.ArtistsCount)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[132]:[/COLOR] $INFO[Window.Property(Music.AlbumsCount)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[182]:[/COLOR] $INFO[Window.Property(Music.SongsCount)]</value>
 	</variable>
 	<variable name="value_libraryvpl1">
 	<value condition="!IsEmpty(Window(0).Property(PlaylistLastMovieMenu31.1.Title))">$INFO[Window(0).Property(PlaylistLastMovieMenu31.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(PlaylistLastMovieMenu31.UnWatched)]</value>

@@ -1,4 +1,5 @@
 	<!-- Ace -->
+	<!-- Ace -->
 
 	<includes>
 	<!--##################################################################################   VISTA BANNER - ID 52   ##################################################################################-->
@@ -59,7 +60,6 @@
 	<control type="image">
 	<include>BannerWatchedOverlay_1</include>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	<control type="image"><!-- Dimmer -->
@@ -97,7 +97,6 @@
 	<control type="image">
 	<include>BannerWatchedOverlay_1</include>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<animation effect="zoom" center="290,60" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerzoom)">Focus</animation>
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>

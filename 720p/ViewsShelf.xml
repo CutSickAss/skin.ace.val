@@ -112,12 +112,11 @@
 	<aspectratio>stretch</aspectratio>
 	</control>
 	<control type="image">
-	<posx>-25</posx>
-	<posy>131</posy>
+	<posx>-28</posx>
+	<posy>133</posy>
 	<width>40</width>
 	<height>40</height>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	</control>
@@ -198,12 +197,11 @@
 	</animation>
 	</control>
 	<control type="image">
-	<posx>5</posx>
-	<posy>87</posy>
-	<width>60</width>
-	<height>60</height>
+	<posx>12</posx>
+	<posy>91</posy>
+	<width>50</width>
+	<height>50</height>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<animation type="Focus" reversible="false">
 	<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="cubic" easing="out" />
 	</animation>

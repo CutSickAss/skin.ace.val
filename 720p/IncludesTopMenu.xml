@@ -173,43 +173,49 @@
 	<onclick>ActivateWindow(videos,movietitles,return)</onclick>
 	<visible>!Container.Content(Movies) + Library.HasContent(Movies)</visible>
 	</control>
-	<control type="button" id="9106"><!-- TVShows -->
+	<control type="button" id="9105"><!-- Sets -->
+	<include>TopMenuButton</include>
+	<label>31029</label>
+	<onclick>ActivateWindow(videos,moviesets,return)</onclick>
+	<visible>!Container.Content(Sets) + Library.HasContent(MovieSets)</visible>
+	</control>
+	<control type="button" id="9107"><!-- TVShows -->
 	<include>TopMenuButton</include>
 	<label>31005</label>
 	<onclick>ActivateWindow(videos,tvshowtitles,return)</onclick>
 	<visible>![Container.Content(TvShows) | Container.Content(Seasons) | Container.Content(Episodes)] + Library.HasContent(TVShows)</visible>
 	</control>
-	<control type="button" id="9107"><!-- Live TV -->
+	<control type="button" id="9108"><!-- Live TV -->
 	<include>TopMenuButton</include>
 	<label>31006</label>
 	<onclick>ActivateWindow(tv)</onclick>
 	<visible>!Container.Content(LiveTV) + System.GetBool(pvrmanager.enabled)</visible>
 	</control>
-	<control type="button" id="9108"><!-- Music Videos -->
+	<control type="button" id="9109"><!-- Music Videos -->
 	<include>TopMenuButton</include>
 	<label>31013</label>
 	<onclick>ActivateWindow(videos,musicvideotitles,return)</onclick>
 	<visible>!Container.Content(MusicVideos) + Library.HasContent(MusicVideos)</visible>
 	</control>
-	<control type="button" id="9109"><!-- Music -->
+	<control type="button" id="9110"><!-- Music -->
 	<include>TopMenuButton</include>
 	<label>31002</label>
 	<onclick>ActivateWindow(music)</onclick>
 	<visible>![Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)] + Library.HasContent(Music)</visible>
 	</control>
-	<control type="button" id="9110">
+	<control type="button" id="9111">
 	<include>TopMenuButton</include>
 	<label>31067</label>
 	<onclick>RunScript(script.tv.show.next.aired)</onclick>
 	<visible>[SubString(Container.FolderPath,videodb://2/) | SubString(Container.FolderPath,videodb://5/)] + system.hasaddon(script.tv.show.next.aired)</visible>
 	</control>
-	<control type="button" id="9111"><!-- Video addons -->
+	<control type="button" id="9112"><!-- Video addons -->
 	<include>TopMenuButton</include>
 	<label>31024</label>
 	<onclick>ActivateWindow(video,addons,return)</onclick>
 	<visible>![Skin.HasSetting(kiosksmart) + !SubString(skin.string(codestep),step3)] + [Window.IsActive(videolibrary) | Window.IsActive(videofiles) | Window.IsActive(videoplaylist)]</visible>
 	</control>
-	<control type="button" id="9112"><!-- Programs addons -->
+	<control type="button" id="9113"><!-- Programs addons -->
 	<include>TopMenuButton</include>
 	<label>31027</label>
 	<onclick>ActivateWindow(programs,addons,return)</onclick>
@@ -281,6 +287,7 @@
 	<onfocus>Container.SetViewMode(54)</onfocus>
 	<onclick>SetFocus(54)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31808])</selected>
+	<visible>!Container.Content(years)</visible>
 	</control>
 	<control type="radiobutton" id="9255"><!-- Low List --><!-- 55 -->
 	<include>TopMenuRadioButton</include>
@@ -295,7 +302,7 @@
 	<onfocus>Container.SetViewMode(56)</onfocus>
 	<onclick>SetFocus(56)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31805])</selected>
-	<visible>![Container.Content(episodes) | Container.Content(sets)]</visible>
+	<visible>![Container.Content(episodes) | Container.Content(sets) | Container.Content(years)]</visible>
 	</control>
 	<control type="radiobutton" id="9257"><!-- GlassList --><!-- 57 -->
 	<include>TopMenuRadioButton</include>
@@ -303,7 +310,7 @@
 	<onfocus>Container.SetViewMode(57)</onfocus>
 	<onclick>SetFocus(57)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31827])</selected>
-	<visible>!Container.Content(episodes)</visible>
+	<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
 	</control>
 	<control type="radiobutton" id="9258"><!-- CoverFlow --><!-- 58 -->
 	<include>TopMenuRadioButton</include>
@@ -311,7 +318,7 @@
 	<onfocus>Container.SetViewMode(58)</onfocus>
 	<onclick>SetFocus(58)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31810])</selected>
-	<visible>!Container.Content(episodes)</visible>
+	<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
 	</control>
 	<control type="radiobutton" id="9259"><!-- RightList --><!-- 59 -->
 	<include>TopMenuRadioButton</include>
@@ -319,6 +326,7 @@
 	<onfocus>Container.SetViewMode(59)</onfocus>
 	<onclick>SetFocus(59)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31828])</selected>
+	<visible>!Container.Content(years)</visible>
 	</control>
 	<control type="radiobutton" id="9260"><!-- ShowArt --><!-- 60 -->
 	<include>TopMenuRadioButton</include>
@@ -326,7 +334,7 @@
 	<onfocus>Container.SetViewMode(60)</onfocus>
 	<onclick>SetFocus(60)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31821])</selected>
-	<visible>![Container.Content(episodes) | Container.Content(sets)]</visible>
+	<visible>![Container.Content(episodes) | Container.Content(sets) | Container.Content(years)]</visible>
 	</control>
 	<control type="radiobutton" id="9261"><!-- Multiplex --><!-- 61 -->
 	<include>TopMenuRadioButton</include>
@@ -334,7 +342,7 @@
 	<onfocus>Container.SetViewMode(61)</onfocus>
 	<onclick>SetFocus(61)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31803])</selected>
-	<visible>!Container.Content(episodes)</visible>
+	<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
 	</control>
 	<control type="radiobutton" id="9262"><!-- Panel --><!-- 62 -->
 	<include>TopMenuRadioButton</include>
@@ -342,6 +350,7 @@
 	<onfocus>Container.SetViewMode(62)</onfocus>
 	<onclick>SetFocus(62)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31818])</selected>
+	<visible>!Container.Content(years)</visible>
 	</control>
 	<control type="radiobutton" id="9263"><!-- Shelf --><!-- 63 -->
 	<include>TopMenuRadioButton</include>
@@ -349,7 +358,7 @@
 	<onfocus>Container.SetViewMode(63)</onfocus>
 	<onclick>SetFocus(63)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31809])</selected>
-	<visible>!Container.Content(episodes)</visible>
+	<visible>![Container.Content(episodes) | Container.Content(years)]</visible>
 	</control>
 	<control type="radiobutton" id="9264"><!-- LandScapeX --><!-- 64 -->
 	<include>TopMenuRadioButton</include>
@@ -559,7 +568,7 @@
 	<label>31111</label>
 	<onclick>Skin.ToggleSetting(nodiscart)</onclick>
 	<selected>!Skin.HasSetting(nodiscart)</selected>
-	<visible>[Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(57)] + Container.Content(movies)</visible>
+	<visible>[Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(65)] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 	</control>
 	<!-- Banner -->
 	<control type="radiobutton" id="9338">
@@ -992,8 +1001,44 @@
 	<selected>SubString(skin.string(musicvideosfanart),extra)</selected>
 	<visible>Container.Content(musicvideos)</visible>
 	</control>
+	<!-- Sets Fanart  -->
+	<control type="radiobutton" id="9433"><!-- Fanart - Default -->
+	<include>TopMenuRadioButton</include>
+	<label>31497</label>
+	<onclick>Skin.SetString(setsfanart,fanart)</onclick>
+	<selected>SubString(skin.string(setsfanart),fanart)</selected>
+	<visible>Container.Content(sets)</visible>
+	</control>
+	<control type="radiobutton" id="9434"><!-- Curtains -->
+	<include>TopMenuRadioButton</include>
+	<label>31501</label>
+	<onclick>Skin.SetString(setsfanart,curtains)</onclick>
+	<selected>SubString(skin.string(setsfanart),curtains)</selected>
+	<visible>Container.Content(sets)</visible>
+	</control>
+	<control type="radiobutton" id="9435"><!-- Fanart - Fallback -->
+	<include>TopMenuRadioButton</include>
+	<label>31500</label>
+	<onclick>Skin.SetString(setsfanart,fallback)</onclick>
+	<selected>SubString(skin.string(setsfanart),fallback)</selected>
+	<visible>Container.Content(sets)</visible>
+	</control>
+	<control type="button" id="9436"><!-- Sets Image Fallback -->
+	<include>TopMenuButton</include>
+	<label>[COLOR=$VAR[value_headercolor]] - $LOCALIZE[31504][/COLOR]</label>
+	<onclick>Skin.SetImage(CustomFallbackSetsBG)</onclick>
+	<visible>Container.Content(sets) + SubString(skin.string(setsfanart),fallback)</visible>
+	</control>
+	<!-- Extra Fanart Sets -->
+	<!--<control type="radiobutton" id="9437">
+	<include>TopMenuRadioButton</include>
+	<label>31498</label>
+	<onclick>Skin.SetString(setsfanart,extra)</onclick>
+	<selected>SubString(skin.string(setsfanart),extra)</selected>
+	<visible>Container.Content(sets)</visible>
+	</control>-->
 	<!-- Genre -->
-	<control type="radiobutton" id="9433"><!-- Genre -->
+	<control type="radiobutton" id="9453"><!-- Genre -->
 	<include>TopMenuRadioButton</include>
 	<label>31499</label>
 	<onclick>Skin.ToggleSetting(videogenrebackground)</onclick>
@@ -1001,19 +1046,19 @@
 	<enable>![Skin.HasSetting(moviescurtains) + Container.Content(movies) | Skin.HasSetting(tvshowscurtains) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(musicvideoscurtains) + Container.Content(musicvideos)]</enable>
 	<visible>Container.Content(Genres)</visible>
 	</control>
-	<control type="button" id="9434"><!-- Video Fanart Genre -->
+	<control type="button" id="9454"><!-- Video Fanart Genre -->
 	<include>TopMenuButton</include>
 	<label>31503</label>
 	<onclick>Skin.SetPath(CustomVideoGenreFolder)</onclick>
 	<visible>Container.Content(Genres) + Skin.HasSetting(videogenrebackground) + IsEmpty(Skin.String(CustomVideoGenreFolder))</visible>
 	</control>
-	<control type="button" id="9435">
+	<control type="button" id="9455">
 	<include>TopMenuButton</include>
 	<label>$INFO[Skin.String(CustomVideoGenreFolder)]</label>
 	<onclick>Skin.SetPath(CustomVideoGenreFolder)</onclick>
 	<visible>Container.Content(Genres) + Skin.HasSetting(videogenrebackground) + !IsEmpty(Skin.String(CustomVideoGenreFolder))</visible>
 	</control>
-	<control type="radiobutton" id="9437">
+	<control type="radiobutton" id="9457">
 	<include>TopMenuRadioButton</include>
 	<label>31509</label>
 	<onclick>Skin.ToggleSetting(nomoviegenrebuiltin)</onclick>
@@ -1021,7 +1066,7 @@
 	<selected>Skin.HasSetting(nomoviegenrebuiltin)</selected>
 	<visible>Container.Content(genres)</visible>
 	</control>
-	<control type="button" id="9438">
+	<control type="button" id="9458">
 	<include>TopMenuRadioButton</include>
 	<label>$VAR[value_videogenreicon]</label>
 	<onclick>Skin.SetPath(CustomVideoGenreIcon)</onclick>
@@ -1075,14 +1120,6 @@
 	<onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], poster, fanart, extrafanart, extrathumbs, clearlogo, clearart, discart, thumb, banner)</onclick>
 	<onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=custom, dbid=$INFO[ListItem.DBID], poster, fanart, extrafanart, extrathumbs, clearlogo, clearart, discart)</onclick>
 	<onclick>SetFocus(51)</onclick>
-	</control>
-	<control type="button" id="9508"><!-- MovieSets -->
-	<include>TopMenuButton</include>
-	<label>$VAR[value_addon3]</label>
-	<onclick>SetFocus(51)</onclick>
-	<onclick condition="!System.HasAddon(plugin.moviesets)">ActivateWindow(Programs,Addons,return)</onclick>
-	<onclick condition="System.HasAddon(plugin.moviesets)">ActivateWindow(videos, plugin://plugin.moviesets)</onclick>
-	<visible>Container.Content(movies)</visible>
 	</control>
 	<control type="radiobutton" id="9509"><!-- TV Tunes -->
 	<include>TopMenuRadioButton</include>

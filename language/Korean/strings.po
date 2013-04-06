@@ -52,6 +52,11 @@
 # Translators:
 # Translators:
 # Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
+# Translators:
 #  <piodio@gmail.com>, 2013.
 #   <piodio@gmail.com>, 2012-2013.
 msgid ""
@@ -59,7 +64,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-03-28 18:19+0000\n"
+"PO-Revision-Date: 2013-04-04 12:00+0000\n"
 "Last-Translator: Wanilton Campos <>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/skin-ace/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -230,8 +235,8 @@ msgid "PLAYLIST"
 msgstr "재생목록"
 
 msgctxt "#31036"
-msgid "YEARS"
-msgstr "연도"
+msgid "Years"
+msgstr ""
 
 msgctxt "#31037"
 msgid "ARTISTS"
@@ -676,6 +681,10 @@ msgstr "나의 메뉴"
 msgctxt "#31230"
 msgid "Playlist"
 msgstr "재생목록"
+
+msgctxt "#31231"
+msgid "CLEAN LIBRARY"
+msgstr ""
 
 #. ....
 msgctxt "#31234"
@@ -1580,17 +1589,15 @@ msgid "RESTORE SETTINGS"
 msgstr "설정 복원"
 
 msgctxt "#31451"
-msgid "ALWAYS USE AFTER A SKIN UPDATE"
-msgstr "스킨 업데이트 후 항상 사용"
+msgid "EXPORT/IMPORT OR RESTART SETTINGS"
+msgstr ""
 
 msgctxt "#31452"
-msgid ""
-"THIS OPTION APPLY TO NEW SETTINGS OR REAPLLY ONLY THE MOST IMPORTANT "
-"ONES.[CR]AVOIDS LOSS OF ALL SKIN CUSTOMIZATION."
+msgid "SAVE AN COPY OF SETTINGS"
 msgstr ""
 
 msgctxt "#31453"
-msgid "APPLY OR REAPPLY STANDARD SETTINGS"
+msgid "APPLY SETTINGS SAVED"
 msgstr ""
 
 msgctxt "#31454"
@@ -2170,25 +2177,25 @@ msgstr "모든 옵션을 스킨 기본값으로 복원"
 
 msgctxt "#31598"
 msgid ""
-"ERRORS OR OTHERS TROUBLES CAN BE SOLVED HERE.[CR]PRESS RIGHT TO ACCESS THE "
-"PURGE BUTTON, RESTORING ALL OPTIONS FOR DEFAULT SKIN"
-msgstr "오류나 문제를 여기에서 해결할 수 있습니다.[CR]클릭하면 모든 옵션을 스킨 기본값으로 복원하는 '초기화' 버튼이 표시됩니다."
+"Error or others troubles can be solved here.[CR]Press Enter to access the "
+"button that will reset the settings to the skin defaults."
+msgstr ""
 
 msgctxt "#31599"
 msgid "CAREFUL: THIS PROCESS IS IRREVERSIBLE !"
 msgstr "주의: 이 작업은 되돌릴 수 없습니다 !"
 
 msgctxt "#31600"
-msgid "MOVE ANY DIRECTION IF YOU WANT TO CANCEL, PRESS ENTER TO PROCEED"
-msgstr "취소하려면 방향키를, 계속하려면 엔터키를 누르세요"
+msgid "Move for any direction to cancel.[CR]Press Enter to proceed"
+msgstr ""
 
 msgctxt "#31601"
 msgid "KIOSK MODE - PREVENTS MENU ACCESS IN COLLECTIONS"
 msgstr "키오스크 모드 - 컬렉션에서 메뉴 접근 차단"
 
 msgctxt "#31602"
-msgid "INFO KIOSK MODE- PREVENTS INFORMATION PANEL ACCESS IN COLLECTIONS"
-msgstr "정보 키오스크 모드 - 컬렉션에서 정보 패널 접근 차단"
+msgid "INFO KIOSK MODE- PREVENTS CHANGE SETTINGS IN INFORMATION WINDOW"
+msgstr ""
 
 msgctxt "#31603"
 msgid ""
@@ -2205,12 +2212,12 @@ msgid "SHOW OPTMIZED POPUP FOR VOXCOMMANDO"
 msgstr "VOXCOMMANDO에 최적화된 팝업창 표시"
 
 msgctxt "#31606"
-msgid "WANT A DIFFERENT VISUAL FOR SKIN?"
-msgstr "스킨에 다른 비쥬얼을 원합니까?"
+msgid "Want a different visual for skin?[CR]Choose a new images theme"
+msgstr ""
 
 msgctxt "#31607"
-msgid "CHOOSE A NEW IMAGES THEME"
-msgstr "새 이미지 테마 선택"
+msgid "IMAGES THEMES"
+msgstr ""
 
 msgctxt "#31608"
 msgid "ENABLE PVR FUNCTIONS"
@@ -2262,6 +2269,18 @@ msgstr ""
 
 msgctxt "#31620"
 msgid "SHOW AUDIO LANGUAGE AND SUBTITLE FLAGS"
+msgstr ""
+
+msgctxt "#31621"
+msgid "SET TIME FOR EACH IMAGE"
+msgstr ""
+
+msgctxt "#31622"
+msgid "EXPORT SKIN SETTINGS"
+msgstr ""
+
+msgctxt "#31623"
+msgid "IMPORT SKIN SETTINGS"
 msgstr ""
 
 msgctxt "#31624"
@@ -2459,6 +2478,10 @@ msgstr "시청한 것 보기"
 msgctxt "#31670"
 msgid "HIDE WATCH"
 msgstr "시청한 것 숨김"
+
+msgctxt "#31671"
+msgid "EDIT DATA"
+msgstr ""
 
 msgctxt "#31672"
 msgid "SHOW LIBRARY"
@@ -3634,7 +3657,6 @@ msgctxt "#31974"
 msgid "Downloading:"
 msgstr "다운로드 중:"
 
-#. ....
 msgctxt "#31980"
 msgid "NEXT EPISODE"
 msgstr "다음 에피소드"
@@ -3658,3 +3680,22 @@ msgstr "크레디트"
 msgctxt "#31986"
 msgid "SHOW NOW PLAYING PANEL"
 msgstr "지금 재생 중 패널 보기"
+
+msgctxt "#31987"
+msgid ""
+"You can save all settings made in the skin.[CR]You also transfer the "
+"settings to another computer"
+msgstr ""
+
+msgctxt "#31988"
+msgid ""
+"Here you reapply all settings saved previously.[CR]You can also do a fresh "
+"install and apply the saved settings.[CR]This option will override all "
+"settings made currently."
+msgstr ""
+
+msgctxt "#31989"
+msgid ""
+"Export settings as backup.[CR]Import settings to configure the skin in a "
+"simple way.[CR]Restore all settings to skin defaults."
+msgstr ""

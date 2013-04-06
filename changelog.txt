@@ -1,19 +1,27 @@
-[B][COLOR=FFFF8C00]BUILD 1.4.0 - RELEASE DATE 04/xx/2013[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 1.4.0 - RELEASE DATE 04/05/2013[/COLOR][/B]
 
 Added: View LandScapeX.
 Added: View Sets.
-Added: Media Case for Movie Sets, all views. 
+Added: Multiple Disc Art for Movie Sets, all compatible views, until 10 discs.
+Added: Media Case for Movie Sets, all compatible views. 
 Added: Movie Sets - Case customization in case selector.
 Added: Support to tag "3d" to make Media Case it more compatible with the .mkv names.
 Added: Option to disable Audio and Subtitile Flags.
 Added: Option to disable Clearlogo and Clearart in all views.
-Added: Removed  support to Movie Sets script, added support to ExtendedInfo Script - by phil65
+Added: Option to use multiples images in Thematic Style.
+Added: Option to Export/Import skin settings. Provided by Extended Info Script.
+Added: Support to Library Editor Script  - by phil65.
+Added: Submenu 'Clean Library" in all Video Menus and Music Menus.
+Improved: Library status in Main Menu horizontal mode.
+Changed: Removed  support to Movie Sets script, added support to ExtendedInfo Script - by phil65.
 Changed: Pulse LED in main menu to static LED.
 Changed: Video Full Screen in Pause - Option 'Hide Furniture' now hides all items. 
+Changed: Moved item Movie Sets in Top Menu/Addons to Top Menu/Smart Shortcuts. 
 Fixed: Missing Fanart for Sets.  (thanks to CutSickAss) 
 Fixed: Missing submenu Video Node Item in Favorite Menu.
 Fixed: Some errors in Smart Kiosk.
-Fixed: Top menu access in touch screen devices.
+Fixed: Missing Scroll bar in View Right List.
+Fixed: Missing Watched flag in View Glass List.
 Fixed: Minor layout details.
 
 

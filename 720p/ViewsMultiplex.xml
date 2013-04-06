@@ -86,8 +86,7 @@
 	<width>40</width>
 	<height>40</height>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-	<visible>!Skin.HasSetting(nooverlays) + Control.HasFocus(61)</visible>
+	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	</itemlayout>
 	<itemlayout condition="!Skin.HasSetting(novideomediacase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]" width="200" height="380">
@@ -107,15 +106,6 @@
 	<aspectratio align="center" aligny="bottom">scale</aspectratio>
 	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 	</control>
-	<control type="image">
-	<posx>125</posx>
-	<posy>25</posy>
-	<width>40</width>
-	<height>40</height>
-	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-	<visible>!Skin.HasSetting(nooverlays) + Control.HasFocus(61)</visible>
-	</control>
 	<control type="image"><!-- Estojo reflexo -->
 	<posx>0</posx>
 	<posy>250</posy>
@@ -133,6 +123,14 @@
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<texture>$VAR[value_videocase0]</texture>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+	</control>
+	<control type="image">
+	<posx>123</posx>
+	<posy>29</posy>
+	<width>40</width>
+	<height>40</height>
+	<info>ListItem.Overlay</info>
+	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	<control type="image"><!-- Codec -->
 	<posx>68</posx>
@@ -173,7 +171,6 @@
 	<width>40</width>
 	<height>40</height>
 	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<animation effect="zoom" start="100" end="110" center="135,255" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
@@ -197,16 +194,6 @@
 	<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 	<animation effect="zoom" start="100" end="110" center="135,255" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 	</control>
-	<control type="image">
-	<posx>125</posx>
-	<posy>25</posy>
-	<width>40</width>
-	<height>40</height>
-	<info>ListItem.Overlay</info>
-	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-	<animation effect="zoom" start="100" end="110" center="135,255" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
-	<visible>!Skin.HasSetting(nooverlays)</visible>
-	</control>
 	<control type="image"><!-- Estojo reflexo -->
 	<posx>0</posx>
 	<posy>250</posy>
@@ -226,6 +213,15 @@
 	<texture>$VAR[value_videocase0]</texture>
 	<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 	<animation effect="zoom" start="100" end="110" center="135,255" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+	</control>
+	<control type="image">
+	<posx>123</posx>
+	<posy>29</posy>
+	<width>40</width>
+	<height>40</height>
+	<info>ListItem.Overlay</info>
+	<animation effect="zoom" start="100" end="110" center="135,255" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
 	<control type="image"><!-- Codec -->
 	<posx>68</posx>

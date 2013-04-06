@@ -67,6 +67,7 @@
 	<onload>Skin.SetString(moviesglobalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(moviesvideofiles.submenu,on)</onload>
 	<onload>Skin.SetString(moviesvideoroot.submenu,on)</onload>
+	<onload>Skin.SetString(moviescleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(movieslibrary.submenu,on)</onload>
 	<onload>Skin.SetString(disceject.submenu,on)</onload>
 	<onload>Skin.SetString(tvshowsrecently.submenu,on)</onload>
@@ -79,6 +80,7 @@
 	<onload>Skin.SetString(tvshowsstudios.submenu,on)</onload>
 	<onload>Skin.SetString(tvshowsvideofiles.submenu,on)</onload>
 	<onload>Skin.SetString(tvshowsvideoroot.submenu,on)</onload>
+	<onload>Skin.SetString(tvshowscleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(tvshowslibrary.submenu,on)</onload>
 	<onload>Skin.SetString(concertsrecently.submenu,on)</onload>
 	<onload>Skin.SetString(concertsgenres.submenu,on)</onload>
@@ -88,6 +90,7 @@
 	<onload>Skin.SetString(concertsartists.submenu,on)</onload>
 	<onload>Skin.SetString(concertsvideofiles.submenu,on)</onload>
 	<onload>Skin.SetString(concertsvideoroot.submenu,on)</onload>
+	<onload>Skin.SetString(concertscleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(concertslibrary.submenu,on)</onload>
 	<onload>Skin.SetString(musicrecentlyplayed.submenu,on)</onload>
 	<onload>Skin.SetString(musicrecently.submenu,on)</onload>
@@ -101,6 +104,7 @@
 	<onload>Skin.SetString(musiccompilations.submenu,on)</onload>
 	<onload>Skin.SetString(musictop100.submenu,on)</onload>
 	<onload>Skin.SetString(musicglobalsearch,on)</onload>
+	<onload>Skin.SetString(musiccleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(musiclibrary.submenu,on)</onload>
 	<onload>Skin.SetString(gamestrailers.submenu,on)</onload>
 	<onload>Skin.SetString(weather36hour.submenu,on)</onload>
@@ -129,57 +133,72 @@
 	<onload>Skin.SetString(vpl1globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vpl1videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vpl1videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vpl1cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vpl1library.submenu,on)</onload>
 	<onload>Skin.SetString(vpl2globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vpl2videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vpl2videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vpl2cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vpl2library.submenu,on)</onload>
 	<onload>Skin.SetString(vpl3globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vpl3videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vpl3videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vpl3cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vpl3library.submenu,on)</onload>
 	<onload>Skin.SetString(vpl4globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vpl4videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vpl4videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vpl4cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vpl4library.submenu,on)</onload>
 	<onload>Skin.SetString(vpl5globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vpl5videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vpl5videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vpl5cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vpl5library.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes1globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes1videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes1videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes1cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes1library.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes2globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes2videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes2videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes2cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes2library.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes3globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes3videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes3videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes3cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes3library.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes4globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes4videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes4videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes4cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes4library.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes5globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes5videofiles.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes5videoroot.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes5cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(vnodes5library.submenu,on)</onload>
 	<onload>Skin.SetString(apl1globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(apl1files.submenu,on)</onload>
+	<onload>Skin.SetString(apl1cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(apl1library.submenu,on)</onload>
 	<onload>Skin.SetString(apl2globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(apl2files.submenu,on)</onload>
+	<onload>Skin.SetString(apl2cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(apl2library.submenu,on)</onload>
 	<onload>Skin.SetString(apl3globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(apl3files.submenu,on)</onload>
+	<onload>Skin.SetString(apl3cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(apl3library.submenu,on)</onload>
 	<onload>Skin.SetString(apl4globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(apl4files.submenu,on)</onload>
+	<onload>Skin.SetString(apl4cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(apl4library.submenu,on)</onload>
 	<onload>Skin.SetString(apl5globalsearch.submenu,on)</onload>
 	<onload>Skin.SetString(apl5files.submenu,on)</onload>
+	<onload>Skin.SetString(apl5cleanlibrary.submenu,on)</onload>
 	<onload>Skin.SetString(apl5library.submenu,on)</onload>
 	<onload>Skin.SetString(widemovies.art,poster)</onload>
 	<onload>Skin.SetString(widetvshows.art,poster)</onload>
@@ -223,6 +242,7 @@
 	<onload>Skin.SetString(musicfanart,fanart)</onload>
 	<onload>Skin.SetString(programsfanart,fanart)</onload>
 	<onload>Skin.SetString(gamesfanart,fanart)</onload>
+	<onload>Skin.SetString(setsfanart,fanart)</onload>
 	<onload>Skin.SetString(multiplexlayout,fanart)</onload>
 	<onload>Skin.SetString(landscapexlayout,fanart)</onload>
 	<onload>Skin.SetString(weather_mode,7days)</onload>
@@ -247,7 +267,27 @@
 	<onload>Skin.SetString(case_set,blood)</onload>
 	<onload>Skin.SetString(codec_set,set)</onload>
 	<onload>Skin.SetString(landscapexlayout,fanart)</onload>
-	<onload>Skin.SetBool(fix2)</onload>
+	<onload>Skin.SetString(setsfanart,fanart)</onload>
+	<onload>Skin.SetString(moviescleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(musiccleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(tvshowscleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(concertscleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vpl1cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vpl2cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vpl3cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vpl4cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vpl5cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes1cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes2cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes3cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes4cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(vnodes5cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(apl1cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(apl2cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(apl3cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(apl4cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetString(apl5cleanlibrary.submenu,on)</onload>
+	<onload>Skin.SetBool(fix3)</onload>
 	</include>
 	
 	<!-- ######################################################################### Animations ######################################################################### -->
@@ -603,78 +643,6 @@
 	<height>3</height>
 	<texture flipx="true">divider.png</texture>
 	<colordiffuse>90FFFFFF</colordiffuse>
-	</control>
-	</include>
-	<include name="BackMenuH">
-	<control type="image">
-	<posx>0</posx>
-	<posy>595</posy>
-	<width>1280</width>
-	<height>125</height>
-	<texture>xadrez_h.png</texture>
-	<colordiffuse>15FFFAF0</colordiffuse>
-	<visible>StringCompare(skin.string(style),modern)</visible>
-	</control>
-	<control type="image">
-	<posx>0</posx>
-	<posy>595</posy>
-	<width>1280</width>
-	<height>125</height>
-	<texture background="true">$VAR[value_mainmenu_style]</texture>
-	<colordiffuse>$VAR[value_mainmenu_color]</colordiffuse>
-	</control>
-	<control type="image"><!-- Fundo degrade para o clima -->
-	<posx>-40</posx>
-	<posy>655</posy>
-	<width>360</width>
-	<height>65</height>
-	<texture flipx="true">shadow_mask_v.png</texture>
-	<aspectratio align="left" aligny="top">stretch</aspectratio>
-	<colordiffuse>60FFFAF0</colordiffuse>
-	<visible>![Skin.HasSetting(submode) | Skin.HasSetting(nodateandweather)]</visible>
-	</control>
-	<include condition="!Skin.HasSetting(nodateandweather)">DateH</include>
-	<control type="image">
-	<posx>0</posx>
-	<posy>595</posy>
-	<width>1280</width>
-	<height>61</height>
-	<texture>grey.png</texture>
-	<colordiffuse>20FFFAF0</colordiffuse>
-	</control>
-	<control type="image">
-	<posx>0</posx>
-	<posy>595</posy>
-	<width>1280</width>
-	<height>1</height>
-	<texture>separator.png</texture>
-	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-	<include>Animation_HomeGlass</include>
-	</control>
-	<control type="image">
-	<posx>0</posx>
-	<posy>655</posy>
-	<width>1280</width>
-	<height>1</height>
-	<texture>separator.png</texture>
-	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-	<include>Animation_HomeGlass</include>
-	</control>
-	<control type="image">
-	<posx>0</posx>
-	<posy>566</posy>
-	<width>1280</width>
-	<height>30</height>
-	<texture>shadow_h.png</texture>
-	<colordiffuse>C3FFFFFF</colordiffuse>
-	</control>
-	<control type="image">
-	<posx>0</posx>
-	<posy>655</posy>
-	<width>1280</width>
-	<height>30</height>
-	<texture flipy="true">shadow_h.png</texture>
-	<colordiffuse>C3FFFFFF</colordiffuse>
 	</control>
 	</include>
 	<include name="ViewBack">
@@ -1069,7 +1037,7 @@
 	<control type="label">
 	<posx>40</posx>
 	<posy>2</posy>
-	<width>400</width>
+	<width>370</width>
 	<height>25</height>
 	<font>Font_16</font>
 	<label>$INFO[Window(2003).Property(AudioLanguage.1)]$INFO[Window(2003).Property(AudioLanguage.2), / ]$INFO[Window(2003).Property(AudioLanguage.3), / ]$INFO[Window(2003).Property(AudioLanguage.4), / ]$INFO[Window(2003).Property(AudioLanguage.5), / ]$INFO[Window(2003).Property(AudioLanguage.6), / ]$INFO[Window(2003).Property(AudioLanguage.7), / ]$INFO[Window(2003).Property(AudioLanguage.8), / ]$INFO[Window(2003).Property(AudioLanguage.9), / ]$INFO[Window(2003).Property(AudioLanguage.10), / ]</label>
@@ -1092,7 +1060,7 @@
 	<control type="label">
 	<posx>40</posx>
 	<posy>32</posy>
-	<width>400</width>
+	<width>370</width>
 	<height>25</height>
 	<font>Font_16</font>
 	<label>$INFO[Window(2003).Property(SubtitleLanguage.1)]$INFO[Window(2003).Property(SubtitleLanguage.2), / ]$INFO[Window(2003).Property(SubtitleLanguage.3), / ]$INFO[Window(2003).Property(SubtitleLanguage.4), / ]$INFO[Window(2003).Property(SubtitleLanguage.5), / ]$INFO[Window(2003).Property(SubtitleLanguage.6), / ]$INFO[Window(2003).Property(SubtitleLanguage.7), / ]$INFO[Window(2003).Property(SubtitleLanguage.8), / ]$INFO[Window(2003).Property(SubtitleLanguage.9), / ]$INFO[Window(2003).Property(SubtitleLanguage.10), / ]</label>

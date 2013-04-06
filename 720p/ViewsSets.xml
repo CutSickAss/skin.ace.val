@@ -64,43 +64,58 @@
 	<animation effect="fade" end="80" condition="true">Conditional</animation>
 	</control>
 	<control type="group">
-	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-	<visible>!Control.HasFocus(5801)</visible>
+	<visible>!SubString(ListItem.Label,..)</visible>
 	<control type="label">
 	<include>ViewLabel</include>
 	<posx>30</posx>
 	<posy>84</posy>
-	<label>$VAR[value_ground1_label]</label>
+	<label>$VAR[value_ground6_label]</label>
+	<visible>!Control.HasFocus(5801)</visible>
+	</control>
+	<control type="label">
+	<include>ViewLabel</include>
+	<posx>30</posx>
+	<posy>84</posy>
+	<label>31028</label>
+	<visible>Control.HasFocus(5801)</visible>
 	</control>
 	<control type="fadelabel">
 	<include>ViewValue</include>
 	<posx>30</posx>
 	<posy>104</posy>
-	<label>$VAR[value_ground1_value]</label>
+	<label>$VAR[value_ground6_value]</label>
+	<visible>!Control.HasFocus(5801)</visible>
+	</control>
+	<control type="fadelabel">
+	<include>ViewValue</include>
+	<posx>30</posx>
+	<posy>104</posy>
+	<label>$INFO[Container(5801).ListItem.Property(Year)]</label>
+	<visible>Control.HasFocus(5801)</visible>
 	</control>
 	<control type="label">
 	<include>ViewLabel</include>
 	<posx>30</posx>
 	<posy>134</posy>
-	<label>$VAR[value_ground2_label]</label>
+	<label>$VAR[value_ground1_label]</label>
 	</control>
 	<control type="fadelabel">
 	<include>ViewValue</include>
 	<posx>30</posx>
 	<posy>154</posy>
-	<label>$VAR[value_ground2_value]</label>
+	<label>$VAR[value_ground1_value]</label>
 	</control>
 	<control type="label">
 	<include>ViewLabel</include>
 	<posx>352</posx>
 	<posy>84</posy>
-	<label>$VAR[value_ground3_label]</label>
+	<label>$VAR[value_ground2_label]</label>
 	</control>
 	<control type="fadelabel">
 	<include>ViewValue</include>
 	<posx>352</posx>
 	<posy>104</posy>
-	<label>$VAR[value_ground3_value]</label>
+	<label>$VAR[value_ground2_value]</label>
 	</control>
 	<control type="label">
 	<include>ViewLabel</include>
@@ -121,58 +136,6 @@
 	<width>2</width>
 	<height>125</height>
 	<texture>separator_v.png</texture>
-	</control>
-	<control type="group">
-	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-	<visible>Control.HasFocus(5801)</visible>
-	<control type="label">
-	<include>ViewLabel</include>
-	<posx>30</posx>
-	<posy>84</posy>
-	<label>$LOCALIZE[562]</label>
-	</control>
-	<control type="fadelabel">
-	<include>ViewValue</include>
-	<posx>30</posx>
-	<posy>104</posy>
-	<label>$INFO[Container(5801).ListItem.Property(Year)]</label>
-	</control>
-	<control type="label">
-	<include>ViewLabel</include>
-	<posx>30</posx>
-	<posy>134</posy>
-	<label>$VAR[value_ground2_label]</label>
-	</control>
-	<control type="fadelabel">
-	<include>ViewValue</include>
-	<posx>30</posx>
-	<posy>154</posy>
-	<label>$VAR[value_ground2_value]</label>
-	</control>
-	<control type="label">
-	<include>ViewLabel</include>
-	<posx>357</posx>
-	<posy>84</posy>
-	<label>$VAR[value_ground3_label]</label>
-	</control>
-	<control type="fadelabel">
-	<include>ViewValue</include>
-	<posx>357</posx>
-	<posy>104</posy>
-	<label>$VAR[value_ground3_value]</label>
-	</control>
-	<control type="label">
-	<include>ViewLabel</include>
-	<posx>357</posx>
-	<posy>134</posy>
-	<label>$VAR[value_ground4_label]</label>
-	</control>
-	<control type="fadelabel">
-	<include>ViewValue</include>
-	<posx>357</posx>
-	<posy>154</posy>
-	<label>$VAR[value_ground4_value]</label>
-	</control>
 	</control>
 	<control type="image">
 	<posx>0</posx>
@@ -345,18 +308,6 @@
 	<include>Animation_Fade</include>
 	<visible allowhiddenfocus="true">Control.IsVisible(65) + Control.HasFocus(80)</visible>
 	</control>
-	<control type="label">
-	<posx>315</posx>
-	<posy>671</posy>
-	<width>650</width>
-	<align>center</align>
-	<aligny>center</aligny>
-	<label>$INFO[Container(5801).ListItem.Label]</label>
-	<font>Font_23</font>
-	<textcolor>$VAR[value_flagscolor]</textcolor>
-	<scroll>true</scroll>
-	<scrollout>false</scrollout>
-	</control>
 	<control type="image">
 	<posx>0</posx>
 	<posy>650</posy>
@@ -383,11 +334,11 @@
 	<animation effect="fade" end="95" condition="true">Conditional</animation>
 	</control>
 	<!-- Movies in Set -->
-	<control type="fixedlist" id="5801">
+	<control type="list" id="5801">
 	<viewtype>list</viewtype>
-	<posx>35</posx>
+	<posx>30</posx>
 	<posy>445</posy>
-	<width>1220</width>
+	<width>1230</width>
 	<height>370</height>
 	<onup>65</onup>
 	<ondown>Skin.Reset(coverzoom)</ondown>
@@ -397,8 +348,7 @@
 	<scrolltime>350</scrolltime>
 	<focusposition>3</focusposition>
 	<preloaditems>2</preloaditems>
-	<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
-	<itemlayout height="220" width="181">
+	<itemlayout condition="Skin.HasSetting(nodiscart)" height="220" width="182"><!-- Sem disco -->
 	<control type="image">
 	<posx>0</posx>
 	<posy>186</posy>
@@ -418,7 +368,39 @@
 	<bordertexture border="-2">black.png</bordertexture>
 	</control>
 	</itemlayout>
-	<focusedlayout height="220" width="181">
+	<itemlayout condition="!Skin.HasSetting(nodiscart)" height="220" width="208"><!-- Com disco -->
+	<control type="image">
+	<posx>57</posx>
+	<posy>10</posy>
+	<width>130</width>
+	<height>130</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<texture fallback="cdart.png" diffuse="cdart2_diffuse.png" background="true">$INFO[ListItem.Property(Disc)]</texture>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<animation effect="rotate" end="-360" center="auto" time="4000" loop="true" reversible="false" condition="Player.HasVideo + !Player.Paused">Conditional</animation>
+	<visible>!IsEmpty(ListItem.Property(Disc))</visible>
+	</control>
+	<control type="image">
+	<posx>0</posx>
+	<posy>186</posy>
+	<width>125</width>
+	<height>180</height>
+	<aspectratio align="center" aligny="top">keep</aspectratio>
+	<texture flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">black.png</bordertexture>	
+	</control>
+	<control type="image">
+	<posx>0</posx>
+	<posy>5</posy>
+	<width>125</width>
+	<height>180</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">black.png</bordertexture>
+	</control>
+	</itemlayout>
+	<focusedlayout condition="Skin.HasSetting(nodiscart)" height="220" width="182"><!-- Sem disco -->
 	<control type="image">
 	<posx>0</posx>
 	<posy>187</posy>
@@ -440,96 +422,141 @@
 	<animation effect="zoom" start="100" end="115" center="125,180" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 	</control>
 	</focusedlayout>
+	<focusedlayout condition="!Skin.HasSetting(nodiscart)" height="220" width="208"><!-- Com disco -->
+	<control type="group">
+	<animation effect="zoom" start="100" end="115" center="125,180" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
+	<control type="image">
+	<posx>57</posx>
+	<posy>10</posy>
+	<width>130</width>
+	<height>130</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio align="center" aligny="center">keep</aspectratio>
+	<texture fallback="cdart.png" diffuse="cdart2_diffuse.png" background="true">$INFO[ListItem.Property(Disc)]</texture>
+	<animation effect="rotate" start="0" end="-360" center="auto" time="40000" delay="5000" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
+	<animation effect="rotate" end="-360" center="auto" time="4000" loop="true" reversible="false" condition="Player.HasVideo + !Player.Paused">Conditional</animation>
+	<visible>!IsEmpty(ListItem.Property(Disc))</visible>
+	</control>
+	<control type="image">
+	<posx>0</posx>
+	<posy>187</posy>
+	<width>125</width>
+	<height>180</height>
+	<aspectratio align="center" aligny="top">keep</aspectratio>
+	<texture flipy="true" diffuse="thumb_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture flipy="true" diffuse="thumb_reflect.png" border="-2">grey.png</bordertexture>	
+	</control>
+	<control type="image">
+	<posx>0</posx>
+	<posy>2</posy>
+	<width>125</width>
+	<height>180</height>
+	<aspectratio align="center" aligny="bottom">keep</aspectratio>
+	<texture fallback="DefaultVideoPoster.png" background="true">$INFO[ListItem.Icon]</texture>
+	<bordertexture border="-2">grey.png</bordertexture>
+	</control>
+	</control>
+	</focusedlayout>
 	<content>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.1.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.1.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.1.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.1.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.1.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.1.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.1.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.1.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.1.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.2.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.2.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.2.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.2.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.2.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.2.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.2.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.2.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.2.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.3.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.3.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.3.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.3.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.3.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.3.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.3.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.3.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.3.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.4.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.4.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.4.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.4.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.4.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.4.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.4.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.4.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.4.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.5.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.5.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.5.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.5.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.5.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.5.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.5.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.5.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.5.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.6.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.6.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.6.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.6.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.6.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.6.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.6.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.6.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.6.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.7.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.7.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.7.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.7.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.7.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.7.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.7.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.7.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.7.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.8.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.8.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.8.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.8.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.8.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.8.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.8.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.8.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.8.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.9.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.9.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.9.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.9.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.9.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.9.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.9.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.9.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.9.Art(poster)))</visible>
 	</item>
 	<item>
 	<label>$INFO[Window(0).Property(Set.Movie.10.Title)]</label>
 	<icon>$INFO[Window(0).Property(Set.Movie.10.Art(poster))]</icon>
+	<property name="Disc">$INFO[Window(0).Property(Set.Movie.10.Art(discart))]</property>
 	<property name="Fanart">$INFO[Window(0).Property(Set.Movie.10.Art(fanart))]</property>
 	<property name="Plot">$INFO[Window(0).Property(Set.Movie.10.Plot)]</property>
 	<property name="Year">$INFO[Window(0).Property(Set.Movie.10.Year)]</property>
 	<onclick>RunScript(service.skin.widgets,movieid=$INFO[Window(0).Property(Set.Movie.10.DBID)])</onclick>
-	<visible>!IsEmpty(Window(0).Property(Set.Movie.10.Art(poster))</visible>
+	<visible>!IsEmpty(Window(0).Property(Set.Movie.10.Art(poster)))</visible>
 	</item>
 	</content>
 	</control>
