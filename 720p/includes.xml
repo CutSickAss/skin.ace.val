@@ -253,6 +253,7 @@
 	<onload>Skin.SetString(games_link,rcb)</onload>
 	<onload>Skin.SetString(PLInfoPanelMovies,infopanelmanual)</onload>
 	<onload>Skin.SetString(PLInfoPanelTVShows,infopanelmanual)</onload>
+	<onload>Skin.SetString(PLInfoPanelSets,infopanelmanual)</onload>
 	<onload>Skin.SetString(PosterLiteMovies,poster)</onload>
 	<onload>Skin.SetString(PosterLiteTVShows,poster)</onload>
 	<onload>Skin.SetString(PosterLiteGenres,poster)</onload>

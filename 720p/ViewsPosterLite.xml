@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-  <include name="PosterLiteValue">
-	<posx>60</posx>
-	<width>400</width>
-	<height>13</height>
-	<align>left</align>
-	<font>Font_16</font>
-	<textcolor>FFFFFAF0</textcolor>
-	<scroll>true</scroll>
-  </include>
   <include name="ViewPosterLite">
 	<control type="group">
 	  <control type="button" id="99528">
@@ -19,6 +10,15 @@
 		<ondown>528</ondown>
 	  </control>
 	  <visible>Control.IsVisible(528)</visible>
+	  <control type="image">
+		<posx>77r</posx>
+		<posy>-32</posy>
+		<width>80</width>
+		<height>80</height>
+		<aspectratio>keep</aspectratio>
+		<texture background="true">$INFO[ListItem.Overlay]</texture>
+		<visible>!Skin.HasSetting(nooverlays)+[StringCompare(Control.GetLabel(528707),logo)|StringCompare(Control.GetLabel(528707),clearart)|StringCompare(Control.GetLabel(528707),characterart)|StringCompare(Control.GetLabel(528707),noicon)]</visible>
+	  </control>
 	  <control type="group">
 		<animation effect="fade" start="100" end="0" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[[[StringCompare(Control.GetLabel(528421),infopanelmanual)+[!Control.HasFocus(99528)|Control.IsVisible(528195)]]|[StringCompare(Control.GetLabel(528421),infopanelauto)+!Control.IsVisible(528200)]]+StringCompare(Control.GetLabel(528707),noicon)]]">Conditional</animation>
 		<control type="image">
@@ -53,7 +53,7 @@
 		<posy>520</posy>
 		<!-- Labels -->
 		<control type="group" id="528200">
-		  <visible>[[Control.IsVisible(528197)+![Container.OnNext|Container.OnPrevious]+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+Control.HasFocus(99528)+!Control.IsVisible(528195)]|StringCompare(Control.GetLabel(528421),infopanelon)]</visible>
+		  <visible>[[Control.IsVisible(528197)+![Container.OnNext|Container.OnPrevious]+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+Control.HasFocus(99528)+!Control.IsVisible(528195)]|StringCompare(Control.GetLabel(528421),infopanelon)]+!StringCompare(ListItem.Label,..)</visible>
 		  <animation effect="fade" time="320">Visible</animation>
 		  <control type="group">
 			<!-- Movies and TV shows -->
@@ -69,14 +69,25 @@
 			<control type="fadelabel">
 			  <posx>0</posx>
 			  <posy>14</posy>
-			  <width>878</width>
+			  <width>600</width>
 			  <height>50</height>
 			  <scrollout>false</scrollout>
 			  <pauseatend>2000</pauseatend>
 			  <scrollspeed>10</scrollspeed>
 			  <font>Font_16</font>
-			  <label>[B]$LOCALIZE[515]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Genre][/COLOR][/B]</label>
-			  <visible>!IsEmpty(ListItem.Genre)</visible>
+			  <label>[B]$LOCALIZE[515]:  [COLOR=$VAR[value_headercolor]]$VAR[value_ground2_value][/COLOR][/B]</label>
+			</control>
+			<control type="fadelabel">
+			  <posx>623r</posx>
+			  <posy>14</posy>
+			  <width>225</width>
+			  <height>50</height>
+			  <align>right</align>
+			  <scrollout>false</scrollout>
+			  <pauseatend>2000</pauseatend>
+			  <scrollspeed>10</scrollspeed>
+			  <font>Font_16</font>
+			  <label>$VAR[PLYear]</label>
 			</control>
 		  </control>
 		</control>
@@ -85,87 +96,58 @@
 		  <visible>[[Stringcompare(Control.GetLabel(528421),infopanelauto)+StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]|[Control.IsVisible(528197)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+[[Control.HasFocus(99528)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]]|Control.IsVisible(528196)]</visible>
 		  <animation effect="fade" time="80" delay="10" reversible="false" condition="StringCompare(Control.GetLabel(528421),infopanelmanual)">Conditional</animation>
 		  <control type="image">
-			<posx>610</posx>
-			<posy>-98</posy>
-			<width>270</width>
-			<height>105</height>
-			<fadetime>FanartCrossFadeTime</fadetime>
-			<aspectratio aligny="bottom">keep</aspectratio>
+			<include>PLClearValue</include>
 			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-			<animation effect="slide" end="0,89" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
 			<visible>StringCompare(Control.GetLabel(528708),logo)</visible>
 		  </control>
 		  <control type="image">
-			<posx>610</posx>
-			<posy>-98</posy>
-			<width>270</width>
-			<height>105</height>
-			<fadetime>FanartCrossFadeTime</fadetime>
-			<aspectratio aligny="bottom">keep</aspectratio>
+			<include>PLClearValue</include>
 			<texture background="true">$VAR[PLClearArtVar]</texture>
-			<animation effect="slide" end="0,89" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
 			<visible>StringCompare(Control.GetLabel(528708),clearart)</visible>
 		  </control>
 		  <control type="image">
-			<posx>610</posx>
-			<posy>-98</posy>
-			<width>270</width>
-			<height>105</height>
-			<fadetime>FanartCrossFadeTime</fadetime>
-			<aspectratio aligny="bottom">keep</aspectratio>
+			<include>PLClearValue</include>
 			<texture background="true">$VAR[PLCharacterArtVar]</texture>
-			<animation effect="slide" end="0,89" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
 			<visible>StringCompare(Control.GetLabel(528708),characterart)</visible>
 		  </control>
 		  <control type="group">
 			<visible>StringCompare(Control.GetLabel(528708),extrathumbs)+!StringCompare(ListItem.Label,..)</visible>
-			<animation effect="slide" end="0,73" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
-			<posx>632</posx>
-			<posy>-107</posy>
+			<animation effect="slide" end="0,111" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
+			<posx>635</posx>
+			<posy>-125</posy>
 			<control type="multiimage" id="528201">
-			  <width>245</width>
-			  <height>138</height>
-			  <fadetime>FanartCrossFadeTime</fadetime>
-			  <timeperimage>4000</timeperimage>
-			  <aspectratio>stretch</aspectratio>
-			  <imagepath>$INFO[ListItem.Path,,extrathumbs]</imagepath>
+			  <include>PLLandValue</include>
+			  <imagepath background="true">$INFO[ListItem.Path,,extrathumbs]</imagepath>
+			</control>
+			<control type="multiimage" id="528202">
+			  <include>PLLandValue</include>
+			  <imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
+			  <visible>IsEmpty(Control.GetLabel(528201))</visible>
 			</control>
 			<control type="image">
-			  <width>245</width>
-			  <height>138</height>
-			  <fadetime>FanartCrossFadeTime</fadetime>
-			  <aspectratio>stretch</aspectratio>
-			  <texture background="true">$VAR[PLLandscapeVar]</texture>
-			  <visible>IsEmpty(Control.GetLabel(528201))</visible>
+			  <include>PLLandValue</include>
+			  <texture background="true">$INFO[ListItem.Art(landscape)]</texture>
+			  <bordertexture background="true" border="-2">black.png</bordertexture>
+			  <visible>IsEmpty(Control.GetLabel(528201))+IsEmpty(Control.GetLabel(528202))</visible>
 			</control>
 		  </control>
 		  <control type="group">
-			<posx>530</posx>
-			<posy>-29</posy>
+			<posx>527</posx>
+			<posy>-52</posy>
 			<include>PLBanner</include>
-			<animation effect="slide" end="0,68" time="160" reversible="false" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
+			<include>PLBannerT1</include>
+			<animation effect="slide" end="0,92" time="160" reversible="false" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
 			<visible>StringCompare(Control.GetLabel(528708),banner)</visible>
 		  </control>
 		</control>
 	  </control>
 	  <control type="group">
-		<posx>467</posx>
-		<posy>83</posy>
-		<animation effect="slide" start="667,0" end="0,0" time="400" delay="1000" tween="quadratic" easing="out" reversible="false">Visible</animation>
+		<posx>369</posx>
+		<posy>-15</posy>
 		<visible>Player.HasVideo+!VideoPlayer.IsFullscreen+!Skin.HasSetting(fullscreentrailer)</visible>
-		<control type="image">
-		  <width>685</width>
-		  <height>393</height>
-		  <texture background="true">home/nowplaying/OverlayDialogBackground.png</texture>
-		  <colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-		  <bordertexture>black.png</bordertexture>
-		  <bordersize>-37</bordersize>
-		</control>
 		<control type="videowindow">
-		  <posx>1</posx>
-		  <posy>5</posy>
-		  <width>683</width>
-		  <height>384</height>
+		  <width>882</width>
+		  <height>496</height>
 		</control>
 	  </control>
 	  <control type="group">
@@ -180,7 +162,7 @@
 		  <onup>528</onup>
 		  <ondown>9920</ondown>
 		  <include>Animation_Fade</include>
-		  <visible allowhiddenfocus="true">Control.IsVisible(528) + Control.HasFocus(80)</visible>
+		  <visible allowhiddenfocus="true">Control.IsVisible(528)+Control.HasFocus(80)</visible>
 		</control>
 		<control type="group">
 		  <animation effect="slide" start="0,0" end="0,-20" time="300" tween="sine" easing="out" condition="Control.HasFocus(80)">Conditional</animation>
@@ -209,16 +191,16 @@
 			<visible>StringCompare(Control.GetLabel(528707),clearart)+Control.IsVisible(528196)</visible>
 		  </control>
 		  <control type="group">
-			<posx>26</posx>
+			<posx>25</posx>
 			<posy>325</posy>
 			<include>PLCharacter</include>
 			<visible>StringCompare(Control.GetLabel(528707),characterart)+Control.IsVisible(528196)</visible>
 		  </control>
 		  <control type="group">
-			<posx>25</posx>
-			<posy>562</posy>
+			<posx>9</posx>
+			<posy>560</posy>
 			<include>PLBanner</include>
-			<include>PLBannerVis</include>
+			<include>PLBannerT2</include>
 			<visible>StringCompare(Control.GetLabel(528707),banner)+Control.IsVisible(528196)</visible>
 		  </control>
 		  <control type="group">
@@ -234,8 +216,8 @@
 	<posy>-41</posy>
 	<width>1920</width>
 	<height>1080</height>
-	<onup condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)+!StringCompare(ListItem.Label,..)+!SubString(ListItem.Path,videodb://1/7/,left)">99528</onup>
-	<onup condition="[!Stringcompare(Control.GetLabel(528421),infopanelmanual)|StringCompare(ListItem.Label,..)|SubString(ListItem.Path,videodb://1/7/,left)]">9900</onup>
+	<onup condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)+!StringCompare(ListItem.Label,..)">99528</onup>
+	<onup condition="[!Stringcompare(Control.GetLabel(528421),infopanelmanual)|StringCompare(ListItem.Label,..)]">9900</onup>
 	<ondown>80</ondown>
 	<orientation>horizontal</orientation>
 	<focusposition>2</focusposition>
@@ -332,7 +314,7 @@
 	</itemlayout>
 	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(528707),characterart)">
 	  <control type="group">
-		<posx>-118</posx>
+		<posx>-119</posx>
 		<posy>366</posy>
 		<animation effect="zoom" center="75,684" start="44" end="100" time="480" tween="cubic" easing="inout" reversible="false" condition="Container.OnNext">Focus</animation>
 		<animation effect="zoom" center="-150,684" start="100" end="44" time="240" tween="cubic" easing="inout" reversible="false" condition="Container.OnNext">Unfocus</animation>
@@ -351,21 +333,21 @@
 		<animation effect="zoom" center="auto" start="74" end="74" condition="true">Conditional</animation>
 		<include>PosFade</include>
 		<include>PLBanner</include>
-		<include>PLBannerVis</include>
+		<include>PLBannerT2</include>
 	  </control>
 	</itemlayout>
 	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(528707),banner)">
 	  <control type="group">
-		<posx>-305</posx>
-		<posy>603</posy>
+		<posx>-321</posx>
+		<posy>601</posy>
 		<animation effect="zoom" center="0,634" start="74" end="100" time="480" tween="cubic" easing="inout" reversible="false">Focus</animation>
 		<animation effect="zoom" start="100" end="100" tween="cubic" easing="inout" reversible="false" condition="!Control.HasFocus(528)">Unfocus</animation>
 		<animation type="Unfocus" reversible="false" condition="Control.HasFocus(528)">
 		  <effect type="zoom" center="-167,634" start="100" end="74" time="240" tween="cubic" easing="inout" />
-		  <effect type="slide" end="-58,-2" />
+		  <effect type="slide" end="-41" />
 		</animation>
 		<include>PLBanner</include>
-		<include>PLBannerVis</include>
+		<include>PLBannerT2</include>
 	  </control>
 	</focusedlayout>
   </include>
@@ -423,30 +405,16 @@
 	  <visible>!Skin.HasSetting(novideomediacase)</visible>
 	</control>
 	<control type="image">
-	  <posx>257</posx>
-	  <posy>0</posy>
+	  <posx>261</posx>
+	  <posy>-4</posy>
 	  <width>50</width>
 	  <height>50</height>
 	  <aspectratio>keep</aspectratio>
-	  <colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	  <texture background="true">$INFO[ListItem.Overlay]</texture>
 	  <visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
   </include>
   <include name="PLLand">
-	<control type="textbox">
-	  <posx>-53</posx>
-	  <posy>7</posy>
-	  <width>345</width>
-	  <height>140</height>
-	  <align>center</align>
-	  <font>Font_MainClassic3</font>
-	  <textcolor>FFE00000</textcolor>
-	  <shadowcolor>black</shadowcolor>
-	  <label>$INFO[ListItem.Label]</label>
-	  <autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
-	  <visible>IsEmpty(ListItem.Art(landscape))+IsEmpty(ListItem.Art(fanart))</visible>
-	</control>
 	<control type="image">
 	  <width>320</width>
 	  <height>180</height>
@@ -462,32 +430,24 @@
 	  <height>118</height>
 	  <aspectratio>keep</aspectratio>
 	  <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-	  <visible>IsEmpty(ListItem.Art(landscape))</visible>
+	  <visible>IsEmpty(ListItem.Art(landscape))+!IsEmpty(ListItem.Art(fanart))</visible>
 	</control>
 	<control type="image">
-	  <posx>268</posx>
-	  <posy>0</posy>
+	  <posx>272</posx>
+	  <posy>-2</posy>
 	  <width>50</width>
 	  <height>50</height>
 	  <aspectratio>keep</aspectratio>
-	  <colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	  <texture background="true">$INFO[ListItem.Overlay]</texture>
 	  <visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
+	<control type="textbox">
+	  <posy>72</posy>
+	  <include>PLTextTitle</include>
+	  <visible>IsEmpty(ListItem.Art(landscape))+IsEmpty(ListItem.Art(fanart))</visible>
+	</control>
   </include>
   <include name="PLLogo">
-	<control type="textbox">
-	  <posy>7</posy>
-	  <width>345</width>
-	  <height>140</height>
-	  <align>center</align>
-	  <font>Font_MainClassic3</font>
-	  <textcolor>FFE00000</textcolor>
-	  <shadowcolor>black</shadowcolor>
-	  <label>$INFO[ListItem.Label]</label>
-	  <autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
-	  <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
-	</control>
 	<control type="image">
 	  <width>320</width>
 	  <height>125</height>
@@ -495,20 +455,13 @@
 	  <aspectratio aligny="bottom">keep</aspectratio>
 	  <texture background="true">$VAR[PLLogoVar]</texture>
 	</control>
+	<control type="textbox">
+	  <posy>19</posy>
+	  <include>PLTextTitle</include>
+	  <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+	</control>
   </include>
   <include name="PLClear">
-	<control type="textbox">
-	  <posy>7</posy>
-	  <width>345</width>
-	  <height>140</height>
-	  <align>center</align>
-	  <font>Font_MainClassic3</font>
-	  <textcolor>FFE00000</textcolor>
-	  <shadowcolor>black</shadowcolor>
-	  <label>$INFO[ListItem.Label]</label>
-	  <autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
-	  <visible>IsEmpty(ListItem.Art(clearart))+IsEmpty(ListItem.Art(clearlogo))</visible>
-	</control>
 	<control type="image">
 	  <width>320</width>
 	  <height>125</height>
@@ -516,21 +469,13 @@
 	  <aspectratio aligny="bottom">keep</aspectratio>
 	  <texture background="true">$VAR[PLClearArtVar]</texture>
 	</control>
+	<control type="textbox">
+	  <posy>19</posy>
+	  <include>PLTextTitle</include>
+	  <visible>IsEmpty(ListItem.Art(clearart))+IsEmpty(ListItem.Art(clearlogo))</visible>
+	</control>
   </include>
   <include name="PLCharacter">
-	<control type="textbox">
-	  <posy>157</posy>
-	  <width>307</width>
-	  <height>140</height>
-	  <align>center</align>
-	  <aligny>bottom</aligny>
-	  <font>Font_MainClassic3</font>
-	  <textcolor>FFE00000</textcolor>
-	  <shadowcolor>black</shadowcolor>
-	  <label>$INFO[ListItem.Label]</label>
-	  <autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
-	  <visible>IsEmpty(ListItem.Art(characterart))+IsEmpty(ListItem.Art(characterart))+IsEmpty(ListItem.Art(clearlogo))</visible>
-	</control>
 	<control type="image">
 	  <width>320</width>
 	  <height>320</height>
@@ -538,25 +483,21 @@
 	  <aspectratio aligny="bottom">keep</aspectratio>
 	  <texture background="true">$VAR[PLCharacterArtVar]</texture>
 	</control>
+	<control type="textbox">
+	  <posy>211</posy>
+	  <include>PLTextTitle</include>
+	  <visible>IsEmpty(ListItem.Art(characterart))+IsEmpty(ListItem.Art(characterart))+IsEmpty(ListItem.Art(clearlogo))</visible>
+	</control>
   </include>
   <include name="PLBanner">
 	<control type="image">
-	  <width>320</width>
-	  <height>60</height>
-	  <fadetime>FanartCrossFadeTime</fadetime>
-	  <aspectratio>stretch</aspectratio>
-	  <texture background="true">$VAR[PLBannerVar]</texture>
-	  <bordertexture background="true" border="-2">black.png</bordertexture>
-	  <visible>[!IsEmpty(ListItem.Art(banner))|!IsEmpty(ListItem.Art(tvshow.banner))]</visible>
+	  <include>PLBannerValue</include>
+	  <visible>!IsEmpty(ListItem.Art(banner))</visible>
 	</control>
 	<control type="image">
-	  <width>320</width>
-	  <height>60</height>
-	  <fadetime>FanartCrossFadeTime</fadetime>
 	  <aspectratio>scale</aspectratio>
-	  <texture background="true">$VAR[PLBannerVar]</texture>
-	  <bordertexture background="true" border="-2">black.png</bordertexture>
-	  <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(tvshow.banner))</visible>
+	  <include>PLBannerValue</include>
+	  <visible>IsEmpty(ListItem.Art(banner))+!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="image">
 	  <width>320</width>
@@ -564,33 +505,74 @@
 	  <fadetime>FanartCrossFadeTime</fadetime>
 	  <aspectratio>keep</aspectratio>
 	  <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-	  <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(tvshow.banner))</visible>
-	</control>
-	<control type="textbox">
-	  <posx>0</posx>
-	  <posy>10</posy>
-	  <width>353</width>
-	  <height>47</height>
-	  <align>center</align>
-	  <font>Font_Reg25_Caps</font>
-	  <textcolor>FFE00000</textcolor>
-	  <shadowcolor>black</shadowcolor>
-	  <autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
-	  <label>$INFO[ListItem.Label]</label>
-	  <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(tvshow.banner))+IsEmpty(ListItem.Art(clearlogo))</visible>
+	  <visible>IsEmpty(ListItem.Art(banner))</visible>
 	</control>
   </include>
-  <include name="PLBannerVis">
+  <include name="PLBannerT1">
+	<control type="label">
+	  <posx>5</posx>
+	  <posy>20</posy>
+	  <width>342</width>
+	  <height>50</height>
+	  <align>center</align>
+	  <font>Font_23</font>
+	  <textcolor>FFE00000</textcolor>
+	  <shadowcolor>black</shadowcolor>
+	  <scroll>true</scroll>
+	  <label>[B]$INFO[ListItem.Label][/B]</label>
+	  <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(clearlogo))</visible>
+	</control>
+  </include>
+  <include name="PLBannerT2">
+	<control type="group">
+	  <include>PLBannerT1</include>
+	  <animation effect="slide" end="171" time="0" condition="!Control.IsVisible(528196)">Conditional</animation>
+	</control>
 	<control type="image">
-	  <posx>282</posx>
-	  <posy>-3</posy>
+	  <posx>314</posx>
+	  <posy>-2</posy>
 	  <width>40</width>
 	  <height>40</height>
 	  <aspectratio>keep</aspectratio>
-	  <colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	  <texture background="true">$INFO[ListItem.Overlay]</texture>
 	  <visible>!Skin.HasSetting(nooverlays)</visible>
 	</control>
+  </include>
+  <include name="PLTextTitle">
+	<posx>-13</posx>
+	<width>345</width>
+	<height>112</height>
+	<align>center</align>
+	<font>Font_40</font>
+	<textcolor>FFE00000</textcolor>
+	<shadowcolor>black</shadowcolor>
+	<label>[B]$INFO[ListItem.Label][/B]</label>
+	<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
+  </include>
+  <include name="PLLandValue">
+	<width>245</width>
+	<height>138</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<timeperimage>4000</timeperimage>
+	<aspectratio>stretch</aspectratio>
+	<randomize>true</randomize>
+  </include>
+  <include name="PLClearValue">
+	<posx>610</posx>
+	<posy>-90</posy>
+	<width>270</width>
+	<height>105</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio aligny="bottom">keep</aspectratio>
+	<animation effect="slide" end="0,106" time="160" condition="[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]">Conditional</animation>
+  </include>
+  <include name="PLBannerValue">
+	<width>352</width>
+	<height>65</height>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<aspectratio>stretch</aspectratio>
+	<texture background="true">$VAR[PLBannerVar]</texture>
+	<bordertexture background="true" border="-2">black.png</bordertexture>
   </include>
   <include name="PosFade">
 	<visible>!Control.IsVisible(528200)</visible>

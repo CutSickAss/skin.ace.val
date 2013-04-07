@@ -3336,14 +3336,20 @@
 	<value condition="SubString(skin.string(panel_seconds),5)"> - $LOCALIZE[31469]</value>
 	</variable>
 
-	<variable name="value_videostarrating">
+	<!-- PosterLite -->
+	<variable name="PLvalue_videostarrating">
+	<value condition="IsEmpty(ListItem.Rating)">rating0.png</value>
 	<value condition="!IntegerGreaterThan(ListItem.Rating,2)">rating1.png</value>
 	<value condition="IntegerGreaterThan(ListItem.Rating,2) + !IntegerGreaterThan(ListItem.Rating,4)">rating2.png</value>
 	<value condition="IntegerGreaterThan(ListItem.Rating,4) + !IntegerGreaterThan(ListItem.Rating,7)">rating3.png</value>
 	<value condition="IntegerGreaterThan(ListItem.Rating,7) + !IntegerGreaterThan(ListItem.Rating,9)">rating4.png</value>
 	<value condition="IntegerGreaterThan(ListItem.Rating,9)">rating5.png</value>
 	</variable>
-	<!-- PosterLite -->
+	<variable name="PLYear">
+	<value condition="!Container.Content(tvshows)+!SubString(ListItem.Path,videodb://1/7,left)">[B]$LOCALIZE[345]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Year][/COLOR][/B]</value>
+	<value condition="!Container.Content(tvshows)+SubString(ListItem.Path,videodb://1/7,left)">[B]$LOCALIZE[345]:  [COLOR=$VAR[value_headercolor]]$INFO[Window(0).Property(Set.Movies.Years)][/COLOR][/B]</value>
+	<value condition="Container.Content(tvshows)">[B]$LOCALIZE[20416]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Premiered][/COLOR][/B]</value>
+	</variable>
 	<variable name="PLIconVar">
 	<value condition="Container.Content(movies)">$INFO[Skin.String(PosterLiteMovies)]</value>
 	<value condition="Container.Content(tvshows)">$INFO[Skin.String(PosterLiteTVShows)]</value>
@@ -3367,13 +3373,15 @@
 	<value condition="StringCompare(Control.GetLabel(528708),logo)">$LOCALIZE[31735]</value>
 	<value condition="StringCompare(Control.GetLabel(528708),clearart)">$LOCALIZE[31734]</value>
 	<value condition="StringCompare(Control.GetLabel(528708),characterart)">CharacterART</value>
-	<value condition="StringCompare(Control.GetLabel(528708),extrathumbs)">Extrathumbs</value>
+	<value condition="StringCompare(Control.GetLabel(528708),extrathumbs) + !Container.Content(tvshows)">Extrathumbs/Extrafanart</value>
+	<value condition="StringCompare(Control.GetLabel(528708),extrathumbs) + Container.Content(tvshows)">$LOCALIZE[31517]</value>
 	<value condition="StringCompare(Control.GetLabel(528708),banner)">$LOCALIZE[31519]</value>
 	<value condition="StringCompare(Control.GetLabel(528708),noicon)">$LOCALIZE[106]</value>
 	</variable>
 	<variable name="PLInfoPanelVar">
 	<value condition="Container.Content(tvshows)">$INFO[Skin.String(PLInfoPanelTVShows)]</value>
 	<value condition="Container.Content(movies)">$INFO[Skin.String(PLInfoPanelMovies)]</value>
+	<value condition="Container.Content(sets)">$INFO[Skin.String(PLInfoPanelSets)]</value>
 	</variable>
 	<variable name="PLInfoPanelLabel">
 	<value condition="Stringcompare(Control.GetLabel(528421),infopaneloff)">$LOCALIZE[31473]</value>
@@ -3382,30 +3390,24 @@
 	<value condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)">$LOCALIZE[31471]</value>
 	</variable>
 	<variable name="PLLandscapeVar">
-	<value condition="Stringcompare(ListItem.label,..)">ace_logo_small.png</value>
-	<value condition="[Container.Content(tvshows) | Container.Content(movies)] + !IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
+	<value condition="!IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 	<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="PLLogoVar">
-	<value condition="Stringcompare(ListItem.label,..)">ace_logo_small.png</value>
 	<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PLClearArtVar">
-	<value condition="Stringcompare(ListItem.label,..)">ace_logo_small.png</value>
 	<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
-	<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+	<value>$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PLCharacterArtVar">
-	<value condition="Stringcompare(ListItem.label,..)">ace_logo_small.png</value>
 	<value condition="!IsEmpty(ListItem.Art(characterart))">$INFO[ListItem.Art(characterart)]</value>
 	<value condition="IsEmpty(ListItem.Art(characterart)) + !IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
 	<value>$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PLBannerVar">
-	<value condition="Stringcompare(ListItem.label,..)">ace_logo_small.png</value>
 	<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
-	<value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
-	<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+	<value condition="IsEmpty(ListItem.Art(banner)) + !IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 	<value>genres/genre-h-social.png</value>
 	</variable>
 

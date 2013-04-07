@@ -431,7 +431,7 @@
 	<label>31486</label>
 	<onclick>Skin.ToggleSetting(novideomediacase)</onclick>
 	<selected>!Skin.HasSetting(novideomediacase)</selected>
-	<visible>Control.IsVisible(51) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)] | [Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(65)] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	<visible>Control.IsVisible(51) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)] | [Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(65) | Control.IsVisible(528)] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 	</control>
 	<control type="button" id="9305">
 	<include>TopMenuButton</include>
@@ -608,7 +608,7 @@
 	<onclick condition="Stringcompare(Control.GetLabel(528421),infopaneloff)">Skin.SetString(PLInfoPanel$INFO[Window(home).Property(Area)],infopanelmanual)</onclick>
 	<onclick condition="Stringcompare(Control.GetLabel(528421),infopanelon)">Skin.SetString(PLInfoPanel$INFO[Window(home).Property(Area)],infopaneloff)</onclick>
 	<onclick condition="Stringcompare(Control.GetLabel(528421),infopanelauto)">Skin.SetString(PLInfoPanel$INFO[Window(home).Property(Area)],infopanelon)</onclick>
-	<visible>Control.IsVisible(528) + !Container.Content(genres) + !Container.Content(sets)</visible>
+	<visible>Control.IsVisible(528) + !Container.Content(genres)</visible>
 	</control>
 	<control type="button" id="528615">
 	<include>TopMenuButton</include>

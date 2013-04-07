@@ -190,7 +190,7 @@
 	<height>40</height>
 	<aspectratio>keep</aspectratio>
 	<colordiffuse>FFFFA500</colordiffuse>
-	<texture fallback="rating0.png">$VAR[value_videostarrating]</texture>
+	<texture fallback="rating0.png">$VAR[PLvalue_videostarrating]</texture>
 	<visible>!IsEmpty(ListItem.Title) + !Container.Content(seasons)</visible>
 	</control>
 	<control type="label"><!-- Rating -->
@@ -261,6 +261,17 @@
 	<label>$INFO[ListItem.PercentPlayed]%</label>
 	<visible>!StringCompare(ListItem.PercentPlayed,0)</visible>
 	</control>
+	<control type="label"><!-- Episodes: Watched/Unwatched -->
+	<width>500</width>
+	<height>40</height>
+	<align>left</align>
+	<aligny>center</aligny>
+	<font>Font_20</font>
+	<textcolor>$VAR[value_flagscolor]</textcolor>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<label>$LOCALIZE[20360]: [COLOR=$VAR[value_headercolor]][B]$INFO[ListItem.Property(TotalEpisodes)][/B][/COLOR]  ($LOCALIZE[16101]: [COLOR=$VAR[value_headercolor]][B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B][/COLOR])</label>
+	<visible>Container.Content(tvshows) + !StringCompare(ListItem.Label,..)</visible>
+	</control>
 	</control>
 	<control type="image">
 	<posx>0</posx>
@@ -292,15 +303,15 @@
 	<include>ViewPosterLite</include>
 	<control type="button" id="528196">
 	<include>InvisibleButton</include>
-	<visible>[Stringcompare(Control.GetLabel(528421),infopanelon)|Stringcompare(Control.GetLabel(528421),infopaneloff)]</visible>
+	<visible>[Stringcompare(Control.GetLabel(528421),infopanelon) | Stringcompare(Control.GetLabel(528421),infopaneloff)]+!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="button" id="528194">
 	<include>InvisibleButton</include>
-	<visible>Stringcompare(Control.GetLabel(528421),infopanelauto)+![Container.OnNext|Container.OnPrevious]+!Control.IsVisible(80)+!SubString(ListItem.Path,videodb://1/7/,left)+!StringCompare(ListItem.Label,..)</visible>
+	<visible>Stringcompare(Control.GetLabel(528421),infopanelauto) + ![Container.OnNext|Container.OnPrevious] + !Control.IsVisible(80) + !StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="button" id="528195">
 	<include>InvisibleButton</include>
-	<visible>[Window.IsVisible(shutdownmenu)|Window.IsVisible(movieinformation)|Window.IsVisible(contextmenu)|Window.IsVisible(playercontrols)|Window.IsVisible(progressdialog)|Window.IsVisible(busydialog)|Window.IsVisible(filebrowser)|Window.IsVisible(selectdialog)|Window.IsVisible(yesnodialog)|Window.IsVisible(virtualkeyboard)|Window.IsVisible(favourites)]</visible>
+	<visible>[Window.IsVisible(shutdownmenu) | Window.IsVisible(movieinformation) | Window.IsVisible(contextmenu) | Window.IsVisible(playercontrols) | Window.IsVisible(progressdialog) | Window.IsVisible(busydialog) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsVisible(yesnodialog) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(favourites)]</visible>
 	</control>
 	<control type="button" id="528197">
 	<include>InvisibleButton</include>
