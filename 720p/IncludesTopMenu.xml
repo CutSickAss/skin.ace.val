@@ -568,7 +568,7 @@
 	<label>31111</label>
 	<onclick>Skin.ToggleSetting(nodiscart)</onclick>
 	<selected>!Skin.HasSetting(nodiscart)</selected>
-	<visible>[Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(65)] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	<visible>[Control.IsVisible(51) | Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(65) | [Control.IsVisible(528) + StringCompare(Control.GetLabel(528707),poster)]] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 	</control>
 	<!-- Banner -->
 	<control type="radiobutton" id="9338">
@@ -665,7 +665,9 @@
 	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
 	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),noicon) | IsEmpty(Control.GetLabel(528708))">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],logo)</onclick>
-	<onclick condition="StringCompare(Control.GetLabel(528708),banner)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],noicon)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528708),cdart)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],noicon)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528708),banner) + !Container.Content(tvshows)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],cdart)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528708),banner) + Container.Content(tvshows)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],noicon)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),extrathumbs)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],banner)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),clearart) + !Container.Content(tvshows)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],extrathumbs)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),characterart)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],extrathumbs)</onclick>

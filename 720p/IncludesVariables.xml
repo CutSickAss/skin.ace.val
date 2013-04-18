@@ -3368,6 +3368,7 @@
 	<value condition="StringCompare(Control.GetLabel(528708),extrathumbs) + !Container.Content(tvshows)">Extrathumbs/Extrafanart</value>
 	<value condition="StringCompare(Control.GetLabel(528708),extrathumbs) + Container.Content(tvshows)">$LOCALIZE[31517]</value>
 	<value condition="StringCompare(Control.GetLabel(528708),banner)">$LOCALIZE[31519]</value>
+	<value condition="StringCompare(Control.GetLabel(528708),cdart)">cdART</value>
 	<value condition="StringCompare(Control.GetLabel(528708),noicon)">$LOCALIZE[106]</value>
 	</variable>
 	<variable name="PLInfoPanelVar">

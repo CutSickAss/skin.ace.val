@@ -53,7 +53,7 @@
 	<texture>black.png</texture>
 	<colordiffuse>C3FFFFFF</colordiffuse>
 	<include>Animation_Fade</include>
-	<visible>Player.HasVideo + !Skin.HasSetting(fullscreentrailer)</visible>
+	<visible>!Control.HasFocus(9920) + Player.HasVideo + !Skin.HasSetting(fullscreentrailer)</visible>
 	</control>
 	<control type="group"><!-- default group -->
 	<include>Animation_Window</include>
@@ -316,6 +316,10 @@
 	<control type="button" id="528194">
 	<include>InvisibleButton</include>
 	<visible>Stringcompare(Control.GetLabel(528421),infopanelauto) + ![Container.OnNext|Container.OnPrevious] + !Control.IsVisible(80) + !StringCompare(ListItem.Label,..)</visible>
+	</control>
+	<control type="button" id="528193">
+	<include>InvisibleButton</include>
+	<visible>[StringCompare(Control.GetLabel(528421),infopaneloff)|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]</visible>
 	</control>
 	<control type="button" id="528195">
 	<include>InvisibleButton</include>
