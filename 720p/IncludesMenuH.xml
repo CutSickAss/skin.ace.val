@@ -246,7 +246,7 @@
 	<label>$INFO[VideoPlayer.Time] / $INFO[VideoPlayer.Duration]</label>
 	<align>center</align>
 	<aligny>center</aligny>
-	<textcolor>E4101010</textcolor>
+	<textcolor>$VAR[value_menucolorlabel]</textcolor>
 	</control>
 	</control>
 	<include>HomeHRSS</include>
@@ -275,7 +275,7 @@
 	<animation effect="zoom" start="0" end="100" center="auto" time="300" delay="1000" easing="out" tween="sine">Visible</animation>
 	<animation effect="zoom" start="100" end="0" center="auto" time="200" easing="in" tween="sine">Hidden</animation>
 	<animation effect="zoom" start="100" end="0" center="auto" time="200" easing="out" tween="sine" condition="Skin.HasSetting(homemenuclean) + ![Control.HasFocus(4200) | Player.HasMedia | Control.HasFocus(510) | Control.HasFocus(5100)]">Conditional</animation>
-	<visible>[[Container(9000).HasFocus(1) + !IsEmpty(Window.Property(RecommendedMovie.1.Title)) | Container(9000).HasFocus(2) + !IsEmpty(Window.Property(RecommendedEpisode.1.Title)) | Container(9000).HasFocus(3) + !IsEmpty(Window.Property(RecommendedMusicVideo.1.Title)) | Container(9000).HasFocus(4) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))] + ![Skin.HasSetting(noprogresspanel) | Player.HasMedia + Skin.HasSetting(nonowplayingpanel)] | Control.HasFocus(510) | Control.HasFocus(5100)] + ![Container(9000).HasFocus(8) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11) | Container(9000).HasFocus(65) | Skin.HasSetting(submode)]</visible>
+	<visible>[[Container(9000).HasFocus(1) + !IsEmpty(Window.Property(RecommendedMovie.1.Title)) | Container(9000).HasFocus(2) + !IsEmpty(Window.Property(RecommendedEpisode.1.Title)) | Container(9000).HasFocus(3) + !IsEmpty(Window.Property(RecommendedMusicVideo.1.Title)) | Container(9000).HasFocus(4) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))] + ![Skin.HasSetting(noprogresspanel) | Player.HasMedia]  | Player.HasMedia + !Skin.HasSetting(nonowplayingpanel) | Control.HasFocus(510) | Control.HasFocus(5100)] + ![Container(9000).HasFocus(8) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11) | Container(9000).HasFocus(65) | Skin.HasSetting(submode)]</visible>
 	<control type="image">
 	<posx>471</posx>
 	<posy>158</posy>

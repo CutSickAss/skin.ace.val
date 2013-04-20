@@ -129,16 +129,19 @@
 	<include>RightListLabel</include>
 	<posy>580</posy>
 	<label>[COLOR=$VAR[value_headercolor]]$VAR[value_ground11_label][/COLOR]$VAR[value_ground11_value, : ]</label>
+	<visible>!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="label">
 	<include>RightListLabel</include>
 	<posy>600</posy>
 	<label>[COLOR=$VAR[value_headercolor]]$VAR[value_ground12_label][/COLOR]$VAR[value_ground12_value, : ]</label>
+	<visible>!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="label">
 	<include>RightListLabel</include>
 	<posy>620</posy>
 	<label>[COLOR=$VAR[value_headercolor]]$VAR[value_ground13_label][/COLOR]$VAR[value_ground13_value, : ]</label>
+	<visible>!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="image">
 	<posx>600</posx>

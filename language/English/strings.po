@@ -560,12 +560,15 @@ msgstr "VIDEO NODE"
 msgctxt "#31116"
 msgid "CHESS EFFECT"
 msgstr "CHESS EFFECT"
+
 msgctxt "#31117"
 msgid "INVERT MENU COLORS"
 msgstr "INVERT MENU COLORS"
+
 msgctxt "#31118"
 msgid "TRANSPARENCY FOR STYLES"
 msgstr "TRANSPARENCY FOR STYLES"
+
 #. ....
 msgctxt "#31200"
 msgid "MENU"

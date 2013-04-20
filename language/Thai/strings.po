@@ -66,7 +66,7 @@ msgstr ""
 "Project-Id-Version: Skin ACE\n"
 "Report-Msgid-Bugs-To: aeonmq@gmail.com\n"
 "POT-Creation-Date: 2012-06-22 19:08+0000\n"
-"PO-Revision-Date: 2013-04-17 09:26+0000\n"
+"PO-Revision-Date: 2013-04-19 02:11+0000\n"
 "Last-Translator: devilshura <devilshura@gmail.com>\n"
 "Language-Team: Thai (http://www.transifex.com/projects/p/skin-ace/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -505,31 +505,31 @@ msgstr "รับชม ทีวี"
 
 msgctxt "#31102"
 msgid "Executables and emulators"
-msgstr ""
+msgstr "ตัวรันโปรแกรม และ อีมูเลเตอร์"
 
 msgctxt "#31103"
 msgid "Highlights to remember"
-msgstr ""
+msgstr "เน้นสีเพื่อเตือนความจำ"
 
 msgctxt "#31104"
 msgid "Forecast for up to 10 DAYS"
-msgstr ""
+msgstr "พยากรณ์ล่วงหน้าอีก 10 วัน"
 
 msgctxt "#31105"
 msgid "My favourites items"
-msgstr ""
+msgstr "รายการที่ชื่นชอบของฉัน"
 
 msgctxt "#31106"
 msgid "Favourite item"
-msgstr ""
+msgstr "รายการที่ชื่นชอบ"
 
 msgctxt "#31107"
 msgid "Playlist"
-msgstr ""
+msgstr "รายการเล่น"
 
 msgctxt "#31108"
 msgid "Add-on"
-msgstr ""
+msgstr "ส่วนเสริม"
 
 msgctxt "#31109"
 msgid "Shutdown"
@@ -537,7 +537,7 @@ msgstr ""
 
 msgctxt "#31110"
 msgid "CD, DVD, Bluray"
-msgstr ""
+msgstr "ซีดี, ดีวีดี, บลูเรย์"
 
 msgctxt "#31111"
 msgid "DISC ART (IF AVAILABLE)"
@@ -1283,7 +1283,7 @@ msgstr "จัดการโปรไฟล์"
 
 msgctxt "#31375"
 msgid "General settings"
-msgstr ""
+msgstr "การตั้งค่าทั่วไป"
 
 msgctxt "#31376"
 msgid "A HIGH DEFINITION MEDIA ENVIROMENT"
@@ -3367,7 +3367,7 @@ msgstr "ภาพของชุดรูปแบบ แบบสุ่ม"
 
 msgctxt "#31900"
 msgid "EXTRAPACK NECESSARY"
-msgstr ""
+msgstr "ชุดพิเศษ ที่จำเป็น"
 
 msgctxt "#31901"
 msgid "USE EXTERNAL PACKAGE IMAGES (USER DEFINED)"
@@ -3383,13 +3383,13 @@ msgstr "ใช้ชุดรูปแทนจากภายนอก (ผู�
 
 msgctxt "#31904"
 msgid "MODERN IMAGES THEME"
-msgstr ""
+msgstr "ธีม รูปภาพสมัยใหม่"
 
 msgctxt "#31905"
 msgid ""
 "A new theme is loaded each time you start skin, your skin will never be the "
 "same"
-msgstr ""
+msgstr "ธีมใหม่จะถูกโหลดในแต่ละครั้งที่คุณเริ่มสกิน, สกินของคุณจะไม่ซ้ำแบบเดิม."
 
 msgctxt "#31906"
 msgid "DIRECTOR'S MOVIES"
@@ -3423,20 +3423,20 @@ msgstr "เลื่อนในทิศทางใด ๆ เพื่อย�
 
 msgctxt "#31913"
 msgid "Clear color images for a smooth visual."
-msgstr ""
+msgstr "รูปภาพสีสะอาดตา เพื่อมุมมองที่นุ่มนวล"
 
 msgctxt "#31914"
 msgid "Hot color images tones for people who prefer more contrast."
-msgstr ""
+msgstr "รูปภาพในโทนสีร้อน สำหรับคนที่ต้องการความชัดเจนยิ่งขึ้น"
 
 msgctxt "#31915"
 msgid ""
 "Computer generated graphics, highlighting the work of many web artists."
-msgstr ""
+msgstr "ภาพกราฟิคคอมพิวเตอร์, เน้นที่งานของหลากหลายศิลปินบนเว็บ."
 
 msgctxt "#31916"
 msgid "Dark tone images mixed with neon, a nice combination."
-msgstr ""
+msgstr "รูปภาพโทนมืดผสมกับแสงนีออน, เข้ากันอย่างลงตัว."
 
 msgctxt "#31917"
 msgid "SHORTCUTS"
@@ -3620,15 +3620,15 @@ msgstr "นาที"
 
 msgctxt "#31962"
 msgid "NOT AVAILABLE TO VERTICAL MENU"
-msgstr ""
+msgstr "ไม่สามารถใช้ได้กับเมนูแนวดิ่ง"
 
 msgctxt "#31963"
 msgid "VERTICAL MENU"
-msgstr ""
+msgstr "เมนู แนวดิ่ง"
 
 msgctxt "#31964"
 msgid "HORIZONTAL MENU"
-msgstr ""
+msgstr "เมนู แนวนอน"
 
 msgctxt "#31965"
 msgid "Images that mix digital art and futurist style."
@@ -3638,13 +3638,13 @@ msgctxt "#31966"
 msgid ""
 "Images that transmit a visual look fresh and modern. The default theme of "
 "Ace."
-msgstr ""
+msgstr "รูปภาพที่นำมาซึ่งความสดชื่นและทันสมัย. ชุดรูปแบบเริ่มต้นของ Ace."
 
 msgctxt "#31967"
 msgid ""
 "This function erases all the pictures that were downloaded and performs a "
 "full download again. Used to correct any problems in downloading."
-msgstr ""
+msgstr "ฟังก์ชั่นนี้จะลบทุกภาพที่ถูกดาวน์โหลดและดำเนินการดาวน์โหลดแบบเต็มอีกครั้ง. ใช้ในการแก้ไขปัญหาใด ๆ ในขณะดาวน์โหลด."
 
 msgctxt "#31968"
 msgid "FUTURE"

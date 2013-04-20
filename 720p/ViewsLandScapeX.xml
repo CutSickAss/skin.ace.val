@@ -195,7 +195,7 @@
 	</control>
 	<control type="image">
 	<posx>202</posx>
-    <posy>5</posy>
+    <posy>10</posy>
     <width>30</width>
     <height>30</height>
 	<info>ListItem.Overlay</info>
@@ -241,13 +241,12 @@
 	</control>
 	<control type="image">
 	<posx>202</posx>
-    <posy>5</posy>
+    <posy>10</posy>
     <width>30</width>
     <height>30</height>
 	<info>ListItem.Overlay</info>
 	<animation type="Focus" reversible="false">
-	<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
-	<effect type="fade" start="80" end="100" time="400" />
+	<effect type="zoom" center="150,60" start="80" end="100" time="400" tween="back" easing="out" />
 	<visible>!Skin.HasSetting(nooverlays)</visible>
 	</animation>
 	</control>

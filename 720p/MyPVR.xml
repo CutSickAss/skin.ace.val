@@ -34,35 +34,35 @@
 	<animation effect="slide" start="0,0" end="0,-70" time="300" easing="inout" tween="cubic">Hidden</animation>
 	<visible>PVR.HasTimer + ![PVR.IsRecording | Player.HasVideo]</visible>
 	<control type="image">
-	<posx>240</posx>
+	<posx>300</posx>
 	<posy>31</posy>
-	<width>1040</width>
+	<width>980</width>
 	<height>30</height>
 	<texture flipy="true">shadow_h.png</texture>
 	<colordiffuse>C3FFFFFF</colordiffuse>
 	</control>
 	<control type="image">
-	<posx>240</posx>
+	<posx>300</posx>
 	<posy>-4</posy>
 	<height>33</height>
-	<width>1040</width>
+	<width>980</width>
 	<aligny>top</aligny>
 	<texture>darkgrey.png</texture>
 	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 	<include>Animation_HomeGlass</include>
 	</control>
 	<control type="image">
-	<posx>240</posx>
+	<posx>300</posx>
 	<posy>-4</posy>
 	<height>35</height>
-	<width>1040</width>
+	<width>980</width>
 	<aligny>top</aligny>
 	<texture>darkgrey.png</texture>
 	<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 	<include>Animation_HomeGlass</include>
 	</control>
 	<control type="image">
-	<posx>280</posx>
+	<posx>320</posx>
 	<posy>4</posy>
 	<width>15</width>
 	<height>15</height>
@@ -70,9 +70,9 @@
 	<texture>pvr_hastimer.png</texture>
 	</control>
 	<control type="label">
-	<posx>310</posx>
+	<posx>350</posx>
 	<posy>4</posy>
-	<width>850</width>
+	<width>880</width>
 	<height>35</height>
 	<align>left</align>
 	<font>Font_16</font>
