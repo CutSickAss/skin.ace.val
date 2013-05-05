@@ -175,15 +175,6 @@
 	<control type="image"><!-- Flags -->
 	<include>FlagImage</include>
 	<texture background="true">$VAR[value_mpaa_fs]</texture>
-	<visible>!Substring(Skin.CurrentTheme,Greek)</visible>
-	</control>
-	<control type="image">
-	<width>89</width>
-	<height>40</height>
-	<aspectratio>keep</aspectratio>
-	<fadetime>FanartCrossFadeTime</fadetime>
-	<texture background="true">$VAR[value_mpaa_fs]</texture>
-	<visible>Substring(Skin.CurrentTheme,Greek)</visible>
 	</control>
 	<control type="image">
 	<include>FlagImage</include>

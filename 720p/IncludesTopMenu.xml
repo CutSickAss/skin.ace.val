@@ -320,7 +320,7 @@
 	<onfocus>Container.SetViewMode(58)</onfocus>
 	<onclick>SetFocus(58)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31810])</selected>
-	<visible>![Skin.HasSetting(noviewcoverflow_video) | Container.Content(episodes) | Container.Content(years) | Container.Content(genres)]</visible>
+	<visible>![Skin.HasSetting(noviewcoverflow_video) | Container.Content(episodes) | Container.Content(years) | Container.Content(genres) | Window.IsActive(28)]</visible>
 	</control>
 	<control type="radiobutton" id="9259"><!-- RightList --><!-- 59 -->
 	<include>TopMenuRadioButton</include>
@@ -817,6 +817,13 @@
 	<label>31463</label>
 	<onclick>Skin.ToggleSetting(animation_panscan)</onclick>
 	<selected>Skin.HasSetting(animation_panscan)</selected>
+	<visible>![Window.IsVisible(VideoPlaylist) + !Skin.HasSetting(noliveplaylistbg)]</visible>
+	</control>
+	<control type="radiobutton" id="9403"><!-- Visualizacao de video - Playlists -->
+	<include>TopMenuRadioButton</include>
+	<label>31125</label>
+	<onclick>Skin.ToggleSetting(noliveplaylistbg)</onclick>
+	<selected>!Skin.HasSetting(noliveplaylistbg)</selected>
 	</control>
 	<!-- Movies Fanart  -->
 	<control type="radiobutton" id="9406"><!-- Fanart - Default -->
@@ -1047,7 +1054,7 @@
 	<selected>SubString(skin.string(setsfanart),extra)</selected>
 	<visible>Container.Content(sets)</visible>
 	</control>-->
-	<!-- Genre -->
+	<!-- Genero Fanart -->
 	<control type="radiobutton" id="9451"><!-- Curtains -->
 	<include>TopMenuRadioButton</include>
 	<label>31501</label>
@@ -1060,7 +1067,7 @@
 	<label>31499</label>
 	<onclick>Skin.SetString(videogenrefanart,genre)</onclick>
 	<selected>SubString(skin.string(videogenrefanart),genre)</selected>
-	<visible>Container.Content(Genres)</visible>
+	<visible>Container.Content(genres)</visible>
 	</control>
 	<control type="radiobutton" id="9454"><!-- Fanart de genero externo -->
 	<include>TopMenuRadioButton</include>
@@ -1069,20 +1076,20 @@
 	<selected>Skin.HasSetting(externalvideogenrefanart)</selected>
 	<visible>Container.Content(genres) + SubString(skin.string(videogenrefanart),genre)</visible>
 	</control>
-	<control type="button" id="9455">
+	<control type="button" id="9455"><!-- Fanart de genero externo - caminho -->
 	<include>TopMenuButton</include>
 	<label>$VAR[value_videogenrefanart]</label>
 	<onclick>Skin.SetPath(CustomVideoGenreFanart)</onclick>
 	<visible>Container.Content(genres) + SubString(skin.string(videogenrefanart),genre) + Skin.HasSetting(externalvideogenrefanart)</visible>
 	</control>
-	<control type="radiobutton" id="9457">
+	<control type="radiobutton" id="9457"><!-- Icones de genero externo -->
 	<include>TopMenuRadioButton</include>
 	<label>31509</label>
 	<onclick>Skin.ToggleSetting(externalvideogenreicon)</onclick>
 	<selected>Skin.HasSetting(externalvideogenreicon)</selected>
 	<visible>Container.Content(genres)</visible>
 	</control>
-	<control type="button" id="9458">
+	<control type="button" id="9458"><!-- Icones de genero externo - caminho -->
 	<include>TopMenuRadioButton</include>
 	<label>$VAR[value_videogenreicon]</label>
 	<onclick>Skin.SetPath(CustomVideoGenreIcon)</onclick>
@@ -1401,7 +1408,7 @@
 	<onfocus>Container.SetViewMode(59)</onfocus>
 	<onclick>SetFocus(59)</onclick>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31828])</selected>
-	<visible>!Skin.HasSetting(noviewrightlist_music) + [Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
+	<visible>!Skin.HasSetting(noviewrightlist_music)</visible>
 	</control>
 	<control type="radiobutton" id="9262"><!-- Panel --><!-- 62 -->
 	<include>TopMenuRadioButton</include>
@@ -1596,7 +1603,7 @@
 	<selected>SubString(skin.string(musicfanart),fanart)</selected>
 	<visible>!Container.Content(Genres)</visible>
 	</control>
-	<control type="radiobutton" id="9407"><!-- Musical Note -->
+	<control type="radiobutton" id="9407"><!-- Curtains -->
 	<include>TopMenuRadioButton</include>
 	<label>31501</label>
 	<onclick>Skin.SetString(musicfanart,musiccurtains)</onclick>
@@ -1637,6 +1644,7 @@
 	<selected>Skin.HasSetting(musiclogo)</selected>
 	<visible>!Container.Content(Genres)</visible>
 	</control>
+	<!-- Genero Fanart -->
 	<control type="radiobutton" id="9451"><!-- Curtains -->
 	<include>TopMenuRadioButton</include>
 	<label>31501</label>
@@ -1649,7 +1657,7 @@
 	<label>31499</label>
 	<onclick>Skin.SetString(musicgenrefanart,genre)</onclick>
 	<selected>SubString(skin.string(musicgenrefanart),genre)</selected>
-	<visible>Container.Content(Genres)</visible>
+	<visible>Container.Content(genres)</visible>
 	</control>
 	<control type="radiobutton" id="9454"><!-- Fanart de genero externo -->
 	<include>TopMenuRadioButton</include>

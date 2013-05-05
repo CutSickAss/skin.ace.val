@@ -701,6 +701,11 @@
 	<label>13404</label>
 	<onclick>SendClick(2003,9)</onclick>
 	</item>
+	<item id="1"><!-- Refresh -->
+	<label>31695</label>
+	<onclick>SendClick(2003,6)</onclick>
+	<visible>!Skin.HasSetting(kioskininfo)</visible>
+	</item>
 	<item id="3"><!-- Start -->
 	<label>31700</label>
 	<onclick>SendClick(2003,8)</onclick>
@@ -715,11 +720,6 @@
 	<label>31701</label>
 	<onclick>SendClick(2003,11)</onclick>
 	<visible>!IsEmpty(ListItem.Trailer)</visible>
-	</item>
-	<item id="1"><!-- Refresh -->
-	<label>31695</label>
-	<onclick>SendClick(2003,6)</onclick>
-	<visible>!Skin.HasSetting(kioskininfo)</visible>
 	</item>
 	<item id="7"><!-- Get Thumb -->
 	<label>13405</label>
