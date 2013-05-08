@@ -639,10 +639,8 @@
 	<include>TopMenuButton</include>
 	<label>$LOCALIZE[536]:</label>
 	<label2>$VAR[PLIconLabel]</label2>
-	<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
 	<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
 	<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
-	<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
 	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
 	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528707),noicon) | IsEmpty(Control.GetLabel(528707))">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
@@ -666,10 +664,8 @@
 	<include>TopMenuButton</include>
 	<label>+ $LOCALIZE[536]:</label>
 	<label2>$VAR[PLPlusIconLabel]</label2>
-	<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
 	<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
 	<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
-	<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
 	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
 	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),noicon) | IsEmpty(Control.GetLabel(528708))">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],logo)</onclick>
@@ -684,11 +680,23 @@
 	<onclick condition="StringCompare(Control.GetLabel(528708),noicon)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],logo)</onclick>
 	<visible>Control.IsVisible(528) + !Container.Content(genres)</visible>
 	</control>
-	<control type="radiobutton" id="528767">
-	<include>TopMenuRadioButton</include>
+	<control type="label" id="528709">
+	<posx>-500</posx>
+	<posy>-500</posy>
+	<label>$VAR[PLTitleVar]</label>
+	<visible>Control.IsVisible(528)</visible>
+	</control>
+	<control type="button" id="528767">
+	<include>TopMenuButton</include>
 	<label>$LOCALIZE[369]</label>
-	<onclick>Skin.ToggleSetting(PLtitle)</onclick>
-	<selected>Skin.HasSetting(PLtitle)</selected>
+	<label2>$VAR[PLTitleLabel]</label2>
+	<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
+	<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
+	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
+	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528709),titleoff) | IsEmpty(Control.GetLabel(528709))">Skin.SetString(PLTitle$INFO[Window(home).Property(Area)],titleon)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528709),titleon)">Skin.SetString(PLTitle$INFO[Window(home).Property(Area)],titleoff)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528709),titleoff)">Skin.SetString(PLTitle$INFO[Window(home).Property(Area)],titleon)</onclick>
 	<visible>Control.IsVisible(528)</visible>
 	</control>
 

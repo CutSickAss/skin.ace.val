@@ -267,6 +267,10 @@
 	<onload>Skin.SetString(PosterLiteSets,poster)</onload>
 	<onload>Skin.SetString(PosterLitePlusMovies,noicon)</onload>
 	<onload>Skin.SetString(PosterLitePlusTVShows,banner)</onload>
+	<onload>Skin.SetString(PLTitleMovies,titleon)</onload>
+	<onload>Skin.SetString(PLTitleTVShows,titleon)</onload>
+	<onload>Skin.SetString(PLTitleGenres,titleon)</onload>
+	<onload>Skin.SetString(PLTitleSets,titleon)</onload>
 	<onload>AlarmClock(replace,ReplaceWindow(0),0:01,true)</onload>
 	<onload>Skin.SetBool(welcomedone5)</onload>
 	</include>
@@ -1011,7 +1015,7 @@
 	<height>60</height>
 	<texture>line_v.png</texture>
 	<colordiffuse>FFFFFAF0</colordiffuse>
-	<visible>![Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59) | [Control.IsVisible(528) + !Skin.HasSetting(PLtitle)]]</visible>
+	<visible>![Control.IsVisible(51) | Control.IsVisible(55) | Control.IsVisible(57) | Control.IsVisible(59) | [Control.IsVisible(528) + StringCompare(Control.GetLabel(528709),titleoff)]]</visible>
 	</control>
 	<control type="image"><!-- Audio -->
 	<posx>0</posx>
