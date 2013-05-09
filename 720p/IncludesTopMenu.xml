@@ -760,6 +760,7 @@
 	<label>31620</label>
 	<onclick>Skin.ToggleSetting(nolanguageflags)</onclick>
 	<selected>!Skin.HasSetting(nolanguageflags)</selected>
+	<visible>![Control.IsVisible(528) + StringCompare(Control.GetLabel(528709),titleoff)]</visible>
 	</control>
 	<control type="radiobutton" id="9352">
 	<include>TopMenuRadioButton</include>
@@ -784,7 +785,7 @@
 	<label>31696</label>
 	<onclick>Skin.ToggleSetting(originaltitle)</onclick>
 	<selected>Skin.HasSetting(originaltitle)</selected>
-	<visible>Container.Content(movies)</visible>
+	<visible>Container.Content(movies) + ![Control.IsVisible(528) + StringCompare(Control.GetLabel(528709),titleoff)]</visible>
 	</control>
 	<control type="radiobutton" id="9356">
 	<include>TopMenuRadioButton</include>

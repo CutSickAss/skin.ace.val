@@ -161,12 +161,13 @@
 		</control>
 	  </control>
 	  <control type="group">
-		<posx>364</posx>
-		<posy>48</posy>
+		<posx>417</posx>
+		<posy>80</posy>
+		<animation effect="slide" end="66,0" time="500" reversible="true" condition="StringCompare(Control.GetLabel(528707),poster)+!IsEmpty(ListItem.Art(discart)">Conditional</animation>
 		<visible>Player.HasVideo+!VideoPlayer.IsFullscreen+!Skin.HasSetting(fullscreentrailer)</visible>
 		<control type="videowindow">
-		  <width>893</width>
-		  <height>380</height>
+		  <width>790</width>
+		  <height>336</height>
 		</control>
 	  </control>
 	  <control type="group">
