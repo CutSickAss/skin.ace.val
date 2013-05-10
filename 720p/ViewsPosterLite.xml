@@ -125,7 +125,7 @@
 			  <imagepath background="true">$INFO[ListItem.Path,,extrafanart]</imagepath>
 			  <visible>IsEmpty(Control.GetLabel(528201))</visible>
 			</control>
-			<control type="image">
+			<control type="image" id="528203">
 			  <include>PLLandValue</include>
 			  <texture background="true">$INFO[ListItem.Art(landscape)]</texture>
 			  <bordertexture background="true" border="-2">black.png</bordertexture>
@@ -156,6 +156,20 @@
 			  <include>PLcdARTHorz</include>
 			  <visible>SubString(ListItem.Path,videodb://1/7,left)</visible>
 			</control>
+		  </control>
+		  <control type="fadelabel">
+			<posx>0</posx>
+			<posy>80</posy>
+			<width>880</width>
+			<align>right</align>
+			<scrollout>false</scrollout>
+			<pauseatend>2000</pauseatend>
+			<scrollspeed>10</scrollspeed>
+			<font>Font_40</font>
+			<textcolor>FFE00000</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>[B]$INFO[ListItem.Label][/B]</label>
+			<visible>StringCompare(Control.GetLabel(528421),infopaneloff)+StringCompare(Control.GetLabel(528707),noicon)+[[StringCompare(Control.GetLabel(528708),logo)+IsEmpty(ListItem.Art(clearlogo))]|[StringCompare(Control.GetLabel(528708),clearart)+IsEmpty(ListItem.Art(clearart))+IsEmpty(ListItem.Art(clearlogo))]|[StringCompare(Control.GetLabel(528708),characterart)+IsEmpty(ListItem.Art(characterart))+IsEmpty(ListItem.Art(clearlogo))]|[StringCompare(Control.GetLabel(528708),characterart)+IsEmpty(ListItem.Art(characterart))+IsEmpty(ListItem.Art(clearlogo))]|[StringCompare(Control.GetLabel(528708),extrathumbs)+IsEmpty(Control.GetLabel(528203))]|[StringCompare(Control.GetLabel(528708),cdart)+IsEmpty(ListItem.Art(discart))]]</visible>
 		  </control>
 		</control>
 	  </control>
