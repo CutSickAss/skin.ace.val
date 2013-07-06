@@ -485,7 +485,7 @@
 	<align>center</align>
 	<aligny>center</aligny>
 	<aspectratio>keep</aspectratio>
-	<texture fallback="stars/0.0.png">$INFO[Container(510).ListItem.Property(Rating),stars/,.png]</texture>
+	<texture fallback="rating0.png">$VAR[value_mfvideostarrating]</texture>
 	<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 	<fadetime>FanartCrossFadeTime</fadetime>
 	<visible>Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(31) | Container(9000).HasFocus(32) | Container(9000).HasFocus(33) | Container(9000).HasFocus(34) | Container(9000).HasFocus(35)</visible>
