@@ -354,9 +354,9 @@
 	  <control type="group">
 		<posx>-119</posx>
 		<posy>366</posy>
-		<animation effect="zoom" center="75,684" start="44" end="100" time="480" tween="cubic" easing="inout" reversible="false" condition="Container.OnNext">Focus</animation>
+		<animation effect="zoom" center="75,684" start="44" end="100" time="300" tween="cubic" easing="inout" reversible="false" condition="Container.OnNext">Focus</animation>
 		<animation effect="zoom" center="-150,684" start="100" end="44" time="240" tween="cubic" easing="inout" reversible="false" condition="Container.OnNext">Unfocus</animation>
-		<animation effect="zoom" center="-150,684" start="44" end="100" time="480" tween="cubic" easing="inout" reversible="false" condition="Container.OnPrevious">Focus</animation>
+		<animation effect="zoom" center="-150,684" start="44" end="100" time="300" tween="cubic" easing="inout" reversible="false" condition="Container.OnPrevious">Focus</animation>
 		<animation type="Unfocus" reversible="false" condition="Container.OnPrevious">
 		  <effect type="zoom" center="-31,684" start="100" end="44" time="240" tween="cubic" easing="inout" />
 		  <effect type="slide" end="-180" />
@@ -431,6 +431,18 @@
 	  <aspectratio>keep</aspectratio>
 	  <texture background="true">$VAR[value_videocodec]</texture>
 	  <visible>!Skin.HasSetting(novideomediacase)</visible>
+	</control>
+	<control type="textbox">
+	  <posx>4</posx>
+	  <posy>-49</posy>
+	  <width>300</width>
+	  <height>40</height>
+	  <align>center</align>
+	  <font>Font_30</font>
+	  <textcolor>FFFFFFFF</textcolor>
+	  <label>[B]$INFO[ListItem.Studio][/B]</label>
+	  <visible>Container.Content(tvshows)</visible>
+	  <autoscroll time="3000" delay="5000" repeat="3000">true</autoscroll>
 	</control>
 	<control type="image">
 	  <posx>261</posx>

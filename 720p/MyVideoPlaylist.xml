@@ -140,7 +140,15 @@
 	<control type="image"><!-- Mpaa -->
 	<include>FlagImage</include>
 	<texture>$VAR[value_mpaa]</texture>
-	<visible>!IsEmpty(ListItem.Mpaa)</visible>
+	<visible>!IsEmpty(ListItem.Mpaa) + !Substring(Skin.CurrentTheme,Greek)</visible>
+	</control>
+	<control type="image">
+	<width>89</width>
+	<height>40</height>
+	<aspectratio>keep</aspectratio>
+	<fadetime>FanartCrossFadeTime</fadetime>
+	<texture>$VAR[value_mpaa]</texture>
+	<visible>!IsEmpty(ListItem.Mpaa) + Substring(Skin.CurrentTheme,Greek)</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>

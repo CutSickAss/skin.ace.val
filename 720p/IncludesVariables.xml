@@ -3,7 +3,7 @@
 	<includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-	<value>1.6.0d[COLOR=80FFFFFF] | [/COLOR]5/4/2013</value>
+	<value>1.6.0[COLOR=80FFFFFF] | [/COLOR]5/4/2013</value>
 	</variable>
 	<variable name="Sub_GoTo">
 	<value condition="Container(9000).HasFocus(1)">5001</value>
@@ -655,7 +655,7 @@
 	<value condition="SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,.iso,Right) + ![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem(0).Filenameandpath,3d)]">flags/source/dvd.png</value>
 	<value condition="SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem(0).Filenameandpath,3d)">flags/source/3dbd.png</value>
 	<value condition="SubString(ListItem.Path,videodb://1/7,left)">flags/source/set.png</value>	
-	<value condition="![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) | SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hdtv) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem(0).Filenameandpath,3d) | SubString(ListItem.Filenameandpath,.iso,Right) | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Path,videodb://1/7,left)]">$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</value>	
+	<value condition="![SubString(ListItem.Filenameandpath,bluray) | SubString(ListItem.Filenameandpath,blu-ray) | SubString(ListItem.Filenameandpath,bdrip) | SubString(ListItem.Filenameandpath,hdtv) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Filenameandpath,dvd) | SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem(0).Filenameandpath,3d) | SubString(ListItem.Filenameandpath,.iso,Right) | SubString(ListItem.Filenameandpath,.ifo,Right) | SubString(ListItem.Filenameandpath,web) | SubString(ListItem.Path,videodb://1/7,left)]">$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</value>
 	</variable>
 
 	<!-- ######################################################################### Variable Video Codec Full Screen ######################################################################### -->
@@ -670,12 +670,12 @@
 
 	<!-- ######################################################################### Variable Mpaa Flags ######################################################################### -->
 	<variable name="value_mpaa">
-	<value condition="SubString(ListItem.Mpaa,Rated NR) | SubString(ListItem.Mpaa,Rated: NR)">flags/rating/MPAA_NR_Certificate_US.png</value>
-	<value condition="SubString(ListItem.Mpaa,Rated G) | SubString(ListItem.Mpaa,Rated: G)">flags/rating/MPAA_G_Certificate_US.png</value>
-	<value condition="[SubString(ListItem.Mpaa,Rated PG) | SubString(ListItem.Mpaa,Rated: PG)] + !SubString(ListItem.Mpaa,Rated PG-13) + !SubString(ListItem.Mpaa,Rated: PG-13)">flags/rating/MPAA_PG_Certificate_US.png</value>
-	<value condition="SubString(ListItem.Mpaa,Rated PG-13) | SubString(ListItem.Mpaa,Rated: PG-13)">flags/rating/MPAA_PG-13_Certificate_US.png</value>
-	<value condition="SubString(ListItem.Mpaa,Rated R) | SubString(ListItem.Mpaa,Rated: R)">flags/rating/MPAA_R_Certificate_US.png</value>
-	<value condition="SubString(ListItem.Mpaa,Rated NC-17) | SubString(ListItem.Mpaa,Rated: NC-17)">flags/rating/MPAA_NC-17_Certificate_US.png</value>
+	<value condition="SubString(ListItem.Mpaa,Rated NR) | SubString(ListItem.Mpaa,Rated: NR) | StringCompare(ListItem.Mpaa,NR)">flags/rating/MPAA_NR_Certificate_US.png</value>
+	<value condition="SubString(ListItem.Mpaa,Rated G) | SubString(ListItem.Mpaa,Rated: G) | StringCompare(ListItem.Mpaa,G)">flags/rating/MPAA_G_Certificate_US.png</value>
+	<value condition="[SubString(ListItem.Mpaa,Rated PG) | SubString(ListItem.Mpaa,Rated: PG) | StringCompare(ListItem.Mpaa,PG)] + !SubString(ListItem.Mpaa,Rated PG-13) + !SubString(ListItem.Mpaa,Rated: PG-13)">flags/rating/MPAA_PG_Certificate_US.png</value>
+	<value condition="SubString(ListItem.Mpaa,Rated PG-13) | SubString(ListItem.Mpaa,Rated: PG-13) | StringCompare(ListItem.Mpaa,PG-13)">flags/rating/MPAA_PG-13_Certificate_US.png</value>
+	<value condition="SubString(ListItem.Mpaa,Rated R) | SubString(ListItem.Mpaa,Rated: R) | StringCompare(ListItem.Mpaa,R)">flags/rating/MPAA_R_Certificate_US.png</value>
+	<value condition="SubString(ListItem.Mpaa,Rated NC-17) | SubString(ListItem.Mpaa,Rated: NC-17) | StringCompare(ListItem.Mpaa,NC-17)">flags/rating/MPAA_NC-17_Certificate_US.png</value>
 	<value condition="StringCompare(ListItem.Mpaa,UK:U)">flags/rating/BBFC_U_Certificate_UK.png</value>
 	<value condition="StringCompare(ListItem.Mpaa,UK:PG)">flags/rating/BBFC_PG_Certificate_UK.png</value>
 	<value condition="StringCompare(ListItem.Mpaa,UK:12)">flags/rating/BBFC_12_Certificate_UK.png</value>
@@ -705,12 +705,12 @@
 
 	<!-- ######################################################################### Variable Mpaa Flags Tela Cheia ######################################################################### -->
 	<variable name="value_mpaa_fs">
-	<value condition="SubString(Videoplayer.Mpaa,Rated NR) | SubString(Videoplayer.Mpaa,Rated: NR)">flags/rating/MPAA_NR_Certificate_US.png</value>
-	<value condition="SubString(Videoplayer.Mpaa,Rated G) | SubString(Videoplayer.Mpaa,Rated: G)">flags/rating/MPAA_G_Certificate_US.png</value>
-	<value condition="[SubString(Videoplayer.Mpaa,Rated PG) | SubString(Videoplayer.Mpaa,Rated: PG)] + !SubString(Videoplayer.Mpaa,Rated PG-13) + !SubString(Videoplayer.Mpaa,Rated: PG-13)">flags/rating/MPAA_PG_Certificate_US.png</value>
-	<value condition="SubString(Videoplayer.Mpaa,Rated PG-13) | SubString(Videoplayer.Mpaa,Rated: PG-13)">flags/rating/MPAA_PG-13_Certificate_US.png</value>
-	<value condition="SubString(Videoplayer.Mpaa,Rated R) | SubString(Videoplayer.Mpaa,Rated: R)">flags/rating/MPAA_R_Certificate_US.png</value>
-	<value condition="SubString(Videoplayer.Mpaa,Rated NC-17) | SubString(Videoplayer.Mpaa,Rated: NC-17)">flags/rating/MPAA_NC-17_Certificate_US.png</value>
+	<value condition="SubString(Videoplayer.Mpaa,Rated NR) | SubString(Videoplayer.Mpaa,Rated: NR) | StringCompare(Videoplayer.Mpaa,NR)">flags/rating/MPAA_NR_Certificate_US.png</value>
+	<value condition="SubString(Videoplayer.Mpaa,Rated G) | SubString(Videoplayer.Mpaa,Rated: G) | StringCompare(Videoplayer.Mpaa,G)">flags/rating/MPAA_G_Certificate_US.png</value>
+	<value condition="[SubString(Videoplayer.Mpaa,Rated PG) | SubString(Videoplayer.Mpaa,Rated: PG) | StringCompare(Videoplayer.Mpaa,PG)] + !SubString(Videoplayer.Mpaa,Rated PG-13) + !SubString(Videoplayer.Mpaa,Rated: PG-13)">flags/rating/MPAA_PG_Certificate_US.png</value>
+	<value condition="SubString(Videoplayer.Mpaa,Rated PG-13) | SubString(Videoplayer.Mpaa,Rated: PG-13) | StringCompare(Videoplayer.Mpaa,PG-13)">flags/rating/MPAA_PG-13_Certificate_US.png</value>
+	<value condition="SubString(Videoplayer.Mpaa,Rated R) | SubString(Videoplayer.Mpaa,Rated: R) | StringCompare(Videoplayer.Mpaa,R)">flags/rating/MPAA_R_Certificate_US.png</value>
+	<value condition="SubString(Videoplayer.Mpaa,Rated NC-17) | SubString(Videoplayer.Mpaa,Rated: NC-17) | StringCompare(Videoplayer.Mpaa,NC-17)">flags/rating/MPAA_NC-17_Certificate_US.png</value>
 	<value condition="StringCompare(Videoplayer.Mpaa,UK:U)">flags/rating/BBFC_U_Certificate_UK.png</value>
 	<value condition="StringCompare(Videoplayer.Mpaa,UK:PG)">flags/rating/BBFC_PG_Certificate_UK.png</value>
 	<value condition="StringCompare(Videoplayer.Mpaa,UK:12)">flags/rating/BBFC_12_Certificate_UK.png</value>
@@ -740,12 +740,12 @@
 
 	<!-- ######################################################################### Variable Mpaa Flags Menu Principal ######################################################################### -->	
 	<variable name="value_mfmpaa">
-	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated NR) | SubString(Container(510).ListItem.Property(Mpaa),Rated: NR)">flags/rating/MPAA_NR_Certificate_US.png</value>
-	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated G) | SubString(Container(510).ListItem.Property(Mpaa),Rated: G)">flags/rating/MPAA_G_Certificate_US.png</value>
-	<value condition="[SubString(Container(510).ListItem.Property(Mpaa),Rated PG) | SubString(Container(510).ListItem.Property(Mpaa),Rated: PG)] + !SubString(Container(510).ListItem.Property(Mpaa),Rated PG-13) + !SubString(Container(510).ListItem.Property(Mpaa),Rated: PG-13)">flags/rating/MPAA_PG_Certificate_US.png</value>
-	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated PG-13) | SubString(Container(510).ListItem.Property(Mpaa),Rated: PG-13)">flags/rating/MPAA_PG-13_Certificate_US.png</value>
-	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated R) | SubString(Container(510).ListItem.Property(Mpaa),Rated: R)">flags/rating/MPAA_R_Certificate_US.png</value>
-	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated NC-17) | SubString(Container(510).ListItem.Property(Mpaa),Rated: NC-17)">flags/rating/MPAA_NC-17_Certificate_US.png</value>
+	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated NR) | SubString(Container(510).ListItem.Property(Mpaa),Rated: NR) | StringCompare(Container(510).ListItem.Property(Mpaa),NR)">flags/rating/MPAA_NR_Certificate_US.png</value>
+	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated G) | SubString(Container(510).ListItem.Property(Mpaa),Rated: G) | StringCompare(Container(510).ListItem.Property(Mpaa),G)">flags/rating/MPAA_G_Certificate_US.png</value>
+	<value condition="[SubString(Container(510).ListItem.Property(Mpaa),Rated PG) | SubString(Container(510).ListItem.Property(Mpaa),Rated: PG) | StringCompare(Container(510).ListItem.Property(Mpaa),PG)] + !SubString(Container(510).ListItem.Property(Mpaa),Rated PG-13) + !SubString(Container(510).ListItem.Property(Mpaa),Rated: PG-13)">flags/rating/MPAA_PG_Certificate_US.png</value>
+	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated PG-13) | SubString(Container(510).ListItem.Property(Mpaa),Rated: PG-13) | StringCompare(Container(510).ListItem.Property(Mpaa),PG-13)">flags/rating/MPAA_PG-13_Certificate_US.png</value>
+	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated R) | SubString(Container(510).ListItem.Property(Mpaa),Rated: R) | StringCompare(Container(510).ListItem.Property(Mpaa),R)">flags/rating/MPAA_R_Certificate_US.png</value>
+	<value condition="SubString(Container(510).ListItem.Property(Mpaa),Rated NC-17) | SubString(Container(510).ListItem.Property(Mpaa),Rated: NC-17) | StringCompare(Container(510).ListItem.Property(Mpaa),NC-17)">flags/rating/MPAA_NC-17_Certificate_US.png</value>
 	<value condition="StringCompare(Container(510).ListItem.Property(Mpaa),UK:U)">flags/rating/BBFC_U_Certificate_UK.png</value>
 	<value condition="StringCompare(Container(510).ListItem.Property(Mpaa),UK:PG)">flags/rating/BBFC_PG_Certificate_UK.png</value>
 	<value condition="StringCompare(Container(510).ListItem.Property(Mpaa),UK:12)">flags/rating/BBFC_12_Certificate_UK.png</value>
@@ -2950,7 +2950,7 @@
 	</variable>
 
 	<variable name="value_librarymovies">
-	<value condition="Library.HasContent(Movies)">$INFO[Window(0).Property(Movies.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(Movies.UnWatched)]</value>
+	<value condition="Library.HasContent(Movies)">[COLOR=$VAR[value_headercolor]]$LOCALIZE[20342]:[/COLOR] $INFO[Window(0).Property(Movies.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(Movies.UnWatched)]</value>
 	</variable>
 	<variable name="value_librarytvshows">
 	<value condition="Library.HasContent(TVShows) + SubString(skin.string(menu),vertical)">$INFO[Window(0).Property(TVShows.Count)][COLOR=80FFFFFF] | [/COLOR][COLOR=$VAR[value_headercolor]]$LOCALIZE[16101]: [/COLOR]$INFO[Window(0).Property(TVShows.UnWatched)]</value>
