@@ -178,7 +178,7 @@
 	<label>31999</label>
 	<onclick>Skin.ToggleSetting(noviewposterlite_video)</onclick>
 	<selected>!Skin.HasSetting(noviewposterlite_video)</selected>
-	<enable>Container.Content(movies) | Container.Content(tvshows)</enable>
+	<enable>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</enable>
 	<visible>Window.IsActive(25)</visible>
 	</control>
 	</control>

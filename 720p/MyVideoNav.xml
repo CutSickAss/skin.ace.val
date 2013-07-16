@@ -205,16 +205,16 @@
 	<aspectratio>keep</aspectratio>
 	<colordiffuse>FFFFA500</colordiffuse>
 	<texture fallback="stars/0.0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
-	<visible>!IsEmpty(ListItem.Title) + Substring(Skin.CurrentTheme,Greek) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)]</visible>
+	<visible>!IsEmpty(ListItem.Rating) + !IsEmpty(ListItem.Title) + Substring(Skin.CurrentTheme,Greek) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)]</visible>
 	</control>
 	<control type="label"><!-- Rating -->
 	<include>FlagLabel</include>
 	<label>$INFO[ListItem.Rating]</label>
-	<visible>!IsEmpty(ListItem.Title)</visible>
+	<visible>!IsEmpty(ListItem.Rating) + !IsEmpty(ListItem.Title)</visible>
 	</control>
 	<control type="image">
 	<include>FlagSeparator</include>
-	<visible>!IsEmpty(ListItem.Title)</visible>
+	<visible>!IsEmpty(ListItem.Rating) + !IsEmpty(ListItem.Title)</visible>
 	</control>
 	<control type="image"><!-- Codec -->
 	<include>FlagImage</include>

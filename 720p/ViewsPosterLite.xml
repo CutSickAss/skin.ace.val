@@ -71,18 +71,18 @@
 			<control type="fadelabel">
 			  <posx>0</posx>
 			  <posy>14</posy>
-			  <width>600</width>
+			  <width>430</width>
 			  <height>50</height>
 			  <scrollout>false</scrollout>
 			  <pauseatend>2000</pauseatend>
 			  <scrollspeed>10</scrollspeed>
 			  <font>Font_16</font>
-			  <label>[B]$LOCALIZE[515]:  [COLOR=$VAR[value_headercolor]]$VAR[value_ground2_value][/COLOR][/B]</label>
+			  <label>$VAR[PLGenre]</label>
 			</control>
 			<control type="fadelabel">
-			  <posx>623r</posx>
+			  <posx>828r</posx>
 			  <posy>14</posy>
-			  <width>225</width>
+			  <width>430</width>
 			  <height>50</height>
 			  <align>right</align>
 			  <scrollout>false</scrollout>
@@ -90,6 +90,7 @@
 			  <scrollspeed>10</scrollspeed>
 			  <font>Font_16</font>
 			  <label>$VAR[PLYear]</label>
+			  <visible>!Container.Content(seasons)</visible>
 			</control>
 		  </control>
 		</control>
@@ -354,11 +355,11 @@
 	  <control type="group">
 		<posx>-119</posx>
 		<posy>366</posy>
-		<animation effect="zoom" center="75,684" start="44" end="100" time="300" tween="cubic" easing="inout" reversible="false" condition="Container.OnNext">Focus</animation>
-		<animation effect="zoom" center="-150,684" start="100" end="44" time="240" tween="cubic" easing="inout" reversible="false" condition="Container.OnNext">Unfocus</animation>
-		<animation effect="zoom" center="-150,684" start="44" end="100" time="300" tween="cubic" easing="inout" reversible="false" condition="Container.OnPrevious">Focus</animation>
+		<animation effect="zoom" center="75,684" start="44" end="100" time="480" tween="quadratic" reversible="false" condition="Container.OnNext">Focus</animation>
+		<animation effect="zoom" center="-150,684" start="100" end="44" time="240" tween="quadratic" reversible="false" condition="Container.OnNext">Unfocus</animation>
+		<animation effect="zoom" center="-150,684" start="44" end="100" time="480" tween="quadratic" reversible="false" condition="Container.OnPrevious">Focus</animation>
 		<animation type="Unfocus" reversible="false" condition="Container.OnPrevious">
-		  <effect type="zoom" center="-31,684" start="100" end="44" time="240" tween="cubic" easing="inout" />
+		  <effect type="zoom" center="-31,684" start="100" end="44" time="240" tween="quadratic" />
 		  <effect type="slide" end="-180" />
 		</animation>
 		<include>PLCharacter</include>
@@ -434,14 +435,14 @@
 	</control>
 	<control type="textbox">
 	  <posx>4</posx>
-	  <posy>-49</posy>
+	  <posy>-50</posy>
 	  <width>300</width>
 	  <height>40</height>
 	  <align>center</align>
 	  <font>Font_30</font>
 	  <textcolor>FFFFFFFF</textcolor>
-	  <label>[B]$INFO[ListItem.Studio][/B]</label>
-	  <visible>Container.Content(tvshows)</visible>
+	  <label>$VAR[PLStudio]</label>
+	  <visible>[[[Container.Content(tvshows)|Container.Content(seasons)]+!SubString(ListItem.FolderPath,videodb://1/)]|Container.Content(genres)]+!Skin.HasSetting(novideomediacase)</visible>
 	  <autoscroll time="3000" delay="5000" repeat="3000">true</autoscroll>
 	</control>
 	<control type="image">
@@ -455,9 +456,19 @@
 	  <width>320</width>
 	  <height>180</height>
 	  <fadetime>FanartCrossFadeTime</fadetime>
-	  <aspectratio aligny="bottom">stretch</aspectratio>
-	  <texture background="true">$VAR[PLLandscapeVar]</texture>
+	  <aspectratio aligny="top">keep</aspectratio>
+	  <texture background="true" fallback="DefaultExtraThumbs.png">$VAR[PLLandscapeVar]</texture>
 	  <bordertexture background="true" border="-2">black.png</bordertexture>
+	</control>
+	<control type="image">
+	  <width>320</width>
+	  <height>180</height>
+	  <fadetime>FanartCrossFadeTime</fadetime>
+	  <aspectratio aligny="top">stretch</aspectratio>
+	  <texture background="true">shadow_mask.png</texture>
+	  <colordiffuse>FFF0F0F0</colordiffuse>
+	  <animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
+	  <visible>IsEmpty(ListItem.Art(landscape))+IsEmpty(ListItem.Art(clearlogo))+IsEmpty(ListItem.Art(tvshow.clearlogo))+!IsEmpty(ListItem.Art(fanart))+!Container.Content(episodes)+!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="image">
 	  <posx>9</posx>
@@ -476,7 +487,7 @@
 	<control type="textbox">
 	  <posy>72</posy>
 	  <include>PLTextTitle</include>
-	  <visible>IsEmpty(ListItem.Art(landscape))+IsEmpty(ListItem.Art(fanart))</visible>
+	  <visible>IsEmpty(ListItem.Art(landscape))+IsEmpty(ListItem.Art(clearlogo))+IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 	</control>
   </include>
   <include name="PLLogo">
@@ -527,9 +538,27 @@
 	  <visible>!IsEmpty(ListItem.Art(banner))</visible>
 	</control>
 	<control type="image">
+	  <width>352</width>
+	  <height>65</height>
+	  <fadetime>FanartCrossFadeTime</fadetime>
+	  <aspectratio>stretch</aspectratio>
+	  <texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
+	  <visible>[Container.Content(seasons)|Container.Content(episodes)]+IsEmpty(ListItem.Art(banner))+!StringCompare(ListItem.Label,..)</visible>
+	</control>
+	<control type="image">
 	  <aspectratio>scale</aspectratio>
 	  <include>PLBannerValue</include>
 	  <visible>IsEmpty(ListItem.Art(banner))+!StringCompare(ListItem.Label,..)</visible>
+	</control>
+	<control type="image">
+	  <width>352</width>
+	  <height>65</height>
+	  <fadetime>FanartCrossFadeTime</fadetime>
+	  <aspectratio>stretch</aspectratio>
+	  <texture background="true">shadow_mask.png</texture>
+	  <colordiffuse>FFF0F0F0</colordiffuse>
+	  <animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
+	  <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(clearlogo))+!IsEmpty(ListItem.Art(fanart))+!StringCompare(ListItem.Label,..)</visible>
 	</control>
 	<control type="image">
 	  <width>352</width>
@@ -567,15 +596,17 @@
 	</control>
   </include>
   <include name="PLTextTitle">
-	<posx>-13</posx>
-	<width>345</width>
-	<height>112</height>
+	<posx>2</posx>
+	<posy>5</posy>
+	<width>315</width>
+	<height>107</height>
 	<align>center</align>
 	<font>Font_40</font>
 	<textcolor>FFE00000</textcolor>
 	<shadowcolor>black</shadowcolor>
 	<label>[B]$INFO[ListItem.Label][/B]</label>
 	<autoscroll time="2000" delay="2000" repeat="2000">true</autoscroll>
+	<visible>!Container.Content(episodes)</visible>
   </include>
   <include name="PLLandValue">
 	<width>245</width>

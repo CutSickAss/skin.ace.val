@@ -375,7 +375,7 @@
 	<label>31999</label>
 	<onfocus>Container.SetViewMode(528)</onfocus>
 	<onclick>SetFocus(528)</onclick>
-	<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(genres)</visible>
+	<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(genres)</visible>
 	<selected>StringCompare(Container.Viewmode,$LOCALIZE[31999])</selected>
 	</control>
 	<control type="button" id="9299"><!-- Customizar menu de vistas -->
@@ -439,7 +439,7 @@
 	<label>31486</label>
 	<onclick>Skin.ToggleSetting(novideomediacase)</onclick>
 	<selected>!Skin.HasSetting(novideomediacase)</selected>
-	<visible>Control.IsVisible(51) + [Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)] | [Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(65) | Control.IsVisible(528)] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+	<visible>Control.IsVisible(51) + [[Container.Content(movies) + SubString(skin.string(widemovies.art),poster) | Container.Content(musicvideos) | Container.Content(sets)] | [Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59) | Control.IsVisible(61) | Control.IsVisible(62) | Control.IsVisible(65)] + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]] | [Control.IsVisible(528) + !Container.Content(episodes)]</visible>
 	</control>
 	<control type="button" id="9305">
 	<include>TopMenuButton</include>
@@ -605,11 +605,10 @@
 	<include>TopMenuButton</include>
 	<label>InfoPanel:</label>
 	<label2>$VAR[PLInfoPanelLabel]</label2>
-	<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
 	<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
 	<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
 	<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
-	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
+	<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
 	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 	<onclick condition="Stringcompare(Control.GetLabel(528421),infopanelauto) | IsEmpty(Control.GetLabel(528421))">Skin.SetString(PLInfoPanel$INFO[Window(home).Property(Area)],infopanelon)</onclick>
 	<onclick condition="Stringcompare(Control.GetLabel(528421),infopanelmanual)">Skin.SetString(PLInfoPanel$INFO[Window(home).Property(Area)],infopanelauto)</onclick>
@@ -641,16 +640,24 @@
 	<label2>$VAR[PLIconLabel]</label2>
 	<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
 	<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
-	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
+	<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
+	<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
 	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
-	<onclick condition="StringCompare(Control.GetLabel(528707),noicon) | IsEmpty(Control.GetLabel(528707))">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
-	<onclick condition="StringCompare(Control.GetLabel(528707),banner)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],noicon)</onclick>
-	<onclick condition="StringCompare(Control.GetLabel(528707),clearart) + !Container.Content(tvshows)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],banner)</onclick>
+	<onclick condition="[StringCompare(Control.GetLabel(528707),noicon) | IsEmpty(Control.GetLabel(528707))]">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
+	<onclick condition="[StringCompare(Control.GetLabel(528707),banner) | IsEmpty(Control.GetLabel(528707))] + Container.Content(seasons)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
+	<onclick condition="[StringCompare(Control.GetLabel(528707),banner) | IsEmpty(Control.GetLabel(528707))] + Container.Content(episodes)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],landscape)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),banner) + !Container.Content(seasons) + !Container.Content(episodes)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],noicon)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),clearart) + !Container.Content(tvshows) + !Container.Content(episodes)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],banner)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528707),characterart)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],banner)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528707),clearart) + Container.Content(tvshows)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],characterart)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528707),logo)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],clearart)</onclick>
-	<onclick condition="StringCompare(Control.GetLabel(528707),landscape)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],logo)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),landscape) + !Container.Content(seasons) + !Container.Content(episodes)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],logo)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),banner) + Container.Content(seasons)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),landscape) + Container.Content(seasons)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],banner)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),landscape) + Container.Content(episodes)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],banner)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528707),poster)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],landscape)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),banner) + Container.Content(seasons)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
+	<onclick condition="StringCompare(Control.GetLabel(528707),banner) + Container.Content(episodes)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],landscape)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528707),noicon)">Skin.SetString(PosterLite$INFO[Window(home).Property(Area)],poster)</onclick>
 	<visible>Control.IsVisible(528) + !Container.Content(genres)</visible>
 	</control>
@@ -666,7 +673,6 @@
 	<label2>$VAR[PLPlusIconLabel]</label2>
 	<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
 	<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
-	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
 	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),noicon) | IsEmpty(Control.GetLabel(528708))">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],logo)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),cdart)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],noicon)</onclick>
@@ -678,7 +684,7 @@
 	<onclick condition="StringCompare(Control.GetLabel(528708),clearart) + Container.Content(tvshows)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],characterart)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),logo)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],clearart)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528708),noicon)">Skin.SetString(PosterLitePlus$INFO[Window(home).Property(Area)],logo)</onclick>
-	<visible>Control.IsVisible(528) + !Container.Content(genres)</visible>
+	<visible>Control.IsVisible(528) + !Container.Content(genres) + !Container.Content(seasons) + !Container.Content(episodes)</visible>
 	</control>
 	<control type="label" id="528709">
 	<posx>-500</posx>
@@ -692,6 +698,8 @@
 	<label2>$VAR[PLTitleLabel]</label2>
 	<onclick condition="Container.Content(movies)">SetProperty(Area,Movies,home)</onclick>
 	<onclick condition="Container.Content(tvshows)">SetProperty(Area,TVShows,home)</onclick>
+	<onclick condition="Container.Content(seasons)">SetProperty(Area,Seasons,home)</onclick>
+	<onclick condition="Container.Content(episodes)">SetProperty(Area,Episodes,home)</onclick>
 	<onclick condition="Container.Content(genres)">SetProperty(Area,Genres,home)</onclick>
 	<onclick condition="Container.Content(sets)">SetProperty(Area,Sets,home)</onclick>
 	<onclick condition="StringCompare(Control.GetLabel(528709),titleoff) | IsEmpty(Control.GetLabel(528709))">Skin.SetString(PLTitle$INFO[Window(home).Property(Area)],titleon)</onclick>

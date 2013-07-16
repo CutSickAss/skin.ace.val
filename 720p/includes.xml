@@ -260,15 +260,23 @@
 	<onload>Skin.SetBool(visanimation_panscan)</onload>
 	<onload>Skin.SetString(PLInfoPanelMovies,infopanelmanual)</onload>
 	<onload>Skin.SetString(PLInfoPanelTVShows,infopanelmanual)</onload>
+	<onload>Skin.SetString(PLInfoPanelSeasons,infopanelmanual)</onload>
+	<onload>Skin.SetString(PLInfoPanelEpisodes,infopanelmanual)</onload>
+	<onload>Skin.SetString(PLInfoPanelGenres,infopanelmanual)</onload>
 	<onload>Skin.SetString(PLInfoPanelSets,infopanelmanual)</onload>
 	<onload>Skin.SetString(PosterLiteMovies,poster)</onload>
 	<onload>Skin.SetString(PosterLiteTVShows,poster)</onload>
+	<onload>Skin.SetString(PosterLiteSeasons,poster)</onload>
+	<onload>Skin.SetString(PosterLiteEpisodes,landscape)</onload>
 	<onload>Skin.SetString(PosterLiteGenres,poster)</onload>
 	<onload>Skin.SetString(PosterLiteSets,poster)</onload>
 	<onload>Skin.SetString(PosterLitePlusMovies,noicon)</onload>
 	<onload>Skin.SetString(PosterLitePlusTVShows,banner)</onload>
+	<onload>Skin.SetString(PosterLitePlusSets,noicon)</onload>
 	<onload>Skin.SetString(PLTitleMovies,titleon)</onload>
 	<onload>Skin.SetString(PLTitleTVShows,titleon)</onload>
+	<onload>Skin.SetString(PLTitleSeasons,titleon)</onload>
+	<onload>Skin.SetString(PLTitleEpisodes,titleon)</onload>
 	<onload>Skin.SetString(PLTitleGenres,titleon)</onload>
 	<onload>Skin.SetString(PLTitleSets,titleon)</onload>
 	<onload>AlarmClock(replace,ReplaceWindow(0),0:01,true)</onload>
