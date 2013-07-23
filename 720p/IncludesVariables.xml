@@ -3385,7 +3385,8 @@
 	<variable name="PLGenre">
 	<value condition="[Container.Content(movies) | Window.IsVisible(VideoPlaylist) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons)] + !SubString(ListItem.Path,videodb://1/7,left)">[B]$LOCALIZE[515]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Genre][/COLOR][/B]</value>
 	<value condition="SubString(ListItem.Path,videodb://1/7,left)">[B]$LOCALIZE[515]:  [COLOR=$VAR[value_headercolor]]$INFO[Window(0).Property(Set.Movies.Genre)][/COLOR][/B]</value>
-	<value condition="Container.Content(episodes)">[B]$LOCALIZE[20339]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Director][/COLOR][/B]</value>
+	<value condition="Container.Content(episodes) + !IsEmpty(ListItem.Director)">[B]$LOCALIZE[20339]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Director][/COLOR][/B]</value>
+	<value condition="Container.Content(episodes) + IsEmpty(ListItem.Director)">[B]$LOCALIZE[20339]:  [COLOR=$VAR[value_headercolor]]$LOCALIZE[161][/COLOR][/B]</value>
 	<!--value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 	<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Type)]</value>
 	<value condition="Window.IsActive(1) + !Container.Content(Addons)">$INFO[ListItem.Genre]</value>
@@ -3395,7 +3396,8 @@
 	<value condition="[Container.Content(movies) | Container.Content(genres) | Container.Content(sets)] + !SubString(ListItem.Path,videodb://1/7,left)">[B]$LOCALIZE[180]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Duration] $LOCALIZE[31961][/COLOR]       $LOCALIZE[345]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Year][/COLOR][/B]</value>
 	<value condition="[Container.Content(movies) | Container.Content(genres) | Container.Content(sets)] + SubString(ListItem.Path,videodb://1/7,left)">[B]$LOCALIZE[345]:  [COLOR=$VAR[value_headercolor]]$INFO[Window(0).Property(Set.Movies.Years)][/COLOR][/B]</value>
 	<value condition="Container.Content(tvshows)">[B]$LOCALIZE[20416]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Premiered][/COLOR][/B]</value>
-	<value condition="Container.Content(episodes)">[B]$LOCALIZE[180]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Duration] $LOCALIZE[31961][/COLOR]       $LOCALIZE[20416]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Premiered][/COLOR][/B]</value>
+	<value condition="[Container.Content(seasons) | Container.Content(episodes)] + SubString(ListItem.FolderPath,videodb://1/)">[B]$LOCALIZE[180]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Duration] $LOCALIZE[31961][/COLOR]       $LOCALIZE[345]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Year][/COLOR][/B]</value>
+	<value condition="Container.Content(episodes) + !SubString(ListItem.FolderPath,videodb://1/)">[B]$LOCALIZE[180]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Duration] $LOCALIZE[31961][/COLOR]       $LOCALIZE[20416]:  [COLOR=$VAR[value_headercolor]]$INFO[ListItem.Premiered][/COLOR][/B]</value>
 	</variable>
 	<variable name="PLStudio">
 	<value condition="Container.Content(tvshows)">[B]$INFO[ListItem.Studio][/B]</value>

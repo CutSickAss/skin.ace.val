@@ -90,7 +90,6 @@
 			  <scrollspeed>10</scrollspeed>
 			  <font>Font_16</font>
 			  <label>$VAR[PLYear]</label>
-			  <visible>!Container.Content(seasons)</visible>
 			</control>
 		  </control>
 		</control>
