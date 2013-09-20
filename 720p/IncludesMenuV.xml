@@ -226,18 +226,7 @@
 	<texture fallback="flags/rating/MPAA_NR_Certificate_US.png">$VAR[value_mfmpaa]</texture>
 	<colordiffuse>E4101010</colordiffuse>
 	<fadetime>FanartCrossFadeTime</fadetime>
-	<visible>!IsEmpty(Container(510).ListItem.Property(Mpaa)) + !Substring(Skin.CurrentTheme,Greek) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(31) | Container(9000).HasFocus(32) | Container(9000).HasFocus(33) | Container(9000).HasFocus(34) | Container(9000).HasFocus(35)]</visible>
-	</control>
-	<control type="image">
-	<width>50</width>
-	<height>26</height>
-	<align>center</align>
-	<aligny>center</aligny>
-	<aspectratio>keep</aspectratio>
-	<texture>$VAR[value_mfmpaa]</texture>
-	<fadetime>FanartCrossFadeTime</fadetime>
-	<animation effect="slide" end="0,6" condition="true">Conditional</animation>
-	<visible>!IsEmpty(Container(510).ListItem.Property(Mpaa)) + Substring(Skin.CurrentTheme,Greek) + [Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(31) | Container(9000).HasFocus(32) | Container(9000).HasFocus(33) | Container(9000).HasFocus(34) | Container(9000).HasFocus(35)]</visible>
+	<visible>Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(31) | Container(9000).HasFocus(32) | Container(9000).HasFocus(33) | Container(9000).HasFocus(34) | Container(9000).HasFocus(35)</visible>
 	</control>
 	<control type="label">
 	<include>HomeFlagSeparator</include>
