@@ -98,7 +98,7 @@
 		  <visible>[[Stringcompare(Control.GetLabel(528421),infopanelauto)+StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]|[Control.IsVisible(528197)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528421),infopanelmanual)+[[Control.HasFocus(99528)+!Control.IsVisible(528195)]|[StringCompare(Control.GetLabel(528707),noicon)+!Control.IsVisible(528200)]]]|Control.IsVisible(528196)]</visible>
 		  <control type="image">
 			<include>PLClearValue</include>
-			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+			<texture background="true">$VAR[PLLogoVar]</texture>
 			<visible>StringCompare(Control.GetLabel(528708),logo)</visible>
 		  </control>
 		  <control type="image">
@@ -136,7 +136,11 @@
 			<posx>527</posx>
 			<posy>-52</posy>
 			<include>PLBanner</include>
-			<include>PLBannerT1</include>
+			<control type="group">
+			  <include>PLBannerMask</include>
+			  <include>PLBannerLabel</include>
+			  <visible>!Container.Content(episodes)</visible>
+			</control>
 			<animation effect="slide" end="0,92" time="160" reversible="false" condition="Control.IsVisible(528193)">Conditional</animation>
 			<visible>StringCompare(Control.GetLabel(528708),banner)</visible>
 		  </control>
@@ -175,12 +179,21 @@
 	  </control>
 	  <control type="group">
 		<posx>417</posx>
-		<posy>80</posy>
-		<animation effect="slide" end="66,0" time="500" reversible="true" condition="StringCompare(Control.GetLabel(528707),poster)+!IsEmpty(ListItem.Art(discart)">Conditional</animation>
-		<visible>Player.HasVideo+!VideoPlayer.IsFullscreen+!Skin.HasSetting(fullscreentrailer)</visible>
+		<posy>76</posy>
 		<control type="videowindow">
 		  <width>790</width>
 		  <height>336</height>
+		  <animation effect="slide" end="66,0" time="500" reversible="true" condition="StringCompare(Control.GetLabel(528707),poster)+!IsEmpty(ListItem.Art(discart)">Conditional</animation>
+		  <visible>Player.HasVideo+!VideoPlayer.IsFullscreen+!Skin.HasSetting(fullscreentrailer)</visible>
+		</control>
+		<control type="image">
+		  <width>790</width>
+		  <height>352</height>
+		  <fadetime>FanartCrossFadeTime</fadetime>
+		  <aspectratio align="center">keep</aspectratio>
+		  <texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+		  <bordertexture background="true" border="-2">black.png</bordertexture>
+		  <visible>!Player.HasVideo+Container.Content(episodes)+Skin.HasSetting(plepthumb)</visible>
 		</control>
 	  </control>
 	  <control type="group">
@@ -238,7 +251,8 @@
 			<posx>9</posx>
 			<posy>560</posy>
 			<include>PLBanner</include>
-			<include>PLBannerT2</include>
+			<include>PLBannerMask</include>
+			<include>PLBannerWatched</include>
 			<visible>StringCompare(Control.GetLabel(528707),banner)+Control.IsVisible(528196)</visible>
 		  </control>
 		  <control type="group">
@@ -371,7 +385,8 @@
 		<animation effect="zoom" center="auto" start="74" end="74" condition="true">Conditional</animation>
 		<include>PosFade</include>
 		<include>PLBanner</include>
-		<include>PLBannerT2</include>
+		<include>PLBannerMask</include>
+		<include>PLBannerWatched</include>
 	  </control>
 	</itemlayout>
 	<focusedlayout width="380" height="149" condition="StringCompare(Control.GetLabel(528707),banner)">
@@ -385,7 +400,8 @@
 		  <effect type="slide" end="-41" />
 		</animation>
 		<include>PLBanner</include>
-		<include>PLBannerT2</include>
+		<include>PLBannerMask</include>
+		<include>PLBannerWatched</include>
 	  </control>
 	</focusedlayout>
   </include>
@@ -455,7 +471,7 @@
 	  <width>320</width>
 	  <height>180</height>
 	  <fadetime>FanartCrossFadeTime</fadetime>
-	  <aspectratio aligny="top">keep</aspectratio>
+	  <aspectratio>scale</aspectratio>
 	  <texture background="true" fallback="DefaultExtraThumbs.png">$VAR[PLLandscapeVar]</texture>
 	  <bordertexture background="true" border="-2">black.png</bordertexture>
 	</control>
@@ -463,7 +479,7 @@
 	  <width>320</width>
 	  <height>180</height>
 	  <fadetime>FanartCrossFadeTime</fadetime>
-	  <aspectratio aligny="top">stretch</aspectratio>
+	  <aspectratio>stretch</aspectratio>
 	  <texture background="true">shadow_mask.png</texture>
 	  <colordiffuse>FFF0F0F0</colordiffuse>
 	  <animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
@@ -477,6 +493,14 @@
 	  <aspectratio>keep</aspectratio>
 	  <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 	  <visible>IsEmpty(ListItem.Art(landscape))+!IsEmpty(ListItem.Art(fanart))</visible>
+	</control>
+	<control type="label">
+	  <posy>161</posy>
+	  <width>320</width>
+	  <font>Font_16</font>
+	  <shadowcolor>black</shadowcolor>
+	  <label>[B]$INFO[ListItem.Label][/B]</label>
+	  <visible>Container.Content(episodes)+!SubString(ListItem.FolderPath,videodb://1/)</visible>
 	</control>
 	<control type="image">
 	  <posx>275</posx>
@@ -553,22 +577,24 @@
 	  <width>352</width>
 	  <height>65</height>
 	  <fadetime>FanartCrossFadeTime</fadetime>
+	  <aspectratio>keep</aspectratio>
+	  <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+	  <visible>IsEmpty(ListItem.Art(banner))</visible>
+	</control>
+  </include>
+  <include name="PLBannerMask">
+	<control type="image">
+	  <width>352</width>
+	  <height>65</height>
+	  <fadetime>FanartCrossFadeTime</fadetime>
 	  <aspectratio>stretch</aspectratio>
 	  <texture background="true">shadow_mask.png</texture>
 	  <colordiffuse>FFF0F0F0</colordiffuse>
 	  <animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
 	  <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(clearlogo))+!IsEmpty(ListItem.Art(fanart))+!StringCompare(ListItem.Label,..)</visible>
 	</control>
-	<control type="image">
-	  <width>352</width>
-	  <height>65</height>
-	  <fadetime>FanartCrossFadeTime</fadetime>
-	  <aspectratio>keep</aspectratio>
-	  <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-	  <visible>IsEmpty(ListItem.Art(banner))</visible>
-	</control>
   </include>
-  <include name="PLBannerT1">
+  <include name="PLBannerLabel">
 	<control type="label">
 	  <posx>5</posx>
 	  <posy>20</posy>
@@ -583,9 +609,9 @@
 	  <visible>IsEmpty(ListItem.Art(banner))+IsEmpty(ListItem.Art(clearlogo))</visible>
 	</control>
   </include>
-  <include name="PLBannerT2">
+  <include name="PLBannerWatched">
 	<control type="group">
-	  <include>PLBannerT1</include>
+	  <include>PLBannerLabel</include>
 	  <animation effect="slide" end="171" time="0" condition="!Control.IsVisible(528196)">Conditional</animation>
 	</control>
 	<control type="image">

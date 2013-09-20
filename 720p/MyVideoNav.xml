@@ -60,7 +60,7 @@
 	<texture>black.png</texture>
 	<colordiffuse>C3FFFFFF</colordiffuse>
 	<include>Animation_Fade</include>
-	<visible>!Control.HasFocus(9920) + Player.HasVideo + !Skin.HasSetting(fullscreentrailer)</visible>
+	<visible>!Control.HasFocus(9920) + [[Player.HasVideo + !Skin.HasSetting(fullscreentrailer)] | [Control.IsVisible(528) + Container.Content(episodes) + Skin.HasSetting(plepthumb)]]</visible>
 	</control>
 	<control type="group"><!-- default group -->
 	<include>Animation_Window</include>
@@ -329,7 +329,7 @@
 	</control>
 	<control type="button" id="528195">
 	<include>InvisibleButton</include>
-	<visible>[Window.IsVisible(shutdownmenu) | Window.IsVisible(movieinformation) | Window.IsVisible(contextmenu) | Window.IsVisible(playercontrols) | Window.IsVisible(progressdialog) | Window.IsVisible(busydialog) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsVisible(yesnodialog) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(favourites) | Window.IsVisible(CustomViewsVideo.xml)]</visible>
+	<visible>[Window.IsVisible(numericinput) | Window.IsVisible(shutdownmenu) | Window.IsVisible(movieinformation) | Window.IsVisible(contextmenu) | Window.IsVisible(playercontrols) | Window.IsVisible(progressdialog) | Window.IsVisible(busydialog) | Window.IsVisible(filebrowser) | Window.IsVisible(selectdialog) | Window.IsVisible(yesnodialog) | Window.IsVisible(virtualkeyboard) | Window.IsVisible(favourites) | Window.IsVisible(CustomViewsVideo.xml)]</visible>
 	</control>
 	<control type="button" id="528197">
 	<include>InvisibleButton</include>

@@ -272,6 +272,8 @@
 	<onload>Skin.SetString(PosterLiteSets,poster)</onload>
 	<onload>Skin.SetString(PosterLitePlusMovies,noicon)</onload>
 	<onload>Skin.SetString(PosterLitePlusTVShows,banner)</onload>
+	<onload>Skin.SetString(PosterLitePlusSeasons,banner)</onload>
+	<onload>Skin.SetString(PosterLitePlusEpisodes,banner)</onload>
 	<onload>Skin.SetString(PosterLitePlusSets,noicon)</onload>
 	<onload>Skin.SetString(PLTitleMovies,titleon)</onload>
 	<onload>Skin.SetString(PLTitleTVShows,titleon)</onload>
@@ -279,6 +281,7 @@
 	<onload>Skin.SetString(PLTitleEpisodes,titleon)</onload>
 	<onload>Skin.SetString(PLTitleGenres,titleon)</onload>
 	<onload>Skin.SetString(PLTitleSets,titleon)</onload>
+	<onload>Skin.SetBool(plepthumb)</onload>
 	<onload>AlarmClock(replace,ReplaceWindow(0),0:01,true)</onload>
 	<onload>Skin.SetBool(welcomedone5)</onload>
 	</include>

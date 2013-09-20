@@ -3423,6 +3423,8 @@
 	<variable name="PLPlusIconVar">
 	<value condition="Container.Content(movies)">$INFO[Skin.String(PosterLitePlusMovies)]</value>
 	<value condition="Container.Content(tvshows)">$INFO[Skin.String(PosterLitePlusTVShows)]</value>
+	<value condition="Container.Content(seasons)">$INFO[Skin.String(PosterLitePlusSeasons)]</value>
+	<value condition="Container.Content(episodes)">$INFO[Skin.String(PosterLitePlusEpisodes)]</value>
 	<value condition="Container.Content(sets)">$INFO[Skin.String(PosterLitePlusSets)]</value>
 	</variable>
 	<variable name="PLPlusIconLabel">
@@ -3471,15 +3473,20 @@
 	<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="PLLogoVar">
-	<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+	<value condition="!IsEmpty(ListItem.Art(clearlogo)) + [[!Container.Content(seasons) + !Container.Content(episodes)] | SubString(ListItem.FolderPath,videodb://1/)]">$INFO[ListItem.Art(clearlogo)]</value>
+	<value condition="!IsEmpty(ListItem.Art(tvshow.clearlogo)) + [Container.Content(seasons) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+	<value>$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PLClearArtVar">
-	<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+	<value condition="!IsEmpty(ListItem.Art(clearart)) + [[!Container.Content(seasons) + !Container.Content(episodes)] | SubString(ListItem.FolderPath,videodb://1/)]">$INFO[ListItem.Art(clearart)]</value>
+	<value condition="!IsEmpty(ListItem.Art(tvshow.clearart)) + [Container.Content(seasons) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.clearart)]</value>
 	<value>$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PLCharacterArtVar">
-	<value condition="!IsEmpty(ListItem.Art(characterart))">$INFO[ListItem.Art(characterart)]</value>
-	<value condition="IsEmpty(ListItem.Art(characterart)) + !IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+	<value condition="!IsEmpty(ListItem.Art(characterart)) + [[!Container.Content(seasons) + !Container.Content(episodes)] | SubString(ListItem.FolderPath,videodb://1/)]">$INFO[ListItem.Art(characterart)]</value>
+	<value condition="IsEmpty(ListItem.Art(characterart)) + !IsEmpty(ListItem.Art(clearart)) + [[!Container.Content(seasons) + !Container.Content(episodes)] | SubString(ListItem.FolderPath,videodb://1/)]">$INFO[ListItem.Art(clearart)]</value>
+	<value condition="!IsEmpty(ListItem.Art(tvshow.characterart)) + [Container.Content(seasons) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.characterart)]</value>
+	<value condition="IsEmpty(ListItem.Art(tvshow.characterart)) + !IsEmpty(ListItem.Art(tvshow.clearart)) + [Container.Content(seasons) | Container.Content(episodes)]">$INFO[ListItem.Art(tvshow.clearart)]</value>
 	<value>$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="PLBannerVar">
