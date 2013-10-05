@@ -305,7 +305,7 @@
 		<animation effect="zoom" center="0,682" start="74" end="100" time="480" tween="cubic" easing="inout" reversible="false">Focus</animation>
 		<animation effect="zoom" start="100" end="100" tween="cubic" easing="inout" reversible="false" condition="!Control.HasFocus(528)">Unfocus</animation>
 		<animation type="Unfocus" reversible="false" condition="Control.HasFocus(528)">
-		  <effect type="zoom" center="-167,682" start="100" end="74" time="240" tween="cubic" easing="inout" />
+		  <effect type="zoom" center="-167,682" start="100" end="74" time="120" tween="cubic" easing="inout" />
 		  <effect type="slide" end="-58,-2" />
 		</animation>
 		<include>PLLand</include>
