@@ -1,6 +1,9 @@
 <includes>
   <include name="ViewPosterLite">
 	<control type="group">
+	  <animation effect="slide" time="600" start="0,400" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
+	  <animation effect="slide" time="600" start="0,400" end="0,0" tween="cubic" easing="out">Visible</animation>
+	  <animation effect="fade" time="250" start="100" end="0">Hidden</animation>
 	  <control type="button" id="99528">
 		<include>InvisibleButton</include>
 		<onleft>528</onleft>
