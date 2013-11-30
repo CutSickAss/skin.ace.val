@@ -187,6 +187,7 @@
 	<size>22</size>
 	<style>uppercase</style>
 	</font>
+	<font>
 	<name>Font_22A</name>
 	<filename>Ubuntu-C.ttf</filename>
 	<size>22</size>
@@ -310,6 +311,11 @@
 	<style>uppercase</style>
 	</font>
 	<font>
+	<name>Font_22A</name>
+	<filename>PTF55F.ttf</filename>
+	<size>22</size>
+	</font>
+	<font>
 	<name>Font_23</name>
 	<filename>PTF55F.ttf</filename>
 	<size>23</size>
@@ -428,6 +434,11 @@
 	<style>uppercase</style>
 	</font>
 	<font>
+	<name>Font_22A</name>
+	<filename>PTM55F.ttf</filename>
+	<size>22</size>
+	</font>
+	<font>
 	<name>Font_23</name>
 	<filename>PTM55F.ttf</filename>
 	<size>23</size>
@@ -544,6 +555,11 @@
 	<filename>Orarienbaum.ttf</filename>
 	<size>22</size>
 	<style>uppercase</style>
+	</font>
+	<font>
+	<name>Font_22A</name>
+	<filename>Orarienbaum.ttf</filename>
+	<size>22</size>
 	</font>
 	<font>
 	<name>Font_23</name>
