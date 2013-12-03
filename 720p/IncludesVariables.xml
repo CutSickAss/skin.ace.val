@@ -3,7 +3,7 @@
 	<includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-	<value>2.0.0 Frodo[COLOR=80FFFFFF] | [/COLOR]11/29/2013</value>
+	<value>2.0.1 Frodo[COLOR=80FFFFFF] | [/COLOR]11/30/2013</value>
 	</variable>
 	<variable name="Sub_GoTo">
 	<value condition="Container(9000).HasFocus(1)">5001</value>

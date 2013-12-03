@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.ace.val" version="2.0.0b" name="Ace (Val)" provider-name="MarcosQui">
+	<addon id="skin.ace.val" version="2.0.2a" name="Ace (Val)" provider-name="MarcosQui">
 	<requires>
 	<import	addon="xbmc.gui" version="4.0.0"/>
 	<import addon="script.ace.extrapack" version="1.0.1"/>
